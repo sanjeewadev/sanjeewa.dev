@@ -5,17 +5,23 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 5vw;
+  padding: 25px 5vw;
 }
 
 .navigation-bar ul {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 2vw;
 }
 
 .navigation-bar ul li {
   list-style: none;
+}
+
+.logo a{
+  font-weight: 600;
 }
 
 /* /////////////////////////////// HERO SECTION  //////////////////////////// */
@@ -27,12 +33,40 @@
 }
 
 .hero-sec-flex-box {
-  width: 41vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
   height: auto;
 }
 
 .hero-section-img-box {
   /* padding: 5vh 5vw; */
+}
+
+.hero-section-img-box img {
+  width: 100%;
+}
+
+.hero-sec-icons {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  margin: 0.8rem 0;
+}
+
+.hero-sec-icons li {
+  list-style: none;
+}
+
+.hero-sec-icons li a img {
+  width: 50px;
+}
+
+.hero-btn {
+  text-decoration: underline;
+
 }
 
 /* ////////////////////////////////// GRID ////////////////////////////////// */
@@ -62,9 +96,7 @@
 }
 
 .service-card img{
-  /* display: block;
-  align-self: center;
-  justify-self: center; */
+  width: 2rem;
 }
 
 .service-cards {
@@ -81,10 +113,37 @@
 .project-card {
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
-  gap: 20px;
-  min-height: 50vh;
+  gap: 25px;
+  height: 50vh;
+  margin-bottom: 3.5rem;
 }
+
+.projects-card-img-side {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.projects-card-img-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 1vw;
+}
+
+.visit-site-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.visit-site-btn img {
+  margin-left: 10px;
+}
+
 
 /* ////////////////////////////////// CLIENT SECTION ////////////////////////////// */
 
@@ -93,6 +152,7 @@
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   text-align: center;
+  margin: 2rem 0;
 }
 
 .clients-cards{
@@ -157,7 +217,6 @@
 .contact-form form input:focus, .contact-form form textarea:focus{
   border-color: rgba(61, 61, 61, 0.755);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.079);
-  transition: all 0.3s ease;  
 }
 
 .form-submit-btn {
@@ -183,6 +242,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  margin-top: 3rem;
+}
+
+.testimonial-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .teatimonial-brand {
@@ -195,7 +266,40 @@
   text-align: center;
 }
 
+.testimonial-content p{
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
+  line-height: 1.8;
+  font-weight: 400;
+}
+
 .testimonial-client {
   align-items: center;
   text-align: center;
+  font-family: "Quicksand";
+}
+
+.teatimonial-brand img{
+  width: 60px;
+  border-radius: 30px;
+}
+
+.testimonial-client img {
+  width: 50px;
+  border-radius: 30px;
+}
+
+.testimoniol-strats{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimoniol-strats img {
+  position: relative;
+  width: 100px;
+  height: 20px;
+  object-fit: cover;
+  object-position: center;
 }
