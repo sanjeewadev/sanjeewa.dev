@@ -8,6 +8,26 @@
   padding: 25px 5vw;
 }
 
+.nav-bar-links{
+  position: relative;
+  width: max-content;
+}
+
+.nav-bar-links::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1.9px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+.navigation-bar a:hover::after{
+  width: 100%;
+}
+
 .navigation-bar ul {
   display: flex;
   flex-direction: row;
@@ -138,10 +158,28 @@
 }
 
 .download-my-cv-btn{
+  position: relative;
   display: inline-block;
   margin-top: 1rem;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: -0.5px;
+  width: max-content;
+  transition: all 0.3s ease;
+}
+
+.download-my-cv-btn::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+.download-my-cv-btn:hover::after{
+  width: 100%;
 }
 
 .donwlod-cv-img{
@@ -218,15 +256,15 @@
 /* ////////////////////////////////// CLIENT SECTION ////////////////////////////// */
 
 .clients-section{
-  background-color: #f9f8f6;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
   text-align: center;
-  margin: 2rem 0;
+  padding: 1rem 0;
 }
 
 .clients-cards{
   place-items: center;
+  background-color: #f9f8f6;
+  padding-top: 2.7vw;
+  padding-bottom: 2.7vw;
 }
 
 .client-card {
@@ -332,7 +370,7 @@
 }
 
 .contact-link{
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .contact-form form{
@@ -362,6 +400,10 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.079);
 }
 
+.footer-section{
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .form-submit-btn {
   width: 100%;
   background-color: black;
@@ -378,11 +420,16 @@
   letter-spacing: normal;
 }
 
+/* //////////////////////////////////// FOOTER SECTION ///////////////////////////// */
+
 .footer-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   padding-left: 3rem;
+  min-height: 30vh;
+  background-color: #f9f8f6;
+  padding-top: 3rem;
 }
 
 .footer-second-grid{
@@ -418,8 +465,36 @@
   list-style: none;
 }
 
-.footer-section{
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #f9f8f6;
-  padding-top: 2rem;
+.footer-social-icon{
+  width: clamp(20px, 2vw, 30px);
+  transition: all 0.3s ease;
+}
+
+.footer-social-icon:hover{
+  transform: scale(1.08);
+}
+
+.footer-social-links ul{
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  padding: 1rem 0;
+}
+
+.footer-bottom-bar{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-bottom-bar p{
+  padding: 0.5vh 3.5vw;
+  font-size: clamp(10px, 0.85vw, 14px);
+  color: white;
+}
+
+.footer-bottom-bar img{
+  width: clamp(10px, 1vw, 16px);
 }

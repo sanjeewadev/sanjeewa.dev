@@ -9,16 +9,16 @@
   <link rel="stylesheet" href="/style/home.css"/>
 </head>
 <body>
-  <nav class="navigation-bar">
+  <nav id="nav" class="navigation-bar">
     <div class="logo"><a href="/index.html">Sanjeewa.dev</a></div>
     <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="#aboutme">About me</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#peojects">Projects</a></li>
+      <li><a class="nav-bar-links" href="/index.html">Home</a></li>
+      <li><a class="nav-bar-links" href="#aboutme">About me</a></li>
+      <li><a class="nav-bar-links" href="#services">Services</a></li>
+      <li><a class="nav-bar-links" href="#peojects">Projects</a></li>
       <!-- <li>Blogs</li> -->
-      <li><a href="#clietns">Clients</a></li>
-      <li><a href="#testimonial">Testimonial</a></li>
+      <li><a class="nav-bar-links" href="#clietns">Clients</a></li>
+      <li><a class="nav-bar-links" href="#testimonial">Testimonial</a></li>
       <li><a href="#contactme" class="btn-black">Contact me</a></li>
     </ul>
   </nav>
@@ -153,6 +153,9 @@
   </section>
   <!-- //////////////////////////////////////////////// CLIENTS SECTION //////////////////////////////////////////////////////// -->
   <section id="clietns" class="clients-section section-padding">
+    <div class="section-title" style="display: block;">
+      <h1>My Clients</h1>
+    </div>
     <div class="clients-cards grid-4">
       <div class="client-card"><a href="https://elinapix.com/" target="_blank"><img src="./assets/Clients/photographer-wordpress-website-design-elinapix.com.png" alt="elina pix logo"></a></div>
       <div class="client-card"><a href="https://motogear.lk/" target="_blank"><img src="/assets/Clients/wordpress-website-design-motogear.com.png" alt="motogear.lk logo"></a></div>
@@ -164,7 +167,7 @@
   <section id="testimonial" class="client-testimonial section-padding">
     <div class="testimonial-card">
       <div class="teatimonial-brand">
-        <h4><a href="https://elinapix.com/" target="_blank">ElinaPix.com</a></h4>
+        <h3><a href="https://elinapix.com/" target="_blank">ElinaPix.com</a></h3>
       </div>
       <div class="testimonial-content">
         <p>“Sanjeewa transformed my Instagram presence into a professional website. The galleries are beautiful, payments are simple, and the site loads quickly. He explained everything clearly and delivered on time. Highly recommend.”</p>
@@ -204,11 +207,10 @@
         <h3>Your website deserves better, let’s make it fast, modern, and built to bring you real clients.</h3>
         <div class="footer-social-links">
           <ul>
-            <li><a href=""><img src="" alt=""></a></li>
-            <li><a href=""><img src="" alt=""></a></li>
-            <li><a href=""><img src="" alt=""></a></li>
-            <li><a href=""><img src="" alt=""></a></li>
-            <li><a href=""><img src="" alt=""></a></li>
+            <li><a href=""><img class="footer-social-icon" src="/assets/Social/github.png" alt="Sanjeewa's GitHub Account"></a></li>
+            <li><a href=""><img class="footer-social-icon" src="/assets/Social/instagram.png" alt="Sanjeewa's Instagram Account"></a></li>
+            <li><a href=""><img class="footer-social-icon" src="/assets/Social/linkedin.png" alt="Sanjeewa's Linkedin Account"></a></li>
+            <li><a href=""><img class="footer-social-icon" src="/assets/Social/whatsapp.png" alt="Sanjeewa's Whatsapp Account"></a></li>
           </ul>
         </div>
       </div>
@@ -216,7 +218,7 @@
         <div class="footer-navigations">
           <h4>Navigations</h4>
           <ul>
-            <li><a href="/index.html">Home</a></li>
+            <li><a href="#nav">Home</a></li>
             <li><a href="#aboutme">About me</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#peojects">Projects</a></li>
@@ -233,7 +235,8 @@
       </div>
     </div>
     <div class="footer-bottom-bar">
-      <p></p>
+      <p class="footer-tagline">Freelance WordPress Developer | Website Design | Frontend Developer in Sri Lanka</p>
+      <p>© 2025 Sanjeewa.dev - Built by me :) || Source Code --> <a href="https://github.com/sanjeewadev/sanjeewa.dev" target="_blank"><img src="/assets/Icons/my-github-repo-icon.png" alt=""></a></p>
     </div>
   </footer>
 </body>
