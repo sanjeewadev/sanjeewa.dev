@@ -22,6 +22,7 @@
 
 .logo a{
   font-weight: 600;
+  font-size: clamp(25px, 2vw, 30px);
 }
 
 /* /////////////////////////////// HERO SECTION  //////////////////////////// */
@@ -29,7 +30,7 @@
 .hero-section {
   display: flex;
   flex-direction: row;
-  padding: 10vh 8vw;
+  padding: 10vh 6vw;
 }
 
 .hero-sec-flex-box {
@@ -65,8 +66,30 @@
 }
 
 .hero-btn {
-  text-decoration: underline;
+  position: relative;
+  width: max-content;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
 
+.hero-btn::after {
+  content: "";
+  height: 1.9px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover::after{
+  width: 0%;
+}
+
+.hero-btn:hover{
+  letter-spacing: 0.5px;
 }
 
 /* ////////////////////////////////// GRID ////////////////////////////////// */
@@ -85,6 +108,11 @@
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* //////////////////////////////// ABOUT ME SECTION ////////////////////////////////////// */
@@ -109,6 +137,18 @@
   padding: 0.5rem 1rem;
 }
 
+.download-my-cv-btn{
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.donwlod-cv-img{
+  width: 20px;
+  padding-left: 5px;
+}
+
 /* ///////////////////////////////// SERVICE SECTION //////////////////////////////////// */
 
 .services-section {
@@ -121,12 +161,25 @@
 
 .service-cards {
   gap: 20px;
+  position: relative;
+  z-index: 1;
 }
 
-.service-card:hover{
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.123);
-  transform: scale(1.005);
+.service-card{
+  position: relative;
 }
+
+/* .service-card::before{
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background-color: black;
+  border-radius: 11px;
+  z-index: -1;
+} */
 
 /* ////////////////////////////////// PROJECTS SECTION ////////////////////////////// */
 
@@ -196,63 +249,6 @@
   opacity: 1;
 }
 
-/* //////////////////////////////////// CONTACT SECTION ///////////////////////////// */
-
-.contacts-section {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.contact-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form form{
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.333);
-  padding: 2rem 1.5rem;
-  gap: 1rem;
-}
-
-.contact-form form input, .contact-form form textarea{
-  border: 1px solid rgba(61, 61, 61, 0.555);
-  border-radius: 9px;
-  padding: 0.75rem 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.contact-form form input:hover, .contact-form form textarea:hover{
-  border-color: rgba(61, 61, 61, 0.755);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.079);
-  transition: all 0.3s ease;  
-}
-
-.contact-form form input:focus, .contact-form form textarea:focus{
-  border-color: rgba(61, 61, 61, 0.755);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.079);
-}
-
-.form-submit-btn {
-  width: 100%;
-  background-color: black;
-  color: white;
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  letter-spacing: 0.1rem;
-  padding: 0.75rem 1.5rem;
-  border-color: transparent;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-}
-
-.form-submit-btn:hover {
-  letter-spacing: normal;
-}
-
-
 /* //////////////////////////////////// TESTAMINAL SECTION ///////////////////////////// */
 
 .client-testimonial {
@@ -319,4 +315,111 @@
   height: 20px;
   object-fit: cover;
   object-position: center;
+}
+
+/* //////////////////////////////////// CONTACT SECTION ///////////////////////////// */
+
+.contacts-section {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-link{
+  text-decoration: underline;
+}
+
+.contact-form form{
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.333);
+  padding: 2rem 1.5rem;
+  gap: 1rem;
+}
+
+.contact-form form input, .contact-form form textarea{
+  border: 1px solid rgba(61, 61, 61, 0.555);
+  border-radius: 9px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form form input:hover, .contact-form form textarea:hover{
+  border-color: rgba(61, 61, 61, 0.755);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.079);
+  transition: all 0.3s ease;  
+}
+
+.contact-form form input:focus, .contact-form form textarea:focus{
+  border-color: rgba(61, 61, 61, 0.755);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.079);
+}
+
+.form-submit-btn {
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  letter-spacing: 0.1rem;
+  padding: 0.75rem 1.5rem;
+  border-color: transparent;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.form-submit-btn:hover {
+  letter-spacing: normal;
+}
+
+.footer-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding-left: 3rem;
+}
+
+.footer-second-grid{
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+}
+
+.footer-logo{
+  position: relative;
+}
+
+.footer-navigations{
+  padding: 0 6vw;
+}
+
+.footer-navigations h4{
+  display: inline;
+}
+
+.footer-navigations ul{
+  list-style: none;
+}
+
+.footer-contacts ul{
+  list-style: none;
+}
+
+.footer-contacts{
+  padding: 0 6vw;
+}
+
+.footer-social-links ul{
+  list-style: none;
+}
+
+.footer-section{
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f9f8f6;
+  padding-top: 2rem;
 }
