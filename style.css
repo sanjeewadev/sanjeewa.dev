@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -16,16 +16,16 @@ html {
   color: white;
 }
 
-h1::selection{
-  color: #E43636;
+h1::selection {
+  color: #e43636;
 }
 
-p::selection{
+p::selection {
   color: white;
 }
 
 a::selection {
-  color: #FF0B55;
+  color: #ff0b55;
 }
 
 /* ///////////////////////////////////////////////////// */
@@ -63,11 +63,10 @@ p {
 
 /* /////////////////////////////////////////////////////////////////// */
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
-
 
 span {
   font-weight: bold;
