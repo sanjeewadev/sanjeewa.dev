@@ -1,0 +1,27 @@
+.projects-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px black solid;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.projects-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+.projects-card img {
+  width: 100%;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

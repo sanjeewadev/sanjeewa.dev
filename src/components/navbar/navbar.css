@@ -1,0 +1,46 @@
+/* ////////////////////////////////// NAV BAR ////////////////////////////////// */
+
+.navigation-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 5vw;
+}
+
+.nav-bar-links {
+  position: relative;
+  width: max-content;
+}
+
+.nav-bar-links::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1.9px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+.navigation-bar a:hover::after {
+  width: 100%;
+}
+
+.navigation-bar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.navigation-bar ul li {
+  list-style: none;
+}
+
+.logo a {
+  font-weight: 600;
+  font-size: clamp(25px, 2vw, 30px);
+}
