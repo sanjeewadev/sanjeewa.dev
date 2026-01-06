@@ -1,82 +1,83 @@
 ---
 import "./projectDetails.css";
+
+const plasticImages = [
+  { src: "https://picsum.photos/200/300?1", alt: "Plastic Component 1" },
+  { src: "https://picsum.photos/200/300?2", alt: "Plastic Component 2" },
+  { src: "https://picsum.photos/200/300?3", alt: "Plastic Component 3" },
+  { src: "https://picsum.photos/200/300?4", alt: "Plastic Component 4" },
+  { src: "https://picsum.photos/200/300?5", alt: "Plastic Component 5" },
+  { src: "https://picsum.photos/200/300?6", alt: "Plastic Component 6" },
+];
 ---
 
-<section>
-  <div class="project-details-container">
-    <div class="project-details-card">
-      <h2>Project Title</h2>
-      <div class="leftside-contet details-sections">
-        <div class="project-descriptions">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
-            sapiente voluptate unde dolorum, aspernatur eos iure cum illo aut
-            ducimus animi debitis numquam suscipit qui asperiores placeat dolore
-            vero. Cupiditate optio expedita quod perferendis tenetur, sequi
-            minima ratione harum quas dolore exercitationem, vitae nobis omnis,
-            totam labore id libero voluptatem sit modi. Provident deleniti iusto
-            iure, quidem sit pariatur, magnam qui et a dolorem eos adipisci odit
-            nemo ullam officiis reprehenderit facere voluptatum excepturi beatae
-            vero odio neque. Officiis, nesciunt ullam magnam commodi sequi fuga
-            quibusdam hic eos, repudiandae autem praesentium nihil laborum illum
-            nostrum mollitia? Nihil soluta consequatur asperiores!
-          </p>
-        </div>
-
-        <div class="projects-grallery">
-          <img
-            class="project-gallery-img"
-            src="https://picsum.photos/150/100.webp"
-            alt="Project Gallery Image 1"
-          />
-          <img
-            class="project-gallery-img"
-            src="https://picsum.photos/150/100.webp"
-            alt="Project Gallery Image 2"
-          />
-          <img
-            class="project-gallery-img"
-            src="https://picsum.photos/150/100.webp"
-            alt="Project Gallery Image 3"
-          />
-        </div>
-      </div>
-      <div class="rightside-content details-sections">
-        <div class="projects-grallery">
-          <img
-            class="project-gallery-img"
-            src="https://picsum.photos/150/100.webp"
-            alt="Project Gallery Image 1"
-          />
-          <img
-            class="project-gallery-img"
-            src="https://picsum.photos/150/100.webp"
-            alt="Project Gallery Image 2"
-          />
-          <img
-            class="project-gallery-img"
-            src="https://picsum.photos/150/100.webp"
-            alt="Project Gallery Image 3"
-          />
-        </div>
-        <div class="project-descriptions">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
-            sapiente voluptate unde dolorum, aspernatur eos iure cum illo aut
-            ducimus animi debitis numquam suscipit qui asperiores placeat dolore
-            vero. Cupiditate optio expedita quod perferendis tenetur, sequi
-            minima ratione harum quas dolore exercitationem, vitae nobis omnis,
-            totam labore id libero voluptatem sit modi. Provident deleniti iusto
-            iure, quidem sit pariatur, magnam qui et a dolorem eos adipisci odit
-            nemo ullam officiis reprehenderit facere voluptatum excepturi beatae
-            vero odio neque. Officiis, nesciunt ullam magnam commodi sequi fuga
-            quibusdam hic eos, repudiandae autem praesentium nihil laborum illum
-            nostrum mollitia? Nihil soluta consequatur asperiores!
-          </p>
-        </div>
+{/* --- SECTION 1: PLASTICS --- */}
+<section class="dyno-factory-section">
+  <div class="container">
+    <div class="dyno-factory-layout">
+      {/* Text Side (Sticky) */}
+      <div class="dyno-factory-info sticky">
+        <h2 class="dyno-factory-title">
+          Plastic <span class="text-red">Division</span>
+        </h2>
+        <p class="dyno-factory-desc">
+          Our advanced injection moulding facility is the heart of component
+          localization. Producing everything from automotive body parts to
+          electrical enclosures with micron-level precision.
+        </p>
+        <ul class="dyno-factory-specs">
+          <li>Automated Injection Units</li>
+          <li>Automotive Grade Polymers</li>
+          <li>In-House Mould Maintenance</li>
+        </ul>
       </div>
 
-      <a href="#" class="button">Visit Project</a>
+      {/* Gallery Side */}
+      <div class="dyno-factory-gallery">
+        {
+          plasticImages.map((img) => (
+            <div class="dyno-gallery-item">
+              <img src={img.src} alt={img.alt} loading="lazy" />
+              <div class="dyno-gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* --- SECTION 2: SCOOTERS (Darker Theme) --- */}
+<section class="dyno-factory-section dark-variant">
+  <div class="container">
+    <div class="dyno-factory-layout reversed">
+      {/* Text Side */}
+      <div class="dyno-factory-info sticky">
+        <h2 class="dyno-factory-title">
+          Assembly <span class="text-red">Line</span>
+        </h2>
+        <p class="dyno-factory-desc">
+          The birthplace of the Dyno Scooter. A fully conveyorised assembly
+          system where 14 local components meet global engineering standards.
+          Every unit undergoes rigorous PDI testing before rolling out.
+        </p>
+      </div>
+
+      {/* Gallery Side */}
+      <div class="dyno-factory-gallery">
+        {
+          plasticImages.map((img) => (
+            <div class="dyno-gallery-item">
+              <img src={img.src} alt={img.alt} loading="lazy" />
+              <div class="dyno-gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>
