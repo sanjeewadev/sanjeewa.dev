@@ -1,102 +1,43 @@
 /* OurFactory.css */
 
-.dyno-factory-page {
-  background-color: var(--color-bg);
-  min-height: 100vh;
-}
-
 /* --- SECTION LAYOUT --- */
-.dyno-factory-section {
-  padding: 8rem 0;
-  border-bottom: 1px solid var(--border-subtle);
+.all-projects-section {
+  padding: 2rem;
 }
 
-.dyno-factory-section.dark-variant {
-  background-color: #050505;
-}
-
-.dyno-factory-layout {
+.all-projects-layout {
   display: flex;
   gap: 6rem;
   align-items: flex-start;
 }
 
-.dyno-factory-layout.reversed {
+.all-projects-layout.reversed {
   flex-direction: row-reverse;
 }
 
 /* --- INFO SIDE (STICKY) --- */
-.dyno-factory-info {
+.all-projects-info {
   flex: 0.8;
   position: sticky;
   top: 120px;
   padding-right: 2rem;
 }
 
-.dyno-factory-icon-box {
-  width: 60px;
-  height: 60px;
-  background: var(--color-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  margin-bottom: 2rem;
-  flex-shrink: 0;
-}
-
-.dyno-factory-icon-box.red-glow {
-  color: var(--color-primary);
-  box-shadow: 0 0 20px rgba(220, 38, 38, 0.15);
-}
-
-.dyno-factory-title {
-  font-family: "Oswald", sans-serif;
+.all-projects-title {
   font-size: 3rem;
-  color: white;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   line-height: 1.1;
 }
 
-.dyno-factory-desc {
-  color: var(--color-text-muted);
+.all-projects-desc {
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 2.5rem;
 }
 
-.dyno-factory-specs {
-  list-style: none;
-  padding: 0;
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 1.5rem;
-}
-
-.dyno-factory-specs li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  font-size: 1rem;
-  margin-bottom: 0.8rem;
-  font-weight: 500;
-}
-
-.dyno-factory-specs li::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  background: var(--color-primary);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
 /* --- GALLERY GRID --- */
-.dyno-factory-gallery {
+.all-projects-gallery {
   flex: 1.2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -168,15 +109,15 @@
 
 /* Tablet - Large (992px - 1200px) */
 @media (max-width: 1200px) {
-  .dyno-factory-layout {
+  .all-projects-layout {
     gap: 4rem;
   }
 
-  .dyno-factory-info {
+  .all-projects-info {
     padding-right: 1.5rem;
   }
 
-  .dyno-factory-title {
+  .all-projects-title {
     font-size: 2.5rem;
   }
 }
@@ -184,19 +125,19 @@
 /* Tablet (768px - 992px) */
 @media (max-width: 992px) {
   /* Section */
-  .dyno-factory-section {
+  .all-projects-section {
     padding: 5rem 0;
   }
 
   /* Layout - Stack vertically */
-  .dyno-factory-layout,
-  .dyno-factory-layout.reversed {
+  .all-projects-layout,
+  .all-projects-layout.reversed {
     flex-direction: column;
     gap: 3rem;
   }
 
   /* Info - Disable sticky, center on tablet */
-  .dyno-factory-info {
+  .all-projects-info {
     position: static;
     padding-right: 0;
     text-align: center;
@@ -204,27 +145,27 @@
     margin: 0 auto 2rem;
   }
 
-  .dyno-factory-icon-box {
+  .all-projects-icon-box {
     margin: 0 auto 1.5rem;
   }
 
-  .dyno-factory-title {
+  .all-projects-title {
     font-size: 2.25rem;
   }
 
-  .dyno-factory-desc {
+  .all-projects-desc {
     font-size: 1.05rem;
     margin-bottom: 2rem;
   }
 
-  .dyno-factory-specs {
+  .all-projects-specs {
     display: inline-block;
     text-align: left;
     padding-top: 1.25rem;
   }
 
   /* Gallery */
-  .dyno-factory-gallery {
+  .all-projects-gallery {
     width: 100%;
     gap: 1.25rem;
   }
@@ -241,48 +182,48 @@
 /* Mobile - Large (576px - 768px) */
 @media (max-width: 768px) {
   /* Section */
-  .dyno-factory-section {
+  .all-projects-section {
     padding: 4rem 0;
   }
 
-  .dyno-factory-layout {
+  .all-projects-layout {
     gap: 2.5rem;
   }
 
   /* Info */
-  .dyno-factory-icon-box {
+  .all-projects-icon-box {
     width: 55px;
     height: 55px;
     margin-bottom: 1.25rem;
   }
 
-  .dyno-factory-icon-box svg {
+  .all-projects-icon-box svg {
     width: 28px;
     height: 28px;
   }
 
-  .dyno-factory-title {
+  .all-projects-title {
     font-size: 2rem;
     margin-bottom: 1.25rem;
   }
 
-  .dyno-factory-desc {
+  .all-projects-desc {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.75rem;
   }
 
-  .dyno-factory-specs {
+  .all-projects-specs {
     padding-top: 1rem;
   }
 
-  .dyno-factory-specs li {
+  .all-projects-specs li {
     font-size: 0.95rem;
     margin-bottom: 0.7rem;
   }
 
   /* Gallery */
-  .dyno-factory-gallery {
+  .all-projects-gallery {
     gap: 1rem;
   }
 
@@ -303,59 +244,59 @@
 /* Mobile - Small (max 576px) */
 @media (max-width: 576px) {
   /* Section */
-  .dyno-factory-section {
+  .all-projects-section {
     padding: 3rem 0;
   }
 
-  .dyno-factory-layout {
+  .all-projects-layout {
     gap: 2rem;
   }
 
   /* Info */
-  .dyno-factory-info {
+  .all-projects-info {
     margin-bottom: 1.5rem;
   }
 
-  .dyno-factory-icon-box {
+  .all-projects-icon-box {
     width: 50px;
     height: 50px;
     margin-bottom: 1rem;
   }
 
-  .dyno-factory-icon-box svg {
+  .all-projects-icon-box svg {
     width: 26px;
     height: 26px;
   }
 
-  .dyno-factory-title {
+  .all-projects-title {
     font-size: 1.75rem;
     margin-bottom: 1rem;
   }
 
-  .dyno-factory-desc {
+  .all-projects-desc {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
   }
 
-  .dyno-factory-specs {
+  .all-projects-specs {
     width: 100%;
     text-align: center;
   }
 
-  .dyno-factory-specs li {
+  .all-projects-specs li {
     font-size: 0.9rem;
     margin-bottom: 0.6rem;
     justify-content: center;
   }
 
-  .dyno-factory-specs li::before {
+  .all-projects-specs li::before {
     width: 5px;
     height: 5px;
   }
 
   /* Gallery - Single column */
-  .dyno-factory-gallery {
+  .all-projects-gallery {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -379,19 +320,19 @@
 
 /* Mobile - Extra Small (max 400px) */
 @media (max-width: 400px) {
-  .dyno-factory-section {
+  .all-projects-section {
     padding: 2.5rem 0;
   }
 
-  .dyno-factory-title {
+  .all-projects-title {
     font-size: 1.5rem;
   }
 
-  .dyno-factory-desc {
+  .all-projects-desc {
     font-size: 0.9rem;
   }
 
-  .dyno-factory-specs li {
+  .all-projects-specs li {
     font-size: 0.85rem;
   }
 
@@ -407,24 +348,24 @@
 
 /* Landscape Mobile Optimization */
 @media (max-width: 992px) and (max-height: 500px) {
-  .dyno-factory-section {
+  .all-projects-section {
     padding: 3rem 0;
   }
 
-  .dyno-factory-layout {
+  .all-projects-layout {
     gap: 2rem;
   }
 
-  .dyno-factory-info {
+  .all-projects-info {
     margin-bottom: 1rem;
   }
 
-  .dyno-factory-title {
+  .all-projects-title {
     font-size: 1.75rem;
     margin-bottom: 1rem;
   }
 
-  .dyno-factory-desc {
+  .all-projects-desc {
     margin-bottom: 1.25rem;
   }
 

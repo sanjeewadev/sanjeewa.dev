@@ -17,16 +17,8 @@ html {
   color: white;
 }
 
-h1::selection {
-  color: #e43636;
-}
-
-p::selection {
-  color: white;
-}
-
 a::selection {
-  color: #ff0b55;
+  color: #ed1e79;
 }
 
 /* ///////////////////////////////////////////////////// */
@@ -106,22 +98,6 @@ span {
 .card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
 }
-
-/* /////////////////////////////////////////// */
-
-.card-dark {
-  background-color: white;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.123);
-  padding: 3rem 2rem;
-  border-radius: 8px;
-  cursor: default;
-  transition: all 0.3s ease;
-}
-
-/* .card-dark:hover{
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.123);
-  transform: scale(1.005);
-} */
 
 /* /////////////////////////////////////////////////////////////////// */
 

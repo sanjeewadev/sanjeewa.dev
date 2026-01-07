@@ -31,7 +31,6 @@
 
 .hero-heading-content {
   width: 100%;
-  line-height: 130px;
   transform-origin: left center;
   transform-style: preserve-3d;
   animation: heroHeading-animation 1s ease forwards;
@@ -48,21 +47,66 @@
   }
 }
 
-.hero-glass-container {
+.hero-gallery-container {
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 1rem;
 }
 
 .hero-glass-box {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 30rem;
+  height: 30rem;
   border-radius: 50px;
   background: rgba(0, 0, 0, 0.053);
   /* 2. The key "frosted" effect */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* For Safari support */
-  border-radius: 20px;
+}
+
+.hero-gallery-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  perspective: 1200px;
+  z-index: 0;
+}
+.hero-gallery-img-1 {
+  position: absolute;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+  transform: rotateY(-7deg);
+  z-index: -1;
+}
+.hero-gallery-img-2 {
+  position: absolute;
+  right: -20px;
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+  scale: 0.98;
+}
+.hero-gallery-img-3 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-mini-heading {
@@ -75,15 +119,16 @@
   font-size: 15rem;
   font-family: saans;
   font-weight: 100;
+  line-height: 1;
   font-style: normal;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
 }
 
 .hero-contact {
   position: relative;
   width: max-content;
   display: inline-block;
-  margin-top: -20px;
+  margin-top: 10px;
 }
 
 .hero-contact::after {
@@ -108,8 +153,17 @@
 }
 
 /* ////////////////////////////////// GRID ////////////////////////////////// */
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
 .grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-repeat-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -143,6 +197,7 @@
 }
 
 .skill-grid ul li {
+  position: relative;
   display: flex;
   gap: 0.5rem;
   align-items: center;
@@ -150,6 +205,59 @@
   border: 1px black solid;
   border-radius: 30px;
   padding: 0.5rem 1rem;
+  z-index: 0;
+}
+
+.about-skills::after {
+  position: absolute;
+  content: "";
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(115deg, #ffffff, #eeeeee);
+  z-index: -1;
+  transition: all 0.3s ease;
+  background-size: 200% 200%;
+  background-position: 0;
+}
+
+.about-skills:hover::after {
+  background-position: 100%;
+}
+
+.aboutme-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.053);
+  /* 2. The key "frosted" effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border-radius: 15px;
+  margin: 0 2rem;
+  box-sizing: border-box;
+  perspective: 1200px;
+}
+
+.my-img-about {
+  width: 95%;
+  height: 95%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  transform: rotateY(0deg);
+  transition: all 0.3s ease;
+}
+
+.my-img-about:hover {
+  transform: rotateY(5deg);
 }
 
 .download-my-cv-btn {
@@ -185,7 +293,7 @@
 /* ///////////////////////////////// SERVICE SECTION //////////////////////////////////// */
 
 .services-section {
-  background: #f9f8f6;
+  background: linear-gradient(-115deg, #ffffff, #eeeeee, #f4f4f4);
 }
 
 .service-card img {
@@ -195,14 +303,70 @@
 .service-cards {
   gap: 20px;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .service-card {
   position: relative;
+  background-color: white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.123);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  cursor: default;
+  transition: all 0.3s ease;
+  z-index: 0;
+  isolation: isolate;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border-radius: 9px;
+  z-index: -2;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5, #3ad59f);
+  background-size: 200% 200%;
+}
+
+.service-card:hover::after {
+  animation: gradient-slide 3s linear infinite;
+}
+
+@keyframes gradient-slide {
+  0% {
+    background-position: 100% 100%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 /* ////////////////////////////////// PROJECTS SECTION ////////////////////////////// */
+
+.projects-section {
+  background: linear-gradient(115deg, #ffffff, #eeeeee, #f4f4f4);
+}
 
 .project-card {
   align-items: center;
@@ -212,19 +376,30 @@
   margin-bottom: 3.5rem;
 }
 
-.projects-card-img-side {
+.projects-images-container {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
-.projects-card-img-side img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  margin: 1vw;
+.projects-images-container:hover {
+  scale: 0.99;
+}
+
+.project-section-img {
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
 }
 
 .visit-site-btn {
@@ -271,13 +446,14 @@
 
 /* //////////////////////////////////// TESTAMINAL SECTION ///////////////////////////// */
 
-.client-testimonial {
+.testimonial-section {
+  background: linear-gradient(115deg, #ffffff, #eeeeee, #ffffff);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 7vw;
-  padding-right: 7vw;
+  padding-left: 12vw;
+  padding-right: 12vw;
   margin-top: 3rem;
 }
 
@@ -287,6 +463,13 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
+  background: rgba(0, 0, 0, 0.03);
+  /* 2. The key "frosted" effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border-radius: 30px;
+  padding: 2rem 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.347);
 }
 
 .teatimonial-brand {
