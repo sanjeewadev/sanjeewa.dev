@@ -12,15 +12,15 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  position: relative;
+  z-index: 0;
+}
+
 ::selection {
-  background-color: #111;
+  background-color: #e69ddc;
   color: white;
 }
-
-a::selection {
-  color: #ed1e79;
-}
-
 /* ///////////////////////////////////////////////////// */
 
 h1 {
@@ -78,10 +78,24 @@ span {
   font-weight: 600;
 }
 
+.btn-white {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.8vw 1.2vw;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  border-radius: 30px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+
 /* //////////////////////////////////////////////////////////////////// */
 
 .section {
   padding: 3rem 5rem;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 /* /////////////////////////////////////////////////////////////////// */

@@ -4,23 +4,26 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 
 import HomeHero from "../components/home/hero.astro";
+import HomeServiceTitle from "../components/home/title-servicesSection.astro";
 import HomeService from "../components/home/service.astro";
+import HomeAboutTitle from "../components/home/title-aboutSection.astro";
 import HomeAbout from "../components/home/about.astro";
+import HomeProjectTitle from "../components/home/title-projectSection.astro";
 import HomeProjects from "../components/home/projects.astro";
+import HomeContactTitle from "../components/home/title-contactSection.astro";
 import HomeContact from "../components/home/contact.astro";
 // import HomeMyClients from "../components/home/clients.astro";
-import HomeTestimonial from "../components/home/testimonial.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// import HomeTestimonial from "../components/home/testimonial.astro";
 ---
 
 <Layout>
   <HomeHero />
+  <HomeServiceTitle />
   <HomeService />
+  <HomeAboutTitle />
   <HomeAbout />
+  <HomeProjectTitle />
   <HomeProjects />
-  <!-- <HomeMyClients /> -->
+  <HomeContactTitle />
   <HomeContact />
-  <HomeTestimonial />
 </Layout>

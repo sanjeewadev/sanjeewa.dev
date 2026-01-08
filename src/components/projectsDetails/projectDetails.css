@@ -5,6 +5,11 @@
   padding: 2rem;
 }
 
+.dark-variant {
+  background-color: black;
+  color: white;
+}
+
 .all-projects-layout {
   display: flex;
   gap: 6rem;
