@@ -15,6 +15,8 @@ html {
 body {
   position: relative;
   z-index: 0;
+  background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 ::selection {
@@ -24,29 +26,38 @@ body {
 /* ///////////////////////////////////////////////////// */
 
 h1 {
-  font-size: clamp(2rem, 4.9vw, 3.4rem);
+  /* Was 3.4rem max -> Now 4.5rem */
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 800; /* Optional: Make sure H1 is bold */
 }
 
 h2 {
-  font-size: clamp(1.5rem, 3.8vw, 2.2rem);
-  margin-top: 0.45em;
-  margin-bottom: 0.45em;
+  /* Was 2.2rem max -> Now 3rem */
+  font-size: clamp(1.8rem, 4.2vw, 3rem);
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 h3 {
-  font-size: clamp(1.25rem, 2.8vw, 1.8rem);
+  /* Was 1.8rem max -> Now 2.2rem */
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
 }
 
 h4 {
-  font-size: clamp(1.1rem, 2.2vw, 1.2rem);
+  /* Was 1.2rem max -> Now 1.6rem */
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
 }
 
 h5 {
-  font-size: clamp(1rem, 1.8vw, 1.05rem);
+  /* Was 1.05rem max -> Now 1.4rem */
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
 }
 
 h6 {
-  font-size: clamp(0.9rem, 1.2vw, 0.8rem);
+  /* FIXED: Max size is now larger than min size */
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  text-transform: uppercase; /* Optional: H6 looks good uppercase */
+  letter-spacing: 0.05em;
 }
 
 p {
@@ -94,8 +105,9 @@ span {
 
 .section {
   padding: 3rem 5rem;
-  height: 100vh;
+  /* height: 100vh; */
   box-sizing: border-box;
+  background-color: #efeeea;
 }
 
 /* /////////////////////////////////////////////////////////////////// */

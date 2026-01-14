@@ -1,32 +1,13 @@
 ---
-import "./../../styles/home/home.css";
+import "./../../styles/titleSections/titleSections.css";
+import MouseWheel from "../mouse-wheel/mouse-wheel.astro";
 ---
 
-<style>
-  .title-section {
-    position: relative;
-    background-image: url("./../../assets/home/9.jpg");
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    color: white;
-    background-attachment: fixed;
-  }
-
-  .title-section-title {
-    position: absolute;
-    text-align: end;
-    bottom: 3rem;
-    right: 2.5rem;
-  }
-</style>
-<section class="section title-section">
-  <div class="title-section-title">
-    <h1>My Services</h1>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus,
-      sed?
-    </p>
+<section class="title-page">
+  <div class="title-page-inner">
+    <h1 class="title-page-title">MY SERVICES</h1>
+    <div class="title-animation-bar"></div>
+    <p class="title-page-sub">Designer • Developer • Problem Solver</p>
   </div>
+  <MouseWheel />
 </section>

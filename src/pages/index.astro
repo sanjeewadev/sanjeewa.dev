@@ -12,18 +12,26 @@ import HomeProjectTitle from "../components/home/title-projectSection.astro";
 import HomeProjects from "../components/home/projects.astro";
 import HomeContactTitle from "../components/home/title-contactSection.astro";
 import HomeContact from "../components/home/contact.astro";
+
+// import HomeServiceStatic from "./../components/home/servicesDetails/ServiceStatic.astro";
+// import HomeServiceCustomWP from "./../components/home/servicesDetails/ServiceCustomWP.astro";
+// import HomeServiceElementor from "./../components/home/servicesDetails/ServiceElementor.astro";
+// import HomeServiceSEO from "./../components/home/servicesDetails/ServiceSEO.astro";
+
 // import HomeMyClients from "../components/home/clients.astro";
 // import HomeTestimonial from "../components/home/testimonial.astro";
 ---
 
 <Layout>
-  <HomeHero />
-  <HomeServiceTitle />
-  <HomeService />
-  <HomeAboutTitle />
-  <HomeAbout />
-  <HomeProjectTitle />
-  <HomeProjects />
-  <HomeContactTitle />
-  <HomeContact />
+  <main class="snap-container">
+    <HomeHero />
+    <HomeServiceTitle />
+    <HomeService />
+    <HomeAboutTitle />
+    <HomeAbout />
+    <HomeProjectTitle />
+    <HomeProjects />
+    <HomeContactTitle />
+    <HomeContact />
+  </main>
 </Layout>
