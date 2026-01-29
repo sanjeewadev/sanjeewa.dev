@@ -19,11 +19,6 @@
   transition: all 0.3s ease-out; /* 3. Don't snap; fade out effectively */
 }
 
-/* This class will be added to the BODY tag, not the loading section */
-:global(body.no-scroll) {
-  overflow: hidden; /* This hides the scrollbar and stops scrolling */
-}
-
 .loading-section {
   position: relative;
   display: flex;

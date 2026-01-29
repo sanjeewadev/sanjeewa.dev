@@ -5,5 +5,5 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loader) {
       loader.classList.add("hidden");
     }
-  }, 5500);
+  }, 0); //5500
 });
