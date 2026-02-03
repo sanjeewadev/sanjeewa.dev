@@ -1,0 +1,131 @@
+.loading-page-section {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: black;
+  color: white;
+  z-index: 999;
+}
+
+.hidden {
+  opacity: 0; /* 1. Make it transparent (invisible) */
+  visibility: hidden; /* 2. Tell the browser to ignore it completely */
+  transition: all 0.3s ease-out; /* 3. Don't snap; fade out effectively */
+}
+
+.loading-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 20rem;
+  line-height: 2.9rem;
+}
+
+.loading-logo h1 {
+  font-size: clamp(2rem, 4.9vw, 3.4rem);
+}
+
+.loading-my-role h2 {
+  font-size: 1.1rem;
+  letter-spacing: 0.7rem;
+  /* Add this line below to fix the alignment */
+  margin-right: -0.7rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  padding: 0;
+}
+
+.loading-my-role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  animation: loading-my-role-animation 5s forwards ease-in-out;
+}
+
+@keyframes loading-my-role-animation {
+  0% {
+    top: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.loading-logo {
+  position: relative;
+  color: white;
+  z-index: 9991;
+}
+
+.loading-logo::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  box-shadow: 1px -3px 5px black;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9992;
+  animation: loading-logo-animation 4.5s forwards ease-in-out;
+}
+
+@keyframes loading-logo-animation {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.loading-bar {
+  position: relative;
+  z-index: 9992;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading-bar::after {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  left: -9.2rem;
+  width: 18.4rem;
+  height: 3px;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  animation: loading-bar-animation 4.5s forwards ease-out;
+}
+
+@keyframes loading-bar-animation {
+  0% {
+    width: 0rem;
+  }
+  /* 60% {
+    width: 10rem;
+  } */
+  100% {
+    width: 18.4rem;
+  }
+}

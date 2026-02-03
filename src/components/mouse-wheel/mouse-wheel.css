@@ -1,0 +1,39 @@
+.mouse_scroll {
+  position: absolute;
+  bottom: 6rem;
+  width: 24px;
+  height: 100px;
+}
+
+.mouse {
+  height: 42px;
+  width: 24px;
+  border-radius: 14px;
+  border: 2px solid black; /* CHANGED: White -> Black */
+}
+
+.wheel {
+  display: block;
+  margin: 5px auto;
+  background: black; /* CHANGED: White -> Black */
+  position: relative;
+  height: 4px;
+  width: 4px;
+  border-radius: 8px;
+
+  animation: mouse-wheel 2s ease-in-out infinite; /* Simplified animation syntax */
+}
+
+/* UNIFIED ANIMATION: Works on all browsers */
+@keyframes mouse-wheel {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(15px); /* Scroll down and fade out */
+  }
+}
+
+/* ////////////// */

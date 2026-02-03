@@ -1,0 +1,1015 @@
+/* //////////////////////// HOME GLOBAL ////////////////////// */
+
+.title-white {
+  color: white;
+}
+
+.title-right {
+  text-align: right;
+  padding: 2rem 1rem;
+}
+
+/* /////////////////////////////// HERO SECTION //////////////////////////// */
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 6rem 5rem 3rem;
+  overflow: hidden;
+  min-height: 100vh;
+  z-index: 99;
+  box-sizing: border-box;
+  background-color: #efeeea;
+}
+
+.hero-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  perspective: 1200px;
+  width: 100%;
+}
+
+.hero-heading-content {
+  line-height: 1.5;
+  width: 100%;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  animation: heroHeading-animation 1s ease forwards;
+}
+
+@keyframes heroHeading-animation {
+  0% {
+    transform: rotateY(5deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.hero-gallery-container {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 2rem);
+  padding: 2rem 1rem;
+}
+
+.hero-glass-box {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.053);
+  /* 2. The key "frosted" effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+}
+
+.hero-gallery-img {
+  position: absolute;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  perspective: 1200px;
+  z-index: 0;
+}
+.hero-gallery-img-1 {
+  position: absolute;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+  transform: rotateY(-7deg);
+  z-index: -1;
+}
+.hero-gallery-img-2 {
+  position: absolute;
+  right: -20px;
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+  scale: 0.98;
+}
+.hero-gallery-img-3 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-mini-heading {
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+/* Big highlight word */
+.hero-larg-text {
+  font-size: clamp(4.2rem, 14vw, 9.8rem);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.hero-contact {
+  position: relative;
+  width: max-content;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.hero-contact::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  border-radius: 30px;
+  transition: width 0.3s ease;
+}
+
+.hero-contact:hover {
+  letter-spacing: 0.5px;
+  transform: translateY(-2px);
+}
+
+.hero-contact:hover::after {
+  width: 0%;
+}
+
+/* ////////////////////////////////// GRID ////////////////////////////////// */
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-repeat-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* //////////////////////////////// ABOUT ME SECTION ////////////////////////////////////// */
+
+/* Section Layout */
+.about-section {
+  min-height: 100vh;
+  overflow: hidden; /* Prevents overflow if image animation goes wide */
+}
+
+/* --- Left Column: The Image Frame --- */
+.about-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+/* The Image Itself */
+.image-frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Soft, expensive looking shadow */
+  transition: transform 0.3s ease;
+}
+
+/* The "Offset" Border (The decoration behind the image) */
+.image-frame::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -20px; /* Shifts the border to the left */
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000; /* Black minimal border */
+  border-radius: 12px;
+  z-index: -1; /* Puts it behind the image */
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.about-image-wrapper:hover .image-frame img {
+  transform: translateY(-5px); /* Image floats up */
+}
+
+.about-image-wrapper:hover .image-frame::before {
+  top: 25px;
+  left: -25px; /* Border moves slightly */
+}
+
+/* --- Right Column: Text --- */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.section-subtitle {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #7873f5; /* Your accent color */
+}
+
+.about-content h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Skill Tags (Clean Pills) */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #f3f3f3;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Download Button */
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: transparent;
+  color: #000;
+  font-weight: 700;
+  border: 2px solid #000;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr; /* Stack vertically */
+    gap: 3rem;
+  }
+
+  .image-frame::before {
+    top: 15px;
+    left: 15px; /* Adjust border position for mobile */
+  }
+
+  .about-content {
+    align-items: flex-start; /* Keep text left-aligned */
+  }
+}
+
+/* //////////////////////////////// SERVICES SECTION ////////////////////////////////////// */
+
+/* Container Layout */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(450px, 1fr)
+  ); /* Responsive Grid */
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Minimalist Card Style */
+.service-card {
+  background-color: #ffffff;
+  /* Thin, subtle border instead of shadow */
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns text to the left */
+  gap: 1rem;
+
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon Styling */
+.service-card img {
+  width: 3.5rem; /* Slightly larger for better balance */
+  height: auto;
+  margin-bottom: 0.5rem;
+  opacity: 0.8; /* Slightly faded for a softer look */
+}
+
+/* Typography */
+.service-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.service-card-des {
+  font-size: 1rem;
+  color: #555; /* Dark gray is easier to read than black */
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Hover Effects (The "Magic") --- */
+
+/* 1. Lift the card slightly */
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: #000; /* Darkens border on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Very soft shadow */
+}
+
+/* 2. Make icon fully visible on hover */
+.service-card:hover img {
+  opacity: 1;
+}
+
+/* --- Shared Service Styles --- */
+
+/* The container for one row */
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 0;
+}
+
+/* The "Zig-Zag" Magic: Use this class to flip the side */
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Text Area */
+.service-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-tag {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: #7873f5; /* Your purple accent */
+}
+
+.service-text h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.service-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Image Area */
+.service-image {
+  flex: 1;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-image img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+/* "Best For" Box */
+.best-for-box {
+  margin-top: 1rem;
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #333;
+}
+
+.best-for-box strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.best-for-box ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.best-for-box li {
+  margin-bottom: 0.3rem;
+  color: #444;
+}
+
+/* ////////////////////////////////// PROJECTS SECTION ////////////////////////////// */
+
+/* Section Spacing */
+.projects-section {
+  min-height: 100vh;
+  padding: 4rem 3rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem; /* Space between projects */
+}
+
+/* --- The Project Card Layout --- */
+.project-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Image gets slightly more space */
+  gap: 4rem;
+  padding: 2.5rem;
+  border-radius: 30px;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* The Reverse Class (Swaps sides) */
+.project-card.reverse {
+  direction: rtl; /* Trick to flip the grid order */
+}
+
+.project-card.reverse > * {
+  direction: ltr; /* Reset text direction inside */
+}
+
+/* --- The Image Collage (Bento Grid) --- */
+.project-collage {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2 parts left, 1 part right */
+  grid-template-rows: 1fr 1fr; /* 2 equal rows */
+  gap: 1rem;
+  height: 400px; /* Fixed height for consistency */
+}
+
+/* 1. Main Image (Takes up the whole left side) */
+.img-main {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3; /* Spans both rows */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+}
+
+/* 2. Small Images (Right side) */
+.img-small {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease;
+}
+
+/* Hover Effect: The "Explosion" */
+.project-collage:hover .img-main {
+  transform: scale(1.02);
+}
+.project-collage:hover .img-small {
+  transform: scale(0.95); /* Shrinks slightly for contrast */
+}
+
+/* --- Text Content --- */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.project-tag {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: #7873f5; /* Your accent color */
+}
+
+.project-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.project-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tech Stack Pills */
+.project-tech-stack {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.project-tech-stack span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: #f0f0f0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  color: #333;
+}
+
+/* Visit Button */
+.btn-visit {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-visit:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
+
+.home-projects-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem 2rem;
+}
+
+.home-projects-btn-all-projects {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.home-projects-btn-all-projects:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+  .project-card,
+  .project-card.reverse {
+    grid-template-columns: 1fr; /* Stack vertically */
+    direction: ltr; /* Remove layout flip on mobile */
+    gap: 2rem;
+  }
+
+  .project-collage {
+    height: 300px; /* Smaller height on mobile */
+  }
+
+  .project-content h2 {
+    font-size: 2rem;
+  }
+}
+/* ////////////////////////////////// CLIENT SECTION ////////////////////////////// */
+
+.clients-section {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.clients-cards {
+  place-items: center;
+  background-color: #f9f8f6;
+  padding-top: 2.7vw;
+  padding-bottom: 2.7vw;
+}
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 13vw;
+  height: 13vw;
+}
+
+.client-card img {
+  width: 100%;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+  border-radius: 1px;
+}
+
+.client-card img:hover {
+  opacity: 1;
+}
+
+/* //////////////////////////////////// TESTAMINAL SECTION ///////////////////////////// */
+
+.testimonial-section {
+  background: linear-gradient(115deg, #ffffff, #eeeeee, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 12vw;
+  padding-right: 12vw;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.03);
+  /* 2. The key "frosted" effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border-radius: 30px;
+  padding: 2rem 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.347);
+}
+
+.teatimonial-brand {
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial-content {
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial-content p {
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.testimonial-client {
+  align-items: center;
+  text-align: center;
+  font-family: "Quicksand";
+}
+
+.teatimonial-brand img {
+  width: 60px;
+  border-radius: 30px;
+}
+
+.testimonial-client img {
+  width: 50px;
+  border-radius: 30px;
+}
+
+.testimoniol-strats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimoniol-strats img {
+  position: relative;
+  width: 100px;
+  height: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* //////////////////////////////////// CONTACT SECTION ///////////////////////////// */
+
+.contact-me-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contacts-section {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+/* Update this existing class */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start;
+   */
+  text-align: left;
+  /* margin-left: 1rem; */
+  padding: 0rem 5rem 0rem 3rem;
+  gap: 1.5rem; /* Changed from 5px to 1.5rem for better spacing */
+}
+
+/* Add these new rules for the text size */
+.contact-details h1 {
+  font-size: 4rem; /* Makes "Contact Me" big */
+  font-weight: 800; /* Makes it bold and strong */
+  margin: 0; /* Removes default browser margins */
+}
+
+.contact-details a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border: 2px transparent solid;
+}
+
+/* The Link Container */
+.contact-link {
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content; /* Only takes necessary width */
+}
+
+/* The "Pill" Design */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 50px; /* Fully rounded pill */
+  transition: all 0.3s ease;
+  background-color: white;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* The Label (WhatsApp/Email) */
+.contact-row strong {
+  background-color: #f0f0f0;
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* The Value (+94...) */
+.contact-row span {
+  font-size: 1.2rem;
+  color: #333;
+  padding-right: 1rem;
+  font-weight: 500;
+}
+
+/* Hover Effect: The Magic */
+.contact-link:hover .contact-row {
+  background-color: #fff;
+  border-color: #ddd;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transform: translateX(10px); /* Slides slightly to the right */
+}
+
+.contact-link:hover strong {
+  background-color: #000; /* Label turns black */
+  color: #fff; /* Text turns white */
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.333);
+  padding: 3rem 2rem;
+  gap: 1rem;
+  background-color: rgba(247, 247, 247, 0.327);
+  backdrop-filter: blur(10px);
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  border: 1px solid rgba(61, 61, 61, 0.555);
+  border-radius: 15px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form form input:hover,
+.contact-form form textarea:hover {
+  border-color: rgba(61, 61, 61, 0.755);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.079);
+  transition: all 0.3s ease;
+}
+
+.contact-form form input:focus,
+.contact-form form textarea:focus {
+  border-color: rgba(61, 61, 61, 0.755);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.079);
+}
+/* ///////////////////////////////////// Footer ////////////////////////////////////////// */
+.footer-section {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-submit-btn {
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  letter-spacing: 0.1rem;
+  padding: 0.75rem 1.5rem;
+  border-color: transparent;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.form-submit-btn:hover {
+  letter-spacing: normal;
+}
+
+/* Home Page Divider */
+.title-page {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  /* background-color: #f3f3f2; */
+}
+
+.title-page-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* overflow: hidden; */
+}
+
+.title-page-title {
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+  opacity: 1;
+  text-transform: uppercase;
+
+  animation: title-animation;
+  animation-timeline: view(50% auto);
+}
+
+.title-page-sub {
+  font-size: clamp(0.9rem, 1.5vw, 1.115rem);
+  opacity: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 1rem;
+
+  animation: sub-titile-animation;
+  animation-timeline: view(40% auto);
+}
+
+.title-animation-bar {
+  inset: 0;
+  width: 540px;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+  animation: animated-bar;
+  animation-timeline: view(20% auto);
+}
+
+/* Subtle, continuous motion */
+@keyframes title-animation {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    transform: scale(1);
+  }
+  from {
+    opacity: 0.6;
+    transform: translateY(100px);
+    transform: scale(0.6);
+  }
+}
+
+@keyframes sub-titile-animation {
+  to {
+    letter-spacing: 0.1em;
+    transform: scale(1);
+  }
+  from {
+    letter-spacing: 0.3em;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes animated-bar {
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  from {
+    opacity: 0.6;
+    transform: scaleX(0.5);
+  }
+}

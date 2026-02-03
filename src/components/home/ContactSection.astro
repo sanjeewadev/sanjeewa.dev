@@ -1,0 +1,50 @@
+---
+import "../../styles/home-page.css";
+---
+
+<section id="contactme" class="contact-me-section section">
+  <div class="contacts-section grid-2">
+    <div class="contact-details">
+      <h1>Contact Me</h1>
+
+      <a class="contact-link" href="https://wa.me/94776369256" target="_blank">
+        <div class="contact-row">
+          <strong>WhatsApp</strong>
+          <span>+94 77 636 9256</span>
+        </div>
+      </a>
+
+      <a class="contact-link" href="mailto:service.sanjeewa@gmail.com">
+        <div class="contact-row">
+          <strong>Email</strong>
+          <span>service.sanjeewa@gmail.com</span>
+        </div>
+      </a>
+
+      <a
+        class="contact-link"
+        href="https://instagram.com/sanjeewa_vi"
+        target="_blank"
+      >
+        <div class="contact-row">
+          <strong>Instagram</strong>
+          <span>@sanjeewa_vi</span>
+        </div>
+      </a>
+    </div>
+    <div class="contact-form">
+      <form action="" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="country" placeholder="Your Country" required />
+        <textarea
+          rows="7"
+          style="resize: none"
+          name="message"
+          placeholder="Share your thoughts, requirements, or questions"
+          required></textarea>
+        <button class="form-submit-btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
