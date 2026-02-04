@@ -1,51 +1,40 @@
 ---
 import "../../styles/home-page.css";
-
-const img1 = {
-  src: "https://picsum.photos/200/300?1",
-  alt: "Plastic Component 1",
-};
-const img2 = {
-  src: "https://picsum.photos/200/300?2",
-  alt: "Plastic Component 2",
-};
-const img3 = {
-  src: "https://picsum.photos/200/300?3",
-  alt: "Plastic Component 3",
-};
 ---
 
-<section id="hero" class="hero-section">
-  <div class="hero-contents">
-    <p class="hero-mini-heading">Web Developer, Sri Lanka</p>
-    <div class="hero-heading-content">
-      <h1>Clean, fast</h1>
-      <h1 class="hero-larg-text">websites</h1>
-      <h1>that bring you clients</h1>
-    </div>
-    <a class="hero-contact" href="#contactme">Contact me</a>
+<section class="hero-section">
+
+  <div class="slider-container hero-bg">
+    <img src="https://picsum.photos/300/200?random=1" alt="Slide 1" class="slide">
+    <img src="https://picsum.photos/300/200?random=2" alt="Slide 2" class="slide">
+    <img src="https://picsum.photos/300/200?random=3" alt="Slide 3" class="slide">
   </div>
-  <div class="hero-gallery-container">
-    <div class="hero-glass-box"></div>
-    <div class="hero-gallery-img">
-      <img
-        class="hero-gallery-img-1"
-        src={img1.src}
-        alt={img1.alt}
-        loading="lazy"
-      />
-      <img
-        class="hero-gallery-img-2"
-        src={img2.src}
-        alt={img2.alt}
-        loading="lazy"
-      />
-      <img
-        class="hero-gallery-img-3"
-        src={img3.src}
-        alt={img3.alt}
-        loading="lazy"
-      />
+  <div class="hero-content">
+    <h1>
+      I build fast websites for small businesses that need real inquiries -
+      not just a design
+    </h1>
+
+    <p class="hero-subtitle">
+      Clean, mobile-friendly WordPress and static websites delivered in
+      <strong>5-7 days</strong>.
+      Simple process. Direct communication. No bloated builders.
+    </p>
+
+    <div class="hero-actions">
+      <a
+        href="https://wa.me/94776369256"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-primary"
+      >
+        Message me on WhatsApp
+      </a>
+
+      <a href="#projects" class="btn btn-secondary">
+        View my work
+      </a>
     </div>
   </div>
 </section>
+
