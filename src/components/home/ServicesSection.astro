@@ -1,46 +1,54 @@
+---
+import "../../styles/home-page.css";
+
+// Ensure these image paths are correct based on your file structure
+import ServicesImage1 from "../../assets/Services/web-developer-services-functional-website-develope.avif";
+import ServicesImage2 from "../../assets/Services/web-developer-services-seo-and-speed.avif";
+---
+
 <section id="services" class="services section">
-  <div class="services-content">
-    <h1 class="h1-margin-bottom">Services I offer</h1>
+  <div class="services-content container">
+    <h1 class="h1-margin-bottom">Services I Offer</h1>
+    
     <p class="services-intro">
-      I focus on building websites that are fast, clear, and easy to maintain -
-      so your business can grow without technical headaches.
+      I help businesses get clear, fast, and easy-to-use websites that bring real 
+      customer inquiries — without unnecessary complexity or monthly fees.
     </p>
+
     <div class="service-grid">
+      
       <div class="service-card">
-        <h3>Fast Business Websites</h3>
+        <p class="service-number" style="margin-bottom: 1rem; flex-grow: 0;">01</p>
+        <img 
+          class="services-images" 
+          src={ServicesImage1.src} 
+          alt="Functional business website development in Sri Lanka" 
+          loading="lazy"
+        />
+        <h3>Functional Business Websites</h3>
         <p>
-          Clean, high-performance websites built for small businesses that need
-          a professional online presence and real customer inquiries.
+          User-friendly websites designed to clearly explain your service, 
+          build trust, and convert visitors into inquiries.
         </p>
-        <span class="service-best">Best for: Local businesses, service providers</span>
+        <span class="service-best">Best for: Small businesses, freelancers, service providers</span>
       </div>
 
       <div class="service-card">
-        <h3>Custom WordPress Websites</h3>
+        <p class="service-number" style="margin-bottom: 1rem; flex-grow: 0;">02</p>
+        <img 
+          class="services-images" 
+          src={ServicesImage2.src} 
+          alt="SEO and website speed optimization services"
+          loading="lazy" 
+        />
+        <h3>SEO & Website Optimization</h3>
         <p>
-          Fully custom WordPress sites that are easy to manage, mobile-friendly,
-          and built without unnecessary plugins or bloat.
+          Speed, structure, and on-page SEO improvements to help your website 
+          perform better on Google and load instantly for users.
         </p>
-        <span class="service-best">Best for: Growing businesses</span>
+        <span class="service-best">Best for: Existing or underperforming websites</span>
       </div>
 
-      <div class="service-card">
-        <h3>Quick Launch WordPress Sites</h3>
-        <p>
-          Affordable WordPress websites using Elementor for faster turnaround
-          when you need to go online quickly.
-        </p>
-        <span class="service-best">Best for: Startups, simple websites</span>
-      </div>
-
-      <div class="service-card">
-        <h3>SEO & Speed Optimization</h3>
-        <p>
-          Improve your existing website’s loading speed, structure, and basic SEO
-          so it performs better on Google and for users.
-        </p>
-        <span class="service-best">Best for: Slow or outdated websites</span>
-      </div>
     </div>
   </div>
 </section>

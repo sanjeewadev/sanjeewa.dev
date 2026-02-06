@@ -1,10 +1,24 @@
 ---
 import Nav from "../components/nav/NavBar.astro";
 import Footer from "../components/footer/Footer.astro";
-import Loading from "../components/loading/Loading.astro";
+// import Loading from "../components/loading/Loading.astro"; // Keep commented if not used yet
 
 // global styles
 import "../global/style.global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = "Sanjeewa | Web Developer & WordPress Expert",
+  description = "I build fast, mobile-friendly websites for small businesses in Sri Lanka. Specializing in WordPress and high-performance static sites. Get a free consultation.",
+  image = "/assets/me/Sanjeewa-web-developer-wordpres-&-static.avif", // Ensure this path matches your actual image
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -12,12 +26,30 @@ import "../global/style.global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="Web Developer Sri Lanka, WordPress Developer, Static Site Generator, Astro Developer, Freelance Web Designer, Colombo, Ratnapura" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>
-    <Loading />
     <Nav />
     <slot />
     <Footer />

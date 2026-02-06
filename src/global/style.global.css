@@ -2,10 +2,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap");
 
+:root {
+  /* Text Colors */
+  --text-intro: #555555; /* The soft grey for intros */
+  --text-body: #272727; /* The main text color */
+  --text-bold: #1f1f1f; /* Darker color for bold/important text */
+
+  /* Component Colors */
+  --card-bg: white;
+  --card-border: #c6c6c6;
+  --card-border-hover: #bababa;
+
+  /* Pill / Badge Colors */
+  --pill-bg: #f4f4f4; /* The background for "Best for" */
+
+  /* Dark Theme Colors (For About Section) */
+  --bg-dark: #020617; /* Very dark navy background */
+  --text-light: #e5e7eb; /* Light grey text for headings */
+  --text-muted-blue: #cbd5f5; /* Blue-ish grey for paragraphs */
+  --border-dark: #1e293b; /* Dark blue border for images */
+
+  /* Glassmorphism Colors */
+  --glass-bg: rgba(255, 255, 255, 0.03); /* Very faint white */
+  --glass-border: rgba(255, 255, 255, 0.1); /* Subtle white border */
+
+  --text-muted: #94a3b8; /* Slate grey for roles/links */
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  /* outline: 1px solid red !important; */
 }
 
 html {
@@ -15,15 +43,22 @@ html {
 body {
   position: relative;
   z-index: 0;
-  background-color: #f6f6f6;
+  background-color: white;
   margin: 0;
   width: 100%;
   height: 100%;
 }
 
 ::selection {
-  background-color: #e69ddc;
+  background-color: #0f172a;
   color: white;
+}
+
+/* 1. FORCE GLOBAL BOX-SIZING (Put this at the top of home-page.css) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
 }
 
 /* ///////////////////////////////////////////////////// */
@@ -34,7 +69,7 @@ h1 {
 }
 
 .h1-margin-bottom {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.1em;
 }
 
 h2 {
@@ -82,7 +117,7 @@ span {
   font-weight: bold;
 }
 
-/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////// btn //////////////////////////////////// */
 
 .btn {
   display: inline-block;
@@ -95,12 +130,12 @@ span {
     box-shadow 0.15s ease;
 }
 
-.btn-primary {
+.btn-green {
   background: #22c55e; /* WhatsApp green */
   color: #052e16;
 }
 
-.btn-primary:hover {
+.btn-green:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 20px rgba(34, 197, 94, 0.25);
 }
@@ -109,9 +144,33 @@ span {
   background: transparent;
   color: #e2e8f0;
   border: 1px solid #334155;
+  transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
+  background: #020617;
+}
+
+.btn-nav {
+  background: transparent;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+  background: black;
+  color: white;
+}
+
+.btn-email {
+  background: transparent;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  transition: all 0.3s ease;
+}
+
+.btn-email:hover {
   background: #020617;
 }
 
@@ -140,9 +199,26 @@ span {
 
 /* //////////////////////////////////////////////////////////////////// */
 
+/* 2. FIX THE CONTAINER */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  overflow: hidden; /* Stops children from leaking out */
+}
+
 .section {
-  padding: 4.5rem 5rem;
-  box-sizing: border-box;
+  padding: 5rem 0; /* Only use padding for Top and Bottom spacing */
+}
+
+/* Lower padding for Mobile View */
+@media (max-width: 768px) {
+  .section {
+    padding: 2.5rem 0; /* Reduced from 5rem to 2.5rem */
+  }
 }
 
 /* /////////////////////////////////////////////////////////////////// */

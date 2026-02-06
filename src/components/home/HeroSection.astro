@@ -1,40 +1,52 @@
 ---
 import "../../styles/home-page.css";
+
+// Placeholder images for the slider
+import Slide1 from "../../assets/me/Sanjeewa-web-developer-wordpress-&-static.avif"; 
+import Slide2 from "../../assets/me/Sanjeewa-web-developer-wordpress-&-static.avif"; 
+import Slide3 from "../../assets/me/Sanjeewa-web-developer-wordpress-&-static.avif"; 
 ---
 
 <section class="hero-section">
-
-  <div class="slider-container hero-bg">
-    <img src="https://picsum.photos/300/200?random=1" alt="Slide 1" class="slide">
-    <img src="https://picsum.photos/300/200?random=2" alt="Slide 2" class="slide">
-    <img src="https://picsum.photos/300/200?random=3" alt="Slide 3" class="slide">
+  <div class="hero-bg">
+    <img src={Slide1.src} class="slide" alt="Web Development Project 1" />
+    <img src={Slide2.src} class="slide" alt="Web Development Project 2" />
+    <img src={Slide3.src} class="slide" alt="Web Development Project 3" />
   </div>
+
+  <div class="hero-overly"></div>
+  
   <div class="hero-content">
     <h1>
-      I build fast websites for small businesses that need real inquiries -
-      not just a design
+      I build <span class="title-white">Functional Business Websites</span> in Sri Lanka that 
+      bring real clients.
     </h1>
 
     <p class="hero-subtitle">
-      Clean, mobile-friendly WordPress and static websites delivered in
-      <strong>5-7 days</strong>.
-      Simple process. Direct communication. No bloated builders.
+      User-friendly, fast websites designed to clearly explain your services and generate real inquiries.
+      No hype. No unnecessary complexity. Ready in <strong>5-7 days</strong>.
     </p>
 
     <div class="hero-actions">
       <a
         href="https://wa.me/94776369256"
         target="_blank"
-        rel="noopener"
-        class="btn btn-primary"
+        rel="noopener noreferrer"
+        class="btn btn-green"
+        aria-label="Chat with Sanjeewa on WhatsApp"
       >
         Message me on WhatsApp
       </a>
-
+      <a
+        href="mailto:hellow.sanjeewa@outlook.com"
+        class="btn btn-email"
+        aria-label="Send an email to Sanjeewa"
+      >
+        Send me an email
+      </a>
       <a href="#projects" class="btn btn-secondary">
         View my work
       </a>
     </div>
   </div>
 </section>
-

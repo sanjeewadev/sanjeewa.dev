@@ -1,138 +1,110 @@
 ---
 import "../../styles/home-page.css";
+
+// Import your project images
+import ProjectImageElinapix from "../../assets/Project/sanjeewa-web-developer-projects-portfolio-elinapix.com-photographer-portfolio.avif";
+import ProjectImageMototgear from "../../assets/Project/sanjeewa-web-developer-projects-portfolio-motogearlk-wordpress-website.avif";
+import ProjectImageSankalpayoga from "../../assets/Project/sanjeewa-web-developer-projects-portfolio-sankalpayoga-yoga-institute-static-website.avif";
 ---
 
 <section id="projects" class="section projects-section">
-  <div class="projects-container">
-    <div class="project-card">
-      <div class="project-collage">
-        <img
-          class="img-main"
-          src="/assets/Project/elina-website.png"
-          alt="ElinaPix Desktop View"
-          loading="lazy"
-        />
-        <img
-          class="img-small"
-          src="/assets/Project/elina-website.png"
-          alt="Gallery View"
-          loading="lazy"
-        />
-        <img
-          class="img-small"
-          src="/assets/Project/elina-website.png"
-          alt="Mobile View"
-          loading="lazy"
-        />
-      </div>
-
-      <div class="project-content">
-        <span class="project-tag">Photography Portfolio</span>
-        <h2>ElinaPix Portfolio</h2>
-        <p>
-          A clean, high-performance portfolio for a professional photographer.
-          Features include a masonry gallery layout, automated inquiry forms,
-          and image optimization for fast loading on mobile devices.
-        </p>
-
-        <div class="project-tech-stack">
-          <span>WordPress</span>
-          <span>Elementor</span>
-          <span>Yoast SEO</span>
+  <div class="container">
+    <h1 class="h1-margin-bottom">Recent Projects</h1>
+    <p class="services-intro">
+      Here are a few real-world examples of how I help businesses improve their online presence.
+    </p>
+    
+    <div class="projects-container">
+      
+      <div class="project-card">
+        <div class="project-image-wrapper"> 
+          <img
+            class="projects-images"
+            src={ProjectImageElinapix.src}
+            alt="ElinaPix Photography Portfolio Website"
+            loading="lazy"
+          />
+          <a class="btn-visit" href="https://elinapix.com/" target="_blank">
+            Visit Site
+          </a>
         </div>
 
-        <a class="btn-visit" href="/projects/elinapix" target="_blank">
-          Visit Site &rarr;
-        </a>
-      </div>
-    </div>
+        <div class="project-content">
+          <span class="project-tag">Photography Portfolio</span>
+          <h2>ElinaPix</h2>
+          <p>
+            A high-performance portfolio for a French Riviera event photographer. 
+            The challenge was to display high-resolution images without slowing down the site. 
+            I built a custom masonry layout that loads instantly on mobile, helping her convert Instagram followers into website inquiries.
+          </p>
 
-    <div class="project-card reverse">
-      <div class="project-collage">
-        <img
-          class="img-main"
-          src="/assets/Project/elina-website.png"
-          alt="Axivelt Desktop"
-          loading="lazy"
-        />
-        <img
-          class="img-small"
-          src="/assets/Project/elina-website.png"
-          alt="Services Page"
-          loading="lazy"
-        />
-        <img
-          class="img-small"
-          src="/assets/Project/elina-website.png"
-          alt="Mobile Menu"
-          loading="lazy"
-        />
+          <div class="project-tech-stack">
+            <span>WordPress</span>
+            <span>Elementor Pro</span>
+            <span>Speed Optimization</span>
+          </div>
+        </div>
       </div>
 
-      <div class="project-content">
-        <span class="project-tag">Corporate Website</span>
-        <h2>Axivelt Solutions</h2>
-        <p>
-          A multi-page brand website built with semantic HTML and custom CSS. It
-          features a clean service breakdown, a blog for content marketing, and
-          a lightweight structure that scores 100/100 on Google PageSpeed.
-        </p>
-
-        <div class="project-tech-stack">
-          <span>HTML5/CSS3</span>
-          <span>JavaScript</span>
-          <span>Netlify</span>
+      <div class="project-card reverse"> <div class="project-image-wrapper"> 
+          <img
+            class="projects-images"
+            src={ProjectImageMototgear.src}
+            alt="MotoGear Sri Lanka E-commerce Website"
+            loading="lazy"
+          />
+          <a class="btn-visit" href="https://motogear.lk/" target="_blank">
+            Visit Site
+          </a>
         </div>
 
-        <a class="btn-visit" href="#" target="_blank"> Visit Site &rarr; </a>
-      </div>
-    </div>
+        <div class="project-content">
+          <span class="project-tag">E-Commerce Store</span>
+          <h2>MotoGear.lk</h2>
+          <p>
+            An online store for one of Sri Lanka's leading motorcycle accessory shops. 
+            They needed a way to manage thousands of products easily. 
+            I built a robust WooCommerce system that handles inventory, shipping classes, and secure payments, resulting in a streamlined sales process.
+          </p>
 
-    <div class="project-card">
-      <div class="project-collage">
-        <img
-          class="img-main"
-          src="/assets/Project/elina-website.png"
-          alt="Shop Page"
-          loading="lazy"
-        />
-        <img
-          class="img-small"
-          src="/assets/Project/elina-website.png"
-          alt="Checkout"
-          loading="lazy"
-        />
-        <img
-          class="img-small"
-          src="/assets/Project/elina-website.png"
-          alt="Product Detail"
-          loading="lazy"
-        />
+          <div class="project-tech-stack">
+            <span>WooCommerce</span>
+            <span>Payment Gateways</span>
+            <span>Custom CSS</span>
+          </div>
+        </div>
       </div>
 
-      <div class="project-content">
-        <span class="project-tag">E-Commerce Demo</span>
-        <h2>Island Tea Co.</h2>
-        <p>
-          A fully functional WooCommerce store. I set up variable products
-          (different sizes/flavors), shipping zones, and a custom checkout
-          experience. This project demonstrates my ability to handle complex
-          data and payments.
-        </p>
-
-        <div class="project-tech-stack">
-          <span>WooCommerce</span>
-          <span>Payment Gateways</span>
-          <span>Analytics</span>
+      <div class="project-card">
+        <div class="project-image-wrapper"> 
+          <img
+            class="projects-images"
+            src={ProjectImageSankalpayoga.src}
+            alt="Sankalpa Yoga Studio Static Website"
+            loading="lazy"
+          />
+          <a class="btn-visit" href="https://sankalpa-yoga.pages.dev/" target="_blank">
+            Visit Site
+          </a>
         </div>
 
-        <a class="btn-visit" href="#" target="_blank"> Visit Site &rarr; </a>
+        <div class="project-content">
+          <span class="project-tag">Static Business Website</span>
+          <h2>Sankalpa Yoga</h2>
+          <p>
+            A lightning-fast static website designed for a yoga institute. 
+            Unlike heavy WordPress sites, this runs on pure HTML/CSS structure (Static). 
+            It loads in under 1 second, ensuring students can quickly check class schedules and location details without waiting.
+          </p>
+
+          <div class="project-tech-stack">
+            <span>Static Site</span>
+            <span>Cloudflare Pages</span>
+            <span>SEO Optimized</span>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
-  <!-- <div class="home-projects-btn-container">
-    <a class="home-projects-btn-all-projects" href="#" target="_blank">
-      All Projects &rarr;
-    </a>
-  </div> -->
 </section>
