@@ -5,7 +5,7 @@ import "../../styles/home-page.css";
 <section id="contactme" class="contact-me-section section">
   <div class="contacts-section grid-2 container">
     <div class="contact-details">
-      <h3>Let's work together</h3>
+      <h1>Let's work together</h1>
 
       <a class="contact-link" href="https://wa.me/94776369256" target="_blank">
         <div class="contact-row">
@@ -32,18 +32,29 @@ import "../../styles/home-page.css";
         </div>
       </a>
     </div>
+
     <div class="contact-form">
-      <form action="" method="POST">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        
         <h3 style="text-align: start;">Send a message</h3>
+
+        <input type="hidden" name="access_key" value="e86a016a-5bc4-4c27-9f8e-89b00560b268">
+
+        <input type="hidden" name="redirect" value="https://sanjeewa.dev/#contactme">
+        
+        <input type="hidden" name="subject" value="New Inquiry from Sanjeewa.dev">
+
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="text" name="country" placeholder="Your Country" required />
+        
         <textarea
           rows="7"
           style="resize: none"
           name="message"
           placeholder="Tell me about your project (e.g. I need a business website...)"
           required></textarea>
+        
         <button class="form-submit-btn" type="submit">Get Free Quote</button>
       </form>
     </div>
