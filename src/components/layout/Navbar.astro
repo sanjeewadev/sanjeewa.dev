@@ -1,0 +1,147 @@
+---
+---
+<header class="header">
+  <div class="container header__container">
+    <a href="/" class="logo">SANJEEWA<span>.</span>DEV</a>
+    
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="#services" class="nav__link">Expertise</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#projects" class="nav__link">Work</a></li>
+      </ul>
+      <a href="#contact" class="btn-nav">Start Project</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle (Hidden on Desktop) -->
+    <button class="mobile-toggle" aria-label="Toggle Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+</header>
+
+<script type="text/javascript">
+  // Simple Native JS for Mobile Menu
+  const toggle = document.querySelector('.mobile-toggle');
+  const nav = document.querySelector('.nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    toggle.classList.toggle('active');
+  });
+</script>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+  }
+
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .nav__list {
+    display: flex;
+    list-style: none;
+    gap: var(--space-md);
+  }
+
+  .nav__link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+  }
+
+  .nav__link:hover {
+    color: var(--accent-color);
+  }
+
+  .btn-nav {
+    background: var(--text-primary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+  }
+
+  .btn-nav:hover {
+    background: var(--accent-color);
+  }
+
+  /* Mobile Toggle */
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 25px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: 0.3s;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .mobile-toggle {
+      display: flex;
+    }
+
+    .nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: white;
+      flex-direction: column;
+      padding: var(--space-md);
+      border-bottom: 1px solid var(--border-color);
+      transform: translateY(-150%); /* Hidden */
+      transition: transform 0.3s ease;
+      z-index: -1;
+    }
+
+    .nav.active {
+      transform: translateY(0);
+    }
+
+    .nav__list {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

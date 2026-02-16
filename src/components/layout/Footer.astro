@@ -1,0 +1,157 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    
+    <div class="footer__top">
+      <!-- Brand Column -->
+      <div class="footer__brand">
+        <span class="footer__logo">SANJEEWA.DEV</span>
+        <p class="footer__mission">
+          Engineering high-performance digital infrastructure for businesses 
+          that demand speed, security, and global visibility.
+        </p>
+      </div>
+
+      <!-- Navigation Column -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Sitemap</h4>
+        <ul class="footer__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="#services">Expertise</a></li>
+          <li><a href="#projects">Case Studies</a></li>
+          <li><a href="#about">Philosophy</a></li>
+        </ul>
+      </div>
+
+      <!-- Socials Column (Text Links > Icons) -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Connect</h4>
+        <ul class="footer__links">
+          <li><a href="https://linkedin.com/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+          <li><a href="https://wa.me/94776369256" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:service.sanjeewa@gmail.com">Email</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal/Status Column -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Status</h4>
+        <ul class="footer__links status-list">
+          <li class="status-item"><span class="dot online"></span> Systems Operational</li>
+          <li class="status-item"><span class="dot busy"></span> Accepting 2 Clients</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer__bottom">
+      <p>&copy; {year} Sanjeewa.dev. All Rights Reserved.</p>
+      <p class="location">Designed by Sanjeewa.</p>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #000;
+    color: white;
+    padding: var(--space-xl) 0 var(--space-md) 0;
+    border-top: 1px solid #222;
+  }
+
+  .footer__top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid #222;
+  }
+
+  .footer__logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0px;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .footer__mission {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.6;
+    max-width: 300px;
+  }
+
+  .footer__heading {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer__links {
+    list-style: none;
+  }
+
+  .footer__links li {
+    margin-bottom: 0.8rem;
+  }
+
+  .footer__links a {
+    color: #ccc;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    text-decoration: none;
+  }
+
+  .footer__links a:hover {
+    color: white;
+  }
+
+  /* Status Indicators */
+  .status-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .dot.online { background-color: #22c55e; box-shadow: 0 0 10px #22c55e; }
+  .dot.busy { background-color: #eab308; }
+
+  /* Bottom Bar */
+  .footer__bottom {
+    padding-top: var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #444;
+  }
+
+  @media (max-width: 900px) {
+    .footer__top {
+      grid-template-columns: 1fr; /* Stack everything on mobile */
+      gap: var(--space-md);
+    }
+    
+    .footer__bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,89 @@
+---
+---
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="section-title">Technical Infrastructure</h2>
+    
+    <div class="services__grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <span class="service-card__num">01</span>
+        <h3 class="service-card__title">Bespoke WordPress</h3>
+        <p class="service-card__desc">
+          Custom-engineered CMS solutions. No page builders. 
+          Scalable architecture for marketing teams who need total control.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <span class="service-card__num">02</span>
+        <h3 class="service-card__title">Headless & Jamstack</h3>
+        <p class="service-card__desc">
+          Astro & Next.js static applications. Sub-second load times. 
+          Unhackable security. The choice for high-traffic global brands.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <span class="service-card__num">03</span>
+        <h3 class="service-card__title">Technical AEO/SEO</h3>
+        <p class="service-card__desc">
+          Schema markup, Core Web Vitals optimization, and 
+          structure designed for AI Search Engines.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: var(--space-xl) 0;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--space-sm);
+  }
+
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .service-card {
+    padding: var(--space-md);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    border-color: var(--text-primary);
+    transform: translateY(-5px);
+  }
+
+  .service-card__num {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--border-color);
+    display: block;
+    margin-bottom: var(--space-sm);
+  }
+
+  .service-card__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+  }
+
+  .service-card__desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+</style>

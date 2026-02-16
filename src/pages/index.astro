@@ -1,23 +1,28 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Navbar from "../components/layout/Navbar.astro";
+import Hero from "../components/sections/Hero.astro";
+import Services from "../components/sections/Services.astro";
+import About from "../components/sections/About.astro";
+import Projects from "../components/sections/Projects.astro";
+import Contact from "../components/sections/Contact.astro";
+import Footer from "../components/layout/Footer.astro";
 
-import HeroSection from "../components/home/HeroSection.astro";
-import ServicesSection from "../components/home/ServicesSection.astro";
-import AboutSection from "../components/home/AboutSection.astro";
-import ProjectsSection from "../components/home/ProjectsSection.astro";
-import ContactSection from "../components/home/ContactSection.astro";
-import TestimonialSection from "../components/home/TestimonialSection.astro";
-
-
+// SEO Metadata
+const title = "Sanjeewa | High-Performance Web Systems Architect";
+const description = "I engineer revenue-generating digital infrastructure for global brands. Specialized in Astro, WordPress, and Technical SEO.";
 ---
 
-<Layout>
-  <main class="snap-container">
-    <HeroSection />
-    <ServicesSection />
-    <AboutSection />
-    <ProjectsSection />
-    <TestimonialSection/>
-    <ContactSection />
+<MainLayout title={title} description={description}>
+  <Navbar />
+  
+  <main>
+    <Hero />
+    <Services />
+    <About />
+    <Projects />
+    <Contact />
   </main>
-</Layout>
+
+  <Footer />
+</MainLayout>

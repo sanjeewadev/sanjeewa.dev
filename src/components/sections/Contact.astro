@@ -1,0 +1,162 @@
+---
+---
+<section id="contact" class="contact">
+  <div class="container contact__grid">
+    
+    <div class="contact__info">
+      <h2 class="contact__title">Initialize<br>Collaboration</h2>
+      <p class="contact__desc">
+        I only take on 2 new projects per month to ensure quality. 
+        Secure your slot for the upcoming quarter.
+      </p>
+      
+      <div class="contact__methods">
+        <a href="mailto:hello.sanjeewa@outlook.com" target="_blank" class="method">
+          <span class="label">Email</span>
+          <span class="value">hello.sanjeewa@outlook.com</span>
+        </a>
+        <a href="https://wa.me/94776369256" target="_blank" class="method">
+          <span class="label">WhatsApp</span>
+          <span class="value">+94 77 636 9256</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact__form-wrapper">
+      <form action="https://api.web3forms.com/submit" method="POST" class="form">
+        <input type="hidden" name="access_key" value="e86a016a-5bc4-4c27-9f8e-89b00560b268">
+        <input type="hidden" name="redirect" value="https://sanjeewa.dev/success">
+
+        <div class="form__group">
+          <label for="name">Name / Company</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name">
+        </div>
+
+        <div class="form__group">
+          <label for="email">Work Email</label>
+          <input type="email" id="email" name="email" required placeholder="name@company.com">
+        </div>
+
+        <div class="form__group">
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Describe your technical requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Request Consultation</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .contact {
+    background-color: #050505; /* Deep Black */
+    color: white;
+    padding: var(--space-xl) 0;
+  }
+
+  .contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .contact__title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: var(--space-md);
+  }
+
+  .contact__desc {
+    color: #a3a3a3;
+    max-width: 400px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .method {
+    display: block;
+    margin-bottom: var(--space-md);
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+    transition: padding 0.3s;
+  }
+
+  .method:hover {
+    padding-left: 1rem;
+    border-color: var(--accent-color);
+  }
+
+  .label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  .value {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  /* Form Styling */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+  }
+
+  input, textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    color: white;
+    font-size: 1.1rem;
+    padding: 1rem 0;
+    font-family: var(--font-body);
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+
+  .btn-submit {
+    background: white;
+    color: black;
+    border: none;
+    padding: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .btn-submit:hover {
+    background: var(--accent-color);
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .contact__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

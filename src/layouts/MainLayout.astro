@@ -1,0 +1,53 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+// SCHEMA.ORG JSON-LD (The Secret Weapon for SEO)
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Sanjeewa.dev",
+  "image": "https://sanjeewa.dev/assets/me/Sanjeewa-web-developer.avif",
+  "url": "https://sanjeewa.dev",
+  "telephone": "+94776369256",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "LK"
+  },
+  "priceRange": "$$$",
+  "description": "High-performance web architecture for global brands.",
+  "sameAs": [
+    "https://github.com/yourhandle",
+    "https://linkedin.com/in/yourhandle"
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO METADATA -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- SCHEMA INJECTION -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+    
+    <!-- GOOGLE ANALYTICS (Keep your existing code here) -->
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

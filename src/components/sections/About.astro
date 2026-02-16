@@ -1,0 +1,157 @@
+---
+import MyImage from "../../assets/me/Sanjeewa-web-developer-wordpress-&-static.avif"; 
+---
+
+<section id="about" class="about">
+  <div class="container about__grid">
+    
+    <!-- Image Column -->
+    <div class="about__image-wrapper">
+      <img src={MyImage.src} alt="Sanjeewa - Web Architect" class="about__image" loading="lazy" />
+      <div class="image-overlay"></div>
+    </div>
+
+    <!-- Content Column -->
+    <div class="about__content">
+      <span class="label">The Operator</span>
+      <h2 class="headline">Code is a commodity.<br>Performance is an asset.</h2>
+      
+      <div class="text-block">
+        <p>
+          Most developers are satisfied if the code compiles. I am only satisfied if the business grows. 
+          I operate at the intersection of <strong>Software Engineering</strong> and <strong>Revenue Strategy</strong>.
+        </p>
+        <p>
+          I do not build "brochure websites" that sit idle. I architect digital ecosystems designed to 
+          capture foreign markets (US/EU/UK). My systems are built on three non-negotiable pillars: 
+          <strong>Speed, Security, and Scalability</strong>.
+        </p>
+      </div>
+
+      <!-- The Tech Arsenal -->
+      <div class="arsenal">
+        <h3 class="arsenal__title">Technical Arsenal</h3>
+        <ul class="arsenal__list">
+          <li class="tech-item">WordPress Development</li>
+          <li class="tech-item">High-Speed Static Sites</li>
+          <li class="tech-item">Advanced SEO (JSON-LD)</li>
+          <li class="tech-item">Astro & Next.js</li>
+          <li class="tech-item">Headless CMS</li>
+          <li class="tech-item">Core Web Vitals</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: var(--space-xl) 0;
+    background-color: var(--bg-color);
+  }
+
+  .about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  /* Image Styling - The "Editorial" Look */
+  .about__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    /* This makes your hoodie photo look artistic/serious */
+    filter: grayscale(100%) contrast(1.1); 
+    transition: filter 0.5s ease;
+  }
+
+  .about__image-wrapper:hover {
+    filter: grayscale(0%) contrast(1); /* Color returns on hover */
+  }
+
+  .about__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Content Styling */
+  .label {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+    font-weight: 600;
+  }
+
+  .headline {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    color: var(--text-primary);
+  }
+
+  .text-block p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+  }
+
+  strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  /* Tech List Styling */
+  .arsenal {
+    margin-top: var(--space-md);
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--space-md);
+  }
+
+  .arsenal__title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .arsenal__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    list-style: none;
+  }
+
+  .arsenal__list li {
+    font-family: var(--font-heading); /* Monospace or Heading font looks techy */
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  .arsenal__list li::before {
+    content: "■ ";
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 900px) {
+    .about__grid {
+      grid-template-columns: 1fr; /* Stack on mobile */
+      gap: var(--space-md);
+    }
+    
+    .about__image-wrapper {
+      order: -1; /* Image on top */
+      max-height: 400px;
+    }
+  }
+</style>
