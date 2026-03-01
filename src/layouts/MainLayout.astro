@@ -8,7 +8,7 @@ interface Props {
 
 const { title, description } = Astro.props;
 
-// SCHEMA.ORG JSON-LD (The Secret Weapon for SEO)
+// SCHEMA.ORG JSON-LD - for SEO
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -37,7 +37,7 @@ const schemaData = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- SEO METADATA -->
+    <!-- SEO METADATA AS Props (We Can import inside page file) -->
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
@@ -45,7 +45,7 @@ const schemaData = {
     <!-- SCHEMA INJECTION -->
     <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
     
-    <!-- GOOGLE ANALYTICS (Keep your existing code here) -->
+    <!-- G - ANALYTICS HERE -->
   </head>
   <body>
     <slot />
