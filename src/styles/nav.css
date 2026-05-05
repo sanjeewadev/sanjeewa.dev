@@ -1,0 +1,171 @@
+/* =========================================
+   THE DYNAMIC GLASS NAVIGATION
+   ========================================= */
+
+/* --- 1. DEFAULT STATE (Transparent at the Top) --- */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  padding: 24px 0;
+  transition: all var(--transition-smooth);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark-main);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  transition: color var(--transition-fast);
+  position: relative;
+  z-index: 1001; /* Keeps logo above mobile menu */
+}
+
+/* Desktop Links */
+.desktop-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.desktop-links a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark-muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color var(--transition-fast);
+}
+
+.desktop-links a:hover {
+  color: var(--accent-brand);
+}
+
+.btn-brand-small {
+  background-color: var(--accent-brand);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-brand-small:hover {
+  background-color: var(--accent-brand-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 113, 227, 0.3);
+}
+
+/* --- 2. SCROLLED STATE --- */
+.main-nav.nav-scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--accent-line-dark);
+  padding: 16px 0;
+}
+
+.main-nav.nav-scrolled .nav-brand {
+  color: var(--text-dark-main);
+}
+
+.main-nav.nav-scrolled .desktop-links a {
+  color: var(--text-dark-muted);
+}
+
+.main-nav.nav-scrolled .desktop-links a:hover {
+  color: var(--accent-brand);
+}
+
+/* --- 3. MOBILE MENU BUTTON & OVERLAY --- */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-light-main);
+  cursor: pointer;
+  z-index: 1001;
+  padding: 8px;
+}
+
+.main-nav.nav-scrolled .mobile-toggle {
+  color: var(--text-dark-main);
+}
+
+/* The Mobile Dropdown Background */
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-pure-white);
+  padding-top: 80px; /* Make room for the header */
+  padding-bottom: 40px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+  /* Hidden by default using transform and opacity */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all var(--transition-smooth);
+  z-index: 999;
+}
+
+/* When the menu is active/open */
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 0 var(--container-padding);
+}
+
+.mobile-link {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-dark-main);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.mobile-link:hover {
+  color: var(--accent-brand);
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 900px) {
+  .desktop-links,
+  .desktop-cta {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+
+  /* When menu is open, force the brand to be dark so it's readable on the white dropdown */
+  .main-nav.menu-open .nav-brand,
+  .main-nav.menu-open .mobile-toggle {
+    color: var(--text-dark-main) !important;
+  }
+}

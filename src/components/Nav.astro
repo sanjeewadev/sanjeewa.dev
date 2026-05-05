@@ -1,0 +1,47 @@
+---
+import '../styles/nav.css';
+---
+
+<header class="main-nav" id="mainNav">
+    <div class="container nav-container">
+        
+        <!-- The Brand Logo -->
+        <a href="/" class="nav-brand">
+            Sanjeewa<span class="text-brand">.dev</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links desktop-links">
+            <a href="/#services">Services</a>
+            <a href="/#work">Work</a>
+            <a href="/#packages">Pricing</a>
+        </div>
+
+        <!-- The Isolated CTA (Desktop) -->
+        <div class="nav-cta desktop-cta">
+            <a href="/contact" class="btn-brand-small">Let's Talk</a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="/#services" class="mobile-link">Services</a>
+            <a href="/#work" class="mobile-link">Work</a>
+            <a href="/#packages" class="mobile-link">Pricing</a>
+            <a href="/contact" class="btn-brand" style="margin-top: 24px; width: 100%;">Let's Talk</a>
+        </div>
+    </div>
+</header>
+
+<script src="../script/nav.js"></script>

@@ -1,30 +1,471 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import Navbar from "../components/layout/Navbar.astro";
-import Hero from "../components/sections/Hero.astro";
-import Services from "../components/sections/Services.astro";
-import About from "../components/sections/About.astro";
-import Projects from "../components/sections/Projects.astro";
-import Contact from "../components/sections/Contact.astro";
-import Footer from "../components/layout/Footer.astro";
+import Layout from '../layouts/Layout.astro';
+import '../styles/home.css'; 
 
-import "../styles/home.css";
+const pageTitle = "Sanjeewa Kumara | Elite Digital Infrastructure Engineering";
+const pageDescription = "Architecting bespoke, high-performance web platforms for global brands and enterprise clients demanding flawless performance.";
 
-// SEO Metadata As Variables
-const title = "Sanjeewa | High-Performance Web Systems Architect";
-const description = "I engineer revenue-generating digital infrastructure for global brands. Specialized in Astro, WordPress, and Technical SEO.";
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://sanjeewa.dev/#person",
+      "name": "Sanjeewa Vipula Kumara",
+      "jobTitle": "Lead Software Engineer",
+      "url": "https://sanjeewa.dev",
+      "alumniOf": {
+         "@type": "CollegeOrUniversity",
+         "name": "Cardiff Metropolitan University"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://sanjeewa.dev/#service",
+      "url": "https://sanjeewa.dev",
+      "name": "Sanjeewa Dev Engineering",
+      "description": "Enterprise Web Engineering and Digital Strategy",
+      "priceRange": "$$$$"
+    }
+  ]
+};
 ---
 
-<MainLayout title={title} description={description}>
-  <Navbar />
-  
-  <main>
-    <Hero />
-    <Services />
-    <About />
-    <Projects />
-    <Contact />
-  </main>
+<Layout title={pageTitle} description={pageDescription}>
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 
-  <Footer />
-</MainLayout>
+    <main class="hybrid-site">
+        
+<!-- =========================================
+             1. THE HOOK (Polished Split Layout)
+             ========================================= -->
+        <section class="hero-split-modern">
+            <div class="container hero-split-grid">
+                
+                <!-- Left: Content & Copywriting -->
+                <div class="hero-split-content scroll-fade-up">
+                    <p class="hero-kicker">Independent Web Engineer</p>
+                    <h1 class="hero-title-split">Premium websites that actually grow your business.</h1>
+                    
+                    <h2 class="hero-subtitle-split text-dark-muted">
+                        Engineered specifically for <br>
+                        <!-- Matches your JS perfectly -->
+                        <span class="dynamic-word-wrapper">
+                            <span class="dynamic-word text-brand">Creative Studios.</span><span class="type-cursor">|</span>
+                        </span>
+                    </h2>
+                    
+                    <p class="hero-description-split text-dark-muted">
+                        Stop losing clients to slow, outdated templates. I build lightning-fast, custom websites that look incredible, rank higher on Google, and turn your visitors into paying customers.
+                    </p>
+                    
+                    <div class="hero-actions-split">
+                        <a href="/contact" class="btn-brand">Schedule a Consultation</a>
+                        <a href="/#work" class="btn-text-link text-dark-main ml-24">View Case Studies ↗</a>
+                    </div>
+                </div>
+
+                <!-- Right: The Sliding Image Frame -->
+                <div class="hero-split-visual scroll-fade-up delay-150">
+                    <div class="visual-frame">
+                        <!-- Matches your JS perfectly -->
+                        <img src="https://picsum.photos/seed/slide1/800/1000" alt="Creative Studio Web Design" class="hero-slide active" loading="eager" />
+                        <img src="https://picsum.photos/seed/slide2/800/1000" alt="Independent Artist Web Design" class="hero-slide" loading="eager" />
+                        <img src="https://picsum.photos/seed/slide3/800/1000" alt="Enterprise Retail Web Design" class="hero-slide" loading="eager" />
+                        <img src="https://picsum.photos/seed/slide4/800/1000" alt="Global Brand Web Design" class="hero-slide" loading="eager" />
+                        <div class="visual-overlay"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             THE LIGHT CANVAS (Sales Funnel Content)
+             ========================================= -->
+        <div class="light-canvas">
+
+            <!-- 2. THE PHILOSOPHY (Engineering Standard) -->
+            <section class="container section-philosophy text-center">
+                <p class="section-kicker text-dark-muted">THE STANDARD</p>
+                <h2 class="scroll-fade-up philosophy-title">
+                    High-end brands don't just need a digital brochure. They need a system engineered for growth. By applying <strong class="text-brand">strict requirement gathering</strong> and flawless <strong class="text-brand">version control</strong>, I architect performance-first infrastructure that turns visitors into clients.
+                </h2>
+            </section>
+
+            <!-- 3. CORE COMPETENCIES (Bento Box) -->
+            <section id="services" class="container section-expertise">
+                <div class="section-label-block">
+                    <p class="section-kicker text-dark-muted">01 // CORE COMPETENCIES</p>
+                    <h2 class="scroll-fade-up">Web Architecture & <br><span class="text-brand">Digital Growth</span></h2>
+                </div>
+
+                <div class="bento-grid">
+                    
+                    <div class="competency-card scroll-fade-up delay-0">
+                        <div class="card-header">
+                            <p class="card-num text-dark-muted">01</p>
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            </div>
+                        </div>
+                        <h3>Ultra-Fast Landing Pages</h3>
+                        <p class="card-description">High-speed, custom-coded landing pages designed to capture leads immediately. Built for perfect Google Lighthouse scores, zero loading lag, and flawless mobile performance.</p>
+                        <div class="tech-stack-row">
+                            <span>Lightning Fast</span>
+                            <span>Mobile Optimized</span>
+                            <span>Technical SEO</span>
+                        </div>
+                    </div>
+
+                    <div class="competency-card highlight-blue scroll-fade-up delay-150">
+                        <div class="card-header">
+                            <p class="card-num text-brand">02</p>
+                            <div class="card-icon text-brand">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                            </div>
+                        </div>
+                        <h3>Custom Business Websites</h3>
+                        <p class="card-description">Fully tailored websites for service businesses and local brands. Featuring easy-to-manage content, integrated local SEO strategies, and highly secure contact forms.</p>
+                        <div class="tech-stack-row">
+                            <span>Easy Updates</span>
+                            <span>Local SEO</span>
+                            <span>Secure Forms</span>
+                        </div>
+                    </div>
+
+                    <div class="competency-card scroll-fade-up delay-300">
+                        <div class="card-header">
+                            <p class="card-num text-dark-muted">03</p>
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                            </div>
+                        </div>
+                        <h3>Premium Brand Portfolios</h3>
+                        <p class="card-description">Bespoke digital portfolios for creative professionals. Focused on stunning visual presentation, heavy image optimization, and highly reliable email routing so you never miss an inquiry.</p>
+                        <div class="tech-stack-row">
+                            <span>Custom Design</span>
+                            <span>Reliable Email</span>
+                            <span>Image Optimized</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 4. CLIENT PROJECTS (Case Studies) -->
+            <section id="work" class="container section-work">
+                <div class="section-label-block">
+                    <p class="section-kicker text-dark-muted">02 // RECENT PROJECTS</p>
+                    <h2 class="scroll-fade-up">Client <span class="text-brand">Success Stories</span></h2>
+                </div>
+
+                <div class="work-grid">
+                    
+                    <a href="#" class="work-card-case scroll-fade-up delay-0">
+                        <div class="work-visual">
+                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200&auto=format&fit=crop" alt="ElinaPix Photography Website Design" loading="lazy" />
+                        </div>
+                        <div class="work-meta">
+                            <h3>ElinaPix Photography</h3>
+                            <p class="work-subtitle">Custom Photography Portfolio</p>
+                            <p class="work-description">Designed a visually stunning, high-speed portfolio to showcase high-res imagery without slowing down the site. Integrated a highly reliable contact system so the client never misses a booking inquiry.</p>
+                            <div class="tech-stack-row work-tags">
+                                <span>Fast Loading</span>
+                                <span>Custom Design</span>
+                                <span>Lead Generation</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="work-card-case scroll-fade-up delay-150">
+                        <div class="work-visual">
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop" alt="DJ Christerna Cloud Automation Logic" loading="lazy" />
+                        </div>
+                        <div class="work-meta">
+                            <h3>DJ Christerna</h3>
+                            <p class="work-subtitle">Automated Booking System</p>
+                            <p class="work-description">Engineered a complete digital presence for a high-volume event professional. Built a custom automated booking and email system to save the client hours of manual admin work every week.</p>
+                            <div class="tech-stack-row work-tags">
+                                <span>Automation</span>
+                                <span>Time Saved</span>
+                                <span>Digital Strategy</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="view-all-wrapper scroll-fade-up delay-300">
+                    <a href="/projects" class="btn-brand">View All Projects</a>
+                </div>
+            </section>
+
+            <!-- 5. INVESTMENT MODELS (Pricing) -->
+            <section id="packages" class="container section-pricing">
+                <div class="section-label-block centered mb-64">
+                    <p class="section-kicker text-dark-muted">03 // INVESTMENT MODELS</p>
+                    <h2 class="scroll-fade-up">Transparent pricing.<br><span class="text-brand">Platform transparency.</span></h2>
+                </div>
+
+                <div class="pricing-grid">
+                    
+                    <div class="pricing-card scroll-fade-up delay-0">
+                        <h3 class="package-name">Static Launch</h3>
+                        <div class="price-block">
+                            <span class="price-label">Starting at</span>
+                            <div class="price-amount">$150</div>
+                        </div>
+                        
+                        <p class="package-desc">
+                            <strong>Platform: Astro / React</strong><br><br>
+                            Ultra-fast, highly secure sites built for speed and conversion. Perfect for simple portfolios. <em>Note: Does not include a content dashboard or e-commerce.</em>
+                        </p>
+                        
+                        <hr class="card-divider">
+
+                        <ul class="package-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Maximum loading speed</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Flawless mobile layout</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Technical SEO Foundation</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Zero ongoing maintenance</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card highlight-blue scroll-fade-up delay-150">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <h3 class="package-name">Business & Commerce</h3>
+                        <div class="price-block">
+                            <span class="price-label">Starting at</span>
+                            <div class="price-amount text-brand">$299</div>
+                        </div>
+                        
+                        <p class="package-desc">
+                            <strong>Platform: Custom WordPress</strong><br><br>
+                            The complete business engine. Includes a dashboard to change your own content, full e-commerce capabilities, and local search infrastructure.
+                        </p>
+
+                        <hr class="card-divider">
+                        
+                        <ul class="package-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Easy content management</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Full online store integration</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> RankMath / Yoast Configuration</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Secure payment gateways</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card scroll-fade-up delay-300">
+                        <h3 class="package-name">Bespoke Architecture</h3>
+                        <div class="price-block">
+                            <span class="price-label">Starting at</span>
+                            <div class="price-amount">$499</div>
+                        </div>
+                        
+                        <p class="package-desc">
+                            <strong>Platform: Next.js + Payload CMS</strong><br><br>
+                            Elite "Headless" architecture for high-end brands. Offers unbreakable security, 100% custom UI design, and significantly faster speeds than standard CMS platforms.
+                        </p>
+
+                        <hr class="card-divider">
+                        
+                        <ul class="package-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Enterprise-grade security</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Unrestricted custom design</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Elite performance metrics</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Modern custom backend</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- THE SEO UPSELL BLOCK -->
+                <div class="seo-upsell-block scroll-fade-up delay-450">
+                    <div class="seo-upsell-content">
+                        <h3>Already have a website? Need more traffic?</h3>
+                        <p>In addition to web development, I offer dedicated Monthly SEO Campaigns. Whether I built your site or someone else did, I can optimize your WordPress infrastructure to bring you more clients.</p>
+                        <a href="/contact" class="btn-text-link text-brand">Discuss an SEO Campaign ↗</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 6. CLIENT TRUST (Google Reviews Slider) -->
+            <section class="container section-google-reviews">
+                <div class="section-label-block">
+                    <p class="section-kicker text-dark-muted">04 // CLIENT TRUST</p>
+                    <h2 class="scroll-fade-up">Verified <span class="text-brand">Google Reviews</span></h2>
+                </div>
+
+                <div class="reviews-carousel-container scroll-fade-up delay-150">
+                    
+                    <button class="slider-arrow prev-arrow" aria-label="Previous Review">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+
+                    <div class="reviews-slider-wrapper">
+                        <div class="reviews-track" id="reviewsTrack">
+                            
+                            <div class="google-review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">K</div>
+                                        <div class="reviewer-details">
+                                            <span class="reviewer-name">Katya (Photography)</span>
+                                            <div class="review-stars">★★★★★</div>
+                                        </div>
+                                    </div>
+                                    <div class="google-logo">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="24" height="24" />
+                                    </div>
+                                </div>
+                                <p class="review-text">"Sanjeewa completely transformed my portfolio. The site loads instantly now, and the contact form goes straight to my phone without any issues. I've already booked new clients because the site looks so professional!"</p>
+                            </div>
+
+                            <div class="google-review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar brand-bg">C</div>
+                                        <div class="reviewer-details">
+                                            <span class="reviewer-name">DJ Christerna</span>
+                                            <div class="review-stars">★★★★★</div>
+                                        </div>
+                                    </div>
+                                    <div class="google-logo">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="24" height="24" />
+                                    </div>
+                                </div>
+                                <p class="review-text">"I was losing clients because my old site was slow. Sanjeewa built a custom system that handles my event bookings perfectly. It saves me hours every single week. Highly recommended."</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="slider-arrow next-arrow" aria-label="Next Review">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                    
+                </div> 
+
+                <div class="review-ctas scroll-fade-up delay-300">
+                    <a href="#" class="btn-brand" target="_blank" rel="noopener">Leave a Review</a>
+                    <a href="#" class="btn-text-link text-dark-main" target="_blank" rel="noopener">View all on Google ↗</a>
+                </div>
+
+            </section>
+
+            <!-- 7. THE DEVELOPER (About Me with Image) -->
+            <section id="about" class="container section-about">
+                <div class="about-grid">
+                    <div class="about-visual scroll-fade-up">
+                        <img src="https://picsum.photos/seed/sanjeewa-profile/800/1000" alt="Sanjeewa Vipula Kumara" class="profile-img" loading="lazy" />
+                    </div>
+                    
+                    <div class="about-content">
+                        <div class="about-header">
+                            <p class="section-kicker text-dark-muted">05 // THE DEVELOPER</p>
+                            <h2 class="scroll-fade-up delay-150 about-title">The developer <br><span class="text-brand">behind the code.</span></h2>
+                        </div>
+                        <div class="about-text scroll-fade-up delay-300">
+                            <p>Hi, I’m Sanjeewa. I am an independent web developer based in Sri Lanka, dedicated to building high-performance websites for creative professionals and local businesses worldwide.</p>
+                            
+                            <p>I understand that hiring a developer can be stressful. My approach is built on clear communication, absolute reliability, and delivering exactly what I promise. While my technical foundation is backed by a formal Software Engineering degree from <strong class="text-dark-main">Cardiff Metropolitan University</strong>, my daily focus is entirely on solving your business problems. I handle the complex architecture, server setups, and performance optimizations so you can focus on running your business.</p>
+                            
+                            <p>I don't just write code; I build digital assets that help you grow. Whether we are launching a lightning-fast portfolio to showcase your work or a dynamic WordPress engine to capture local leads, my priority is your return on investment.</p>
+                            
+                            <p>When I step away from the keyboard, I focus on analog creativity—studying photography and the visual arts.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. FREQUENTLY ASKED QUESTIONS (AEO & Trust) -->
+            <section id="faq" class="container section-faq">
+                <div class="section-label-block centered mb-64">
+                    <p class="section-kicker text-dark-muted">06 // PROJECT DETAILS</p>
+                    <h2 class="scroll-fade-up">Common <span class="text-brand">Questions.</span></h2>
+                </div>
+
+                <div class="faq-container">
+                    
+                    <div class="faq-item scroll-fade-up delay-0">
+                        <button class="faq-question">
+                            <span>Can I share design ideas or examples of websites I like?</span>
+                            <div class="faq-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely. When you reach out via email, I encourage you to send links to websites you admire or any branding assets you already have. This gives us a perfect starting point to understand your exact vision before we write a single line of code.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item scroll-fade-up delay-100">
+                        <button class="faq-question">
+                            <span>Do I need to buy my own hosting and domain?</span>
+                            <div class="faq-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>It depends on the architecture we choose. For ultra-fast Static landing pages, I provide zero-maintenance global deployment. However, for dynamic WordPress or e-commerce sites, you will need to purchase your own hosting and domain. Don't worry—I will guide you through the exact setup process to ensure you get the best performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item scroll-fade-up delay-200">
+                        <button class="faq-question">
+                            <span>Is SEO included with the website build?</span>
+                            <div class="faq-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Every website I build includes a strict Technical SEO foundation—meaning it is lightning-fast, mobile-optimized, and engineered to be easily readable by Google. If you require aggressive, ongoing local SEO marketing to rank above your competitors, we can discuss a dedicated monthly strategy after the site is launched.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item scroll-fade-up delay-300">
+                        <button class="faq-question">
+                            <span>How does the process work if we are in different time zones?</span>
+                            <div class="faq-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>I work seamlessly with global clients on a daily basis. We rely on clear asynchronous communication via email, structured requirement gathering, and scheduled milestone reviews to ensure your project is delivered flawlessly, no matter where your business is located.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item scroll-fade-up delay-400">
+                        <button class="faq-question">
+                            <span>Do I own the website and the code?</span>
+                            <div class="faq-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely. I build transparent systems, not traps. Once the final invoice is paid, you have 100% ownership of your domain, hosting, and all project files.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 9. THE INITIATION (Final CTA) -->
+            <section class="container section-final-cta scroll-fade-up">
+                <div class="final-cta-content">
+                    <h2 class="final-cta-title">Ready to build your <span class="text-brand">digital presence?</span></h2>
+                    <p class="final-cta-text">Let's discuss your project goals and figure out the perfect architecture for your business.</p>
+                    <a href="/contact" class="btn-brand">Get a Free Consultation</a>
+                </div>
+            </section>
+
+        </div> <!-- End Light Canvas -->
+
+    </main>
+
+    <script src="../script/hero.js"></script>
+    <script src="../script/reviews.js"></script>
+    <script src="../script/scroll.js"></script>
+    <script src="../script/faq.js"></script>
+</Layout>

@@ -1,0 +1,252 @@
+/* =========================================
+   THE MINIMALIST CONTACT DESK (contact.css)
+   ========================================= */
+
+/* --- 1. MINIMALIST HERO --- */
+.contact-hero-minimal {
+  width: 100%;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background-color: var(--bg-pure-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid var(--accent-line-dark);
+}
+
+.contact-hero-content-centered {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.contact-title-minimal {
+  font-size: clamp(48px, 6vw, 84px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.contact-subtitle-minimal {
+  font-size: clamp(18px, 2vw, 20px);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- 2. GRID & CONTENT CANVAS --- */
+.contact-canvas {
+  padding-top: 80px;
+  background-color: var(--bg-pure-white);
+  padding-bottom: 120px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* --- Left: Channels & Socials --- */
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.channel-card h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.channel-link {
+  font-family: var(--font-heading);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 600;
+  color: var(--text-dark-main);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  display: inline-block;
+}
+
+.channel-link:hover {
+  color: var(--accent-brand);
+}
+
+/* Copy Button Mechanism */
+.copy-link-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.copy-btn {
+  background-color: var(--bg-soft-gray);
+  border: 1px solid var(--accent-line-dark);
+  color: var(--text-dark-muted);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.copy-btn:hover {
+  background-color: var(--bg-pure-white);
+  color: var(--accent-brand);
+  border-color: var(--accent-brand);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.1);
+}
+
+/* Toggles the checkmark on success */
+.icon-check {
+  display: none;
+  color: #10b981;
+} /* Clean green success check */
+.copy-btn.copied .icon-copy {
+  display: none;
+}
+.copy-btn.copied .icon-check {
+  display: block;
+}
+.copy-btn.copied {
+  border-color: #10b981;
+}
+
+/* Upgraded Social Network Grid */
+.modern-social-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.social-link-minimal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  color: var(--text-dark-main);
+  border: 1px solid var(--accent-line-dark);
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.social-link-minimal:hover {
+  color: var(--bg-pure-white);
+  background-color: var(
+    --text-dark-main
+  ); /* Inverts to pitch black for an elite feel */
+  border-color: var(--text-dark-main);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Right: The Solid Filled Premium Form --- */
+.contact-form-wrapper {
+  width: 100%;
+}
+
+.solid-premium-form {
+  background-color: var(--bg-pure-white);
+  padding: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--accent-line-dark);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.04);
+}
+
+.solid-input-group {
+  margin-bottom: 24px;
+}
+
+.solid-input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark-main);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.solid-input-group input,
+.solid-input-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--text-dark-main);
+  background-color: var(--bg-soft-gray); /* Soft filled background */
+  border: 2px solid transparent; /* Transparent border prevents jumping on focus */
+  border-radius: 12px;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.solid-input-group input::placeholder,
+.solid-input-group textarea::placeholder {
+  color: var(--text-light-muted);
+}
+
+/* Beautiful Focus Animation */
+.solid-input-group input:focus,
+.solid-input-group textarea:focus {
+  background-color: var(--bg-pure-white);
+  border-color: var(--accent-brand); /* Blue highlight */
+  box-shadow: 0 8px 16px rgba(0, 113, 227, 0.08); /* Soft blue glow */
+}
+
+.solid-input-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.submit-btn {
+  border: none;
+}
+
+/* --- Mobile Fixes for the Form --- */
+@media (max-width: 900px) {
+  .solid-premium-form {
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+}
+
+/* --- Mobile Fixes --- */
+@media (max-width: 900px) {
+  .contact-hero-minimal {
+    padding-top: 140px;
+    padding-bottom: 40px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+
+  .modern-premium-form {
+    padding: 40px 24px;
+  }
+}

@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/contact.css'; 
+
+const pageTitle = "Contact | Sanjeewa.dev";
+const pageDescription = "Initiate a project or discuss enterprise digital infrastructure engineering, custom web development, and performance optimization with Sanjeewa Kumara.";
+
+// Advanced Local & Global SEO Schema
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Sanjeewa Kumara",
+  "description": "Get in touch for bespoke web engineering and digital strategy.",
+  "url": "https://sanjeewa.dev/contact",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Sanjeewa Vipula Kumara",
+    "jobTitle": "Lead Software Engineer",
+    "email": "hello@sanjeewa.dev",
+    "telephone": "+94700000000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Colombo",
+      "addressCountry": "LK"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/sanjeewakumara",
+      "https://github.com/sanjeewa",
+      "https://instagram.com/sanjeewa",
+      "https://tiktok.com/@sanjeewa",
+      "https://medium.com/@sanjeewa"
+    ]
+  }
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+    
+    <!-- 1. MINIMALIST SEO HERO -->
+    <header class="contact-hero-minimal">
+        <div class="container contact-hero-content-centered scroll-fade-up">
+            <p class="hero-kicker">THE CONTACT DESK</p>
+            <h1 class="contact-title-minimal text-dark-main">Let's build something <br><span class="text-brand">exceptional.</span></h1>
+            <p class="contact-subtitle-minimal text-dark-muted">
+                Currently accepting inquiries for enterprise web engineering, high-performance custom development, and strategic digital infrastructure projects. Reach out to discuss your timeline and technical requirements.
+            </p>
+        </div>
+    </header>
+
+    <!-- 2. CONTACT GRID CANVAS -->
+    <main class="contact-canvas">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Left: Direct Channels & Social Icons -->
+                <div class="contact-channels scroll-fade-up delay-100">
+                    
+                    <div class="channel-card">
+                        <h3>Direct Email</h3>
+                        <div class="copy-link-group">
+                            <a href="mailto:hello@sanjeewa.dev" class="channel-link">hello@sanjeewa.dev ↗</a>
+                            <button class="copy-btn" onclick="copyToClipboard('hello@sanjeewa.dev', this)" aria-label="Copy Email">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="channel-card">
+                        <h3>WhatsApp Direct</h3>
+                        <div class="copy-link-group">
+                            <a href="https://wa.me/94700000000" class="channel-link" target="_blank" rel="noopener">+94 70 000 0000 ↗</a>
+                            <button class="copy-btn" onclick="copyToClipboard('+94700000000', this)" aria-label="Copy Phone Number">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="channel-card">
+                        <h3>Social Network</h3>
+                        <!-- Upgraded sleek social network grid -->
+                        <div class="modern-social-grid">
+                            
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com/in/sanjeewakumara" class="social-link-minimal" aria-label="LinkedIn" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/sanjeewa" class="social-link-minimal" aria-label="GitHub" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="https://instagram.com/sanjeewa" class="social-link-minimal" aria-label="Instagram" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+
+                            <!-- TikTok -->
+                            <a href="https://tiktok.com/@sanjeewa" class="social-link-minimal" aria-label="TikTok" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                                </svg>
+                            </a>
+
+                            <!-- Official Medium Logo -->
+                            <a href="https://medium.com/@sanjeewa" class="social-link-minimal" aria-label="Medium" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                    <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42c1.87 0 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Right: The Modern Form (Floating Labels) -->
+<!-- Right: The Solid Filled Premium Form -->
+                <div class="contact-form-wrapper scroll-fade-up delay-200">
+                    <form class="solid-premium-form" onsubmit="event.preventDefault(); alert('Form connected successfully!');">
+                        
+                        <div class="solid-input-group">
+                            <label for="name">Name / Brand</label>
+                            <input type="text" id="name" name="name" required placeholder="e.g. Sanjeewa">
+                        </div>
+                        
+                        <div class="solid-input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="hello@gmail.com">
+                        </div>
+                        
+                        <!-- NEW: The Country Field -->
+                        <div class="solid-input-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" required placeholder="e.g. Australia">
+                        </div>
+                        
+                        <div class="solid-input-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project, business ideas, or ask me anything..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn btn-brand btn-full-width mt-32">Submit Inquiry</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="../script/nav.js"></script>
+    <script src="../script/scroll.js"></script>
+    
+    <!-- Copy to Clipboard Logic -->
+    <script is:inline>
+        function copyToClipboard(text, button) {
+            navigator.clipboard.writeText(text).then(() => {
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</Layout>

@@ -1,6 +1,10 @@
 ---
 import "../styles/global.css";
 
+// Importing the Universal components we need to build next
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -15,7 +19,7 @@ const schemaData = {
   "name": "Sanjeewa.dev",
   "image": "https://sanjeewa.dev/assets/me/Sanjeewa-web-developer.avif",
   "url": "https://sanjeewa.dev",
-  "telephone": "+94776369256",
+  "telephone": "+94700000000",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "LK"
@@ -27,7 +31,15 @@ const schemaData = {
     "https://linkedin.com/in/yourhandle"
   ]
 };
+
+
 ---
+
+<!-- REQUIRED: The Immersive Luxury Fonts -->
+<!-- REQUIRED: The Clear & Modern Font Pairing -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!doctype html>
 <html lang="en">
@@ -37,7 +49,10 @@ const schemaData = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- SEO METADATA AS Props (We Can import inside page file) -->
+    <!-- REQUIRED: Importing your premium font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SEO METADATA -->
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
@@ -48,6 +63,13 @@ const schemaData = {
     <!-- G - ANALYTICS HERE -->
   </head>
   <body>
+    <!-- The Universal Navigation -->
+    <Nav />
+    
+    <!-- Your page content (index.astro) gets injected here -->
     <slot />
+    
+    <!-- The Universal Footer -->
+    <Footer />
   </body>
 </html>
