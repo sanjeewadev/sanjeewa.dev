@@ -2,6 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/home.css'; 
 
+// Add these imports for your 3 new hero slider images
+import heroImg0 from '../assets/hero/premium-website-design-for-creative-studios.webp';
+import heroImg1 from '../assets/hero/high-performance-photography-portfolio-website.webp';
+import heroImg2 from '../assets/hero/custom-event-booking-website-development.webp';
+
+import imgElinaPix from '../assets/Project/elinapix-photography-portfolio-website.webp';
+import imgDJ from '../assets/Project/dj-christerna-dj-booking-website.webp';
+
+import imgProfile from '../assets/me/sanjeewa-vipula-kumara-freelance-web-developer.webp';
+
 const pageTitle = "Sanjeewa Kumara | Elite Digital Infrastructure Engineering";
 const pageDescription = "Architecting bespoke, high-performance web platforms for global brands and enterprise clients demanding flawless performance.";
 
@@ -68,11 +78,10 @@ const schemaData = {
                 <!-- Right: The Sliding Image Frame -->
                 <div class="hero-split-visual scroll-fade-up delay-150">
                     <div class="visual-frame">
-                        <!-- Matches your JS perfectly -->
-                        <img src="https://picsum.photos/seed/slide1/800/1000" alt="Creative Studio Web Design" class="hero-slide active" loading="eager" />
-                        <img src="https://picsum.photos/seed/slide2/800/1000" alt="Independent Artist Web Design" class="hero-slide" loading="eager" />
-                        <img src="https://picsum.photos/seed/slide3/800/1000" alt="Enterprise Retail Web Design" class="hero-slide" loading="eager" />
-                        <img src="https://picsum.photos/seed/slide4/800/1000" alt="Global Brand Web Design" class="hero-slide" loading="eager" />
+                        <!-- Updated: Using your imported local assets -->
+                        <img src={heroImg0.src} alt="Elias Thorne Photography Website Design" class="hero-slide active" loading="eager" />
+                        <img src={heroImg1.src} alt="DJ Christerna Website Design" class="hero-slide" loading="lazy" />
+                        <img src={heroImg2.src} alt="ElinaPix Portfolio Website Design" class="hero-slide" loading="lazy" />
                         <div class="visual-overlay"></div>
                     </div>
                 </div>
@@ -153,7 +162,7 @@ const schemaData = {
                 </div>
             </section>
 
-            <!-- 4. CLIENT PROJECTS (Case Studies) -->
+        <!-- 4. CLIENT PROJECTS (Case Studies) -->
             <section id="work" class="container section-work">
                 <div class="section-label-block">
                     <p class="section-kicker text-dark-muted">02 // RECENT PROJECTS</p>
@@ -164,7 +173,8 @@ const schemaData = {
                     
                     <a href="#" class="work-card-case scroll-fade-up delay-0">
                         <div class="work-visual">
-                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200&auto=format&fit=crop" alt="ElinaPix Photography Website Design" loading="lazy" />
+                            <!-- Updated: ElinaPix Webp Image -->
+                            <img src={imgElinaPix.src} alt="ElinaPix Photography Website Design" loading="lazy" />
                         </div>
                         <div class="work-meta">
                             <h3>ElinaPix Photography</h3>
@@ -180,7 +190,8 @@ const schemaData = {
 
                     <a href="#" class="work-card-case scroll-fade-up delay-150">
                         <div class="work-visual">
-                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop" alt="DJ Christerna Cloud Automation Logic" loading="lazy" />
+                            <!-- Updated: DJ Christerna Webp Image -->
+                            <img src={imgDJ.src} alt="DJ Christerna Cloud Automation Logic" loading="lazy" />
                         </div>
                         <div class="work-meta">
                             <h3>DJ Christerna</h3>
@@ -200,7 +211,6 @@ const schemaData = {
                     <a href="/projects" class="btn-brand">View All Projects</a>
                 </div>
             </section>
-
             <!-- 5. INVESTMENT MODELS (Pricing) -->
             <section id="packages" class="container section-pricing">
                 <div class="section-label-block centered mb-64">
@@ -354,11 +364,12 @@ const schemaData = {
 
             </section>
 
-            <!-- 7. THE DEVELOPER (About Me with Image) -->
+   <!-- 7. THE DEVELOPER (About Me with Image) -->
             <section id="about" class="container section-about">
                 <div class="about-grid">
                     <div class="about-visual scroll-fade-up">
-                        <img src="https://picsum.photos/seed/sanjeewa-profile/800/1000" alt="Sanjeewa Vipula Kumara" class="profile-img" loading="lazy" />
+                        <!-- Updated: Using your local .avif image -->
+                        <img src={imgProfile.src} alt="Sanjeewa Vipula Kumara - Web Developer" class="profile-img" loading="lazy" />
                     </div>
                     
                     <div class="about-content">

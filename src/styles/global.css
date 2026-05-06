@@ -125,8 +125,8 @@ h6 {
   transition-delay: 0ms;
 }
 .delay-150 {
-  transition-delay: 150ms;
+  transition-delay: 100ms;
 }
 .delay-300 {
-  transition-delay: 300ms;
+  transition-delay: 200ms;
 }

@@ -31,15 +31,7 @@ const schemaData = {
     "https://linkedin.com/in/yourhandle"
   ]
 };
-
-
 ---
-
-<!-- REQUIRED: The Immersive Luxury Fonts -->
-<!-- REQUIRED: The Clear & Modern Font Pairing -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!doctype html>
 <html lang="en">
@@ -49,8 +41,10 @@ const schemaData = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- REQUIRED: Importing your premium font -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- REQUIRED: The Immersive Luxury Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- SEO METADATA -->
     <title>{title}</title>
@@ -71,5 +65,15 @@ const schemaData = {
     
     <!-- The Universal Footer -->
     <Footer />
+
+    <!-- REQUIRED: Scroll Restoration Script -->
+    <script is:inline>
+        // 1. Tell Chrome NOT to remember the scroll position on reload
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        // 2. Force the window to the absolute top (Pixel 0, 0)
+        window.scrollTo(0, 0);
+    </script>
   </body>
 </html>

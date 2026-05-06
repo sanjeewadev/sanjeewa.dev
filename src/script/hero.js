@@ -4,12 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const dynamicTextElement = document.querySelector(".dynamic-word");
   const slides = document.querySelectorAll(".hero-slide");
 
-  // The words that will be typed out
+  // FIXED: Reduced to 3 words to perfectly match your 3 new laptop images
   const words = [
     "Creative Studios.",
     "Independent Artists.",
-    "Enterprise Retail.",
-    "Global Brands.",
+    "Premium Brands.",
   ];
 
   let wordIndex = 0;
@@ -42,12 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // If word is fully deleted
     else if (isDeleting && charIndex === 0) {
       isDeleting = false;
+
       // Move to the next word
       wordIndex = (wordIndex + 1) % words.length;
 
       // SWAP THE BACKGROUND IMAGE
-      slides.forEach((slide) => slide.classList.remove("active"));
-      slides[wordIndex].classList.add("active");
+      // Added a failsafe (% slides.length) so it never crashes even if words and images don't match!
+      if (slides.length > 0) {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        const safeSlideIndex = wordIndex % slides.length;
+        slides[safeSlideIndex].classList.add("active");
+      }
 
       typeSpeed = 500; // Pause briefly before typing next word
     }
