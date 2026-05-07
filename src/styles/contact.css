@@ -38,7 +38,7 @@
 
 .contact-subtitle-minimal {
   font-size: clamp(18px, 2vw, 20px);
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
   line-height: 1.6;
 }
@@ -52,7 +52,7 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 80px;
   align-items: flex-start;
 }
@@ -120,8 +120,9 @@
 /* Toggles the checkmark on success */
 .icon-check {
   display: none;
-  color: #10b981;
-} /* Clean green success check */
+  color: #10b981; /* Clean green success check */
+}
+
 .copy-btn.copied .icon-copy {
   display: none;
 }
@@ -204,9 +205,10 @@
   transition: all var(--transition-fast);
 }
 
+/* FIXED: Changed to a color that is readable on a light gray background */
 .solid-input-group input::placeholder,
 .solid-input-group textarea::placeholder {
-  color: var(--text-light-muted);
+  color: #888893;
 }
 
 /* Beautiful Focus Animation */
@@ -226,18 +228,23 @@
   border: none;
 }
 
-/* --- Mobile Fixes for the Form --- */
-@media (max-width: 900px) {
-  .solid-premium-form {
-    padding: 32px 24px;
-    border-radius: 20px;
-  }
+/* --- 3. ACCESSIBILITY (Keyboard Navigation) --- */
+.channel-link:focus-visible,
+.copy-btn:focus-visible,
+.social-link-minimal:focus-visible {
+  outline: 2px solid var(--accent-brand);
+  outline-offset: 4px;
+  border-radius: 50%; /* Keeps the focus ring round */
 }
 
-/* --- Mobile Fixes --- */
+.channel-link:focus-visible {
+  border-radius: 4px; /* Square outline for the text links */
+}
+
+/* --- 4. MOBILE RESPONSIVENESS --- */
 @media (max-width: 900px) {
   .contact-hero-minimal {
-    padding-top: 140px;
+    padding-top: 120px;
     padding-bottom: 40px;
   }
 
@@ -246,7 +253,9 @@
     gap: 64px;
   }
 
-  .modern-premium-form {
-    padding: 40px 24px;
+  /* Merged form adjustments */
+  .solid-premium-form {
+    padding: 32px 24px;
+    border-radius: 20px;
   }
 }

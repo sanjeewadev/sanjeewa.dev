@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/404.css'; 
+
+const pageTitle = "404 - Page Not Found | Sanjeewa.dev";
+const pageDescription = "Oops! The page you are looking for does not exist.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <main class="error-page">
+        <div class="container error-container text-center scroll-fade-up">
+            
+            <h1 class="error-code text-brand">404</h1>
+            <h2 class="error-title">Page Not Found</h2>
+            
+            <p class="error-text text-dark-muted">
+                Oops! The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. Let's get you back on track.
+            </p>
+            
+            <div class="error-action mt-32">
+                <a href="/" class="btn-brand">Return to Homepage</a>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../script/scroll.js"></script>
+</Layout>

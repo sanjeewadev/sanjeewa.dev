@@ -1,0 +1,527 @@
+/* =========================================
+   START: CASE STUDY PAGE (case-study.css)
+   ========================================= */
+
+.case-study-page {
+  background-color: var(--bg-pure-white);
+  padding-bottom: 80px;
+}
+
+/* --- START: GLOBAL CASE STUDY TYPOGRAPHY --- */
+/* This controls the massive section titles like "The Results" and "Technical Insights" */
+.section-label-block h2 {
+  font-size: clamp(36px, 4.5vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+}
+/* --- END: GLOBAL CASE STUDY TYPOGRAPHY --- */
+
+/* --- START: 1. SPLIT HERO & VERTICAL VISUAL --- */
+.cs-hero-split {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--accent-line-dark);
+  background-color: var(--bg-soft-gray);
+  overflow: hidden;
+}
+
+.cs-hero-split-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.cs-title {
+  font-size: clamp(40px, 4.5vw, 64px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--text-dark-main);
+  letter-spacing: -1px;
+}
+
+.cs-subtitle {
+  font-size: clamp(18px, 2vw, 22px);
+  margin-bottom: 16px;
+  line-height: 1.5;
+  color: var(--text-dark-muted);
+}
+
+.cs-meta-grid-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 16px;
+  padding-bottom: 32px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.meta-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-dark-muted);
+}
+
+.meta-value {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark-main);
+}
+
+.cs-hero-action-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cs-hero-visual-right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cs-vertical-image-wrapper {
+  width: 100%;
+  max-width: 410px;
+  aspect-ratio: 4/5;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.08);
+  background-color: var(--bg-pure-white);
+}
+
+.cs-vertical-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 1s var(--transition-smooth);
+}
+
+.cs-vertical-image-wrapper:hover .cs-vertical-image {
+  transform: scale(1.03);
+}
+/* --- END: 1. SPLIT HERO & VERTICAL VISUAL --- */
+
+/* --- START: 1.5 MAIN VISUAL (The Wide Image Below Hero) --- */
+.cs-visual-section {
+  margin-top: 40px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.cs-main-image-wrapper {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-soft-gray);
+  aspect-ratio: 16/9;
+}
+
+.cs-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--transition-smooth);
+}
+
+.cs-main-image-wrapper:hover .cs-main-image {
+  transform: scale(1.02);
+}
+/* --- END: 1.5 MAIN VISUAL --- */
+
+/* --- START: 2. STORY SECTION (Challenge & Solution) --- */
+.cs-story-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  border-bottom: 1px solid var(--accent-line-dark);
+}
+
+.cs-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* UPDATED: Much larger titles with more breathing room below */
+.story-block h2 {
+  font-size: clamp(32px, 3.5vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 32px;
+}
+
+.story-block p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-dark-muted);
+  margin-bottom: 24px;
+}
+
+.cs-solution-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cs-solution-list li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dark-main);
+  margin-bottom: 24px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.cs-solution-list li::before {
+  content: "→";
+  color: var(--accent-brand);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+/* --- END: 2. STORY SECTION --- */
+
+/* --- START: 3. THE VISUAL TOUR (Bento Grid) --- */
+.cs-visual-tour {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.bento-tour-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+
+.bento-tour-item {
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: var(--bg-soft-gray);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.bento-tour-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--transition-smooth);
+}
+
+.bento-tour-item:hover img {
+  transform: scale(1.03);
+}
+
+.bento-tour-item.tall {
+  grid-column: span 5;
+  height: 700px;
+}
+
+.bento-tour-item.wide {
+  grid-column: span 7;
+  height: 400px;
+}
+
+.bento-tour-item.small {
+  grid-column: span 7;
+  height: 268px;
+}
+/* --- END: 3. THE VISUAL TOUR --- */
+
+/* --- START: 4. THE PROOF (Metrics & Trust) --- */
+.cs-proof-section {
+  background-color: var(--bg-soft-gray);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.metric-card {
+  background-color: var(--bg-pure-white);
+  padding: 48px 32px;
+  border-radius: 24px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.03);
+  transition: transform var(--transition-fast);
+}
+
+.metric-card:hover {
+  transform: translateY(-8px);
+}
+
+.metric-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  margin: 0 auto 24px auto;
+}
+
+.score-perfect {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 4px solid #10b981;
+}
+
+.metric-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--text-dark-main);
+}
+
+.metric-card p {
+  font-size: 15px;
+  color: var(--text-dark-muted);
+}
+
+.cs-testimonial-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.featured-review {
+  background-color: var(--bg-pure-white);
+  border: 1px solid var(--accent-line-dark);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.05);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.reviewer-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.pink-bg {
+  background-color: #d81b60;
+  color: #ffffff;
+}
+
+.reviewer-name {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+}
+
+.review-stars {
+  color: #fbbc04;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-dark-muted);
+  font-style: italic;
+}
+/* --- END: 4. THE PROOF --- */
+
+/* --- START: 5. AEO FAQ SECTION --- */
+.section-faq {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-container {
+  border-top: 1px solid var(--accent-line-dark);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--accent-line-dark);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark-main);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.faq-question:hover,
+.faq-question:focus-visible {
+  color: var(--accent-brand);
+  outline: none;
+}
+
+.faq-question:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-brand);
+  text-underline-offset: 4px;
+}
+
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--text-dark-muted);
+  transition: transform 0.4s var(--transition-smooth);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s var(--transition-smooth),
+    padding-bottom 0.4s ease;
+}
+
+.faq-answer p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dark-muted);
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  color: var(--accent-brand);
+}
+
+.faq-item.active .faq-answer {
+  padding-bottom: 32px;
+}
+/* --- END: 5. AEO FAQ SECTION --- */
+
+/* --- START: 6. FINAL CTA --- */
+.section-final-cta {
+  padding-bottom: 120px;
+}
+
+.final-cta-content {
+  text-align: center;
+  background-color: var(--bg-soft-gray);
+  padding: 80px 40px;
+  border-radius: 24px;
+}
+
+.final-cta-title {
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 16px;
+}
+
+.final-cta-text {
+  font-size: 18px;
+  color: var(--text-dark-muted);
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* --- END: 6. FINAL CTA --- */
+
+/* --- START: 7. MOBILE RESPONSIVENESS --- */
+@media (max-width: 900px) {
+  .cs-hero-split {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .cs-hero-split-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 56px;
+  }
+
+  .cs-meta-grid-left {
+    justify-content: center;
+  }
+
+  .cs-hero-action-left {
+    justify-content: center;
+  }
+
+  .meta-item {
+    text-align: center;
+  }
+
+  .cs-hero-visual-right {
+    justify-content: center;
+  }
+
+  .cs-vertical-image-wrapper {
+    max-width: 100%;
+    aspect-ratio: 4/3;
+  }
+
+  .cs-story-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .bento-tour-item.tall,
+  .bento-tour-item.wide,
+  .bento-tour-item.small {
+    grid-column: span 12;
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-review {
+    padding: 32px 24px;
+  }
+}
+/* --- END: 7. MOBILE RESPONSIVENESS --- */
+/* =========================================
+   END: CASE STUDY PAGE (case-study.css)
+   ========================================= */

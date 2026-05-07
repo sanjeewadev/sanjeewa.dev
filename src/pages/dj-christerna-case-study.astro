@@ -1,0 +1,243 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/case-study.css'; 
+
+// 1. IMPORT ASTRO'S IMAGE COMPONENT
+import { Image } from 'astro:assets';
+
+// 2. IMPORT YOUR IMAGES 
+// (Make sure to save 4 screenshots of his site in this new folder!)
+import imgHero from '../assets/djchristerna-case-study/1.png';
+import imgTall from '../assets/djchristerna-case-study/2.png'; 
+import imgWide from '../assets/djchristerna-case-study/3.png'; 
+import imgMobile from '../assets/djchristerna-case-study/4.png';   
+
+// THE BAIT (SEO Meta Data)
+const pageTitle = "DJ Christerna Case Study | Dubai DJ Website Design & SEO";
+const pageDescription = "How I rescued a Dubai DJ from a restrictive developer, built a custom WordPress booking platform, and delivered 100% digital ownership and top-tier SEO.";
+
+// Advanced AEO & SEO Schema
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Case Study: Custom Booking Website for DJ Christerna in Dubai",
+      "author": {
+        "@type": "Person",
+        "name": "Sanjeewa Vipula Kumara"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sanjeewa.dev"
+      },
+      "description": "Providing 100% digital ownership, custom email routing, and local SEO for a Dubai-based DJ."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is it important to own your own website domain and hosting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many site builders or restrictive developers lock clients out of their own assets. By building with custom WordPress on independent hosting, I ensure business owners have 100% legal ownership and administrative control over their digital presence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do DJs and entertainers need automated booking systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A professional automated booking system with dedicated email server routing ensures that an entertainer never misses a gig inquiry while traveling or performing."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+    
+    <main class="case-study-page">
+        
+        <header class="cs-hero-split">
+            <div class="container cs-hero-split-grid">
+                
+                <div class="cs-hero-content-left scroll-fade-up">
+                    <p class="section-kicker text-dark-muted">PROJECT HIGHLIGHT</p>
+                    <h1 class="cs-title">DJ Christerna</h1>
+                    <p class="cs-subtitle text-dark-muted">Reclaiming digital ownership and automating event bookings in Dubai.</p>
+                    
+                    <div class="cs-meta-grid-left">
+                        <div class="meta-item">
+                            <span class="meta-label">Client Focus</span>
+                            <span class="meta-value">Entertainment & Events</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Location</span>
+                            <span class="meta-value">Dubai, UAE</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Tech Stack</span>
+                            <span class="meta-value">Custom WordPress + Email Routing</span>
+                        </div>
+                    </div>
+
+                    <div class="cs-hero-action-left mt-32">
+                        <a href="https://djchristerna.com/" target="_blank" rel="noopener" class="btn-brand">Visit Live Website ↗</a>
+                    </div>
+                </div>
+
+                <div class="cs-hero-visual-right scroll-fade-up delay-150">
+                    <div class="cs-vertical-image-wrapper">
+                        <Image src={imgHero} alt="DJ Christerna Custom Website Design Dubai" class="cs-vertical-image" />
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <section class="container cs-visual-section scroll-fade-up delay-150">
+            <div class="cs-main-image-wrapper">
+                <Image src={imgWide} alt="DJ Christerna full website layout and event gallery" class="cs-main-image" />
+            </div>
+        </section>
+
+        <section class="container cs-story-section">
+            <div class="cs-story-grid">
+                
+                <div class="story-block scroll-fade-up">
+                    <h2 class="text-brand">The Challenge</h2>
+                    <p>Chris is an emerging DJ in the highly competitive Dubai nightlife market, but he was trapped. He had paid a previous developer for a website built on a restrictive site builder, but was completely locked out. He didn't own his domain, couldn't access his own site, and had no way to update his event schedule or receive direct bookings.</p>
+                </div>
+
+                <div class="story-block scroll-fade-up delay-150">
+                    <h2 class="text-brand">The Engineering Solution</h2>
+                    <p>I rescued his digital presence by building a completely independent, custom WordPress architecture from the ground up.</p>
+                    <ul class="cs-solution-list">
+                        <li><strong>100% Digital Ownership:</strong> Secured his domain and hosting, handing over full administrative rights so he can never be locked out again.</li>
+                        <li><strong>Automated Bookings:</strong> Developed a seamless inquiry system with custom email server configurations so he never misses a high-paying gig.</li>
+                        <li><strong>Aggressive Dubai SEO:</strong> Implemented a targeted local SEO strategy to help him rank above the noise in the UAE entertainment industry.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container cs-visual-tour scroll-fade-up">
+            <div class="section-label-block centered mb-64">
+                <p class="section-kicker text-dark-muted">PLATFORM INTERFACE</p>
+                <h2>High-Performance <span class="text-brand">Design.</span></h2>
+            </div>
+            
+            <div class="bento-tour-grid">
+                <div class="bento-tour-item tall scroll-fade-up delay-0">
+                    <Image src={imgTall} alt="DJ Christerna Booking Interface UI" />
+                </div>
+                
+                <div class="bento-tour-item wide scroll-fade-up delay-150">
+                    <Image src={imgWide} alt="DJ Christerna Event Highlights" />
+                </div>
+                
+                <div class="bento-tour-item small scroll-fade-up delay-300">
+                    <Image src={imgMobile} alt="DJ Website Mobile Responsive View" />
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-proof-section">
+            <div class="container">
+                <div class="section-label-block centered mb-64">
+                    <h2 class="scroll-fade-up">The <span class="text-brand">Results.</span></h2>
+                </div>
+
+                <div class="metrics-grid scroll-fade-up">
+                    <div class="metric-card">
+                        <div class="metric-circle score-perfect">100</div>
+                        <h3>Total Ownership</h3>
+                        <p>100% control over domain, hosting, and code.</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-circle score-perfect">100</div>
+                        <h3>SEO Score</h3>
+                        <p>Optimized perfectly for Dubai Google searches.</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-circle score-perfect">100</div>
+                        <h3>Uptime & Delivery</h3>
+                        <p>Flawless email routing and server stability.</p>
+                    </div>
+                </div>
+
+                <div class="cs-testimonial-wrapper scroll-fade-up delay-150">
+                    <div class="google-review-card featured-review">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar" style="background-color: #1a73e8; color: white;">C</div>
+                                <div class="reviewer-details">
+                                    <span class="reviewer-name">Chris (DJ Christerna)</span>
+                                    <div class="review-stars">★★★★★</div>
+                                </div>
+                            </div>
+                            <div class="google-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="24" height="24" />
+                            </div>
+                        </div>
+                        <p class="review-text">"Sanjeewa completely saved my business online. After being locked out by my last developer, I finally own my own website and domain. The new booking system works perfectly, and the site looks incredibly professional. Highly recommended for any business owner!"</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container section-faq">
+            <div class="section-label-block centered mb-64">
+                <p class="section-kicker text-dark-muted">PROJECT DETAILS</p>
+                <h2 class="scroll-fade-up">Technical <span class="text-brand">Insights.</span></h2>
+            </div>
+
+            <div class="faq-container">
+                
+                <div class="faq-item scroll-fade-up delay-0">
+                    <button class="faq-question">
+                        <span>Why is it important to own your own website domain?</span>
+                        <div class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Many "drag-and-drop" site builders or restrictive agencies keep legal ownership of your domain name to lock you into their services. By building a custom WordPress site on independent hosting, I guarantee my clients have 100% legal and administrative control over their digital business assets.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item scroll-fade-up delay-100">
+                    <button class="faq-question">
+                        <span>How does a custom email server setup help an entertainer?</span>
+                        <div class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Standard website contact forms often send inquiries straight to a client's spam folder. I configured dedicated email routing for DJ Christerna to ensure that every time a club or event promoter requests a booking, the notification hits his inbox instantly, securing the gig.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container section-final-cta scroll-fade-up">
+            <div class="final-cta-content">
+                <h2 class="final-cta-title">Want results like <span class="text-brand">DJ Christerna?</span></h2>
+                <p class="final-cta-text">Stop renting your website from restrictive developers. Let's build a platform that you actually own.</p>
+                <a href="/contact" class="btn-brand">Get Your Free Consultation</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../script/scroll.js"></script>
+    <script src="../script/faq.js"></script>
+</Layout>

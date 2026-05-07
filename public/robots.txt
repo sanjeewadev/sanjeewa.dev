@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /coming-soon
+Disallow: /404
 
 Sitemap: https://sanjeewa.dev/sitemap-index.xml

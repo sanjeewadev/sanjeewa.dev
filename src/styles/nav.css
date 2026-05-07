@@ -71,7 +71,7 @@
   box-shadow: 0 6px 16px rgba(0, 113, 227, 0.3);
 }
 
-/* --- 2. SCROLLED STATE --- */
+/* --- 2. SCROLLED STATE (Glassmorphism) --- */
 .main-nav.nav-scrolled {
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
@@ -80,31 +80,18 @@
   padding: 16px 0;
 }
 
-.main-nav.nav-scrolled .nav-brand {
-  color: var(--text-dark-main);
-}
-
-.main-nav.nav-scrolled .desktop-links a {
-  color: var(--text-dark-muted);
-}
-
-.main-nav.nav-scrolled .desktop-links a:hover {
-  color: var(--accent-brand);
-}
-
 /* --- 3. MOBILE MENU BUTTON & OVERLAY --- */
 .mobile-toggle {
   display: none;
   background: none;
   border: none;
-  color: var(--text-light-main);
+  /* FIXED: Changed to dark main so it is visible on your white background! */
+  color: var(--text-dark-main);
   cursor: pointer;
   z-index: 1001;
-  padding: 8px;
-}
-
-.main-nav.nav-scrolled .mobile-toggle {
-  color: var(--text-dark-main);
+  /* UPGRADED: Increased padding to make it a better "touch target" for thumbs */
+  padding: 12px;
+  margin-right: -12px; /* Pulls it slightly right so it aligns perfectly with the edge */
 }
 
 /* The Mobile Dropdown Background */
@@ -114,9 +101,10 @@
   left: 0;
   width: 100%;
   background-color: var(--bg-pure-white);
-  padding-top: 80px; /* Make room for the header */
+  padding-top: 80px;
   padding-bottom: 40px;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+
   /* Hidden by default using transform and opacity */
   opacity: 0;
   visibility: hidden;
@@ -161,11 +149,5 @@
   }
   .mobile-toggle {
     display: block;
-  }
-
-  /* When menu is open, force the brand to be dark so it's readable on the white dropdown */
-  .main-nav.menu-open .nav-brand,
-  .main-nav.menu-open .mobile-toggle {
-    color: var(--text-dark-main) !important;
   }
 }

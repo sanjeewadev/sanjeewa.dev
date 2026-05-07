@@ -1,36 +1,28 @@
 ---
 import "../styles/global.css";
 
-// Importing the Universal components we need to build next
+// Importing the Universal components
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+
+// REQUIRED: Import the astro-seo component you wanted to use!
+import { SEO } from "astro-seo";
 
 interface Props {
   title: string;
   description: string;
+  image?: string; // We add an optional image prop for social media sharing
 }
 
-const { title, description } = Astro.props;
+// FIXED: We set the default image to your new OG image in the public folder!
+const { 
+  title, 
+  description, 
+  image = "https://sanjeewa.dev/og-image.png" 
+} = Astro.props;
 
-// SCHEMA.ORG JSON-LD - for SEO
-const schemaData = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Sanjeewa.dev",
-  "image": "https://sanjeewa.dev/assets/me/Sanjeewa-web-developer.avif",
-  "url": "https://sanjeewa.dev",
-  "telephone": "+94700000000",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "LK"
-  },
-  "priceRange": "$$$",
-  "description": "High-performance web architecture for global brands.",
-  "sameAs": [
-    "https://github.com/yourhandle",
-    "https://linkedin.com/in/yourhandle"
-  ]
-};
+// Automatically generate the canonical URL for whatever page the user is on
+const canonicalURL = new URL(Astro.url.pathname, 'https://sanjeewa.dev');
 ---
 
 <!doctype html>
@@ -38,35 +30,52 @@ const schemaData = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- REQUIRED: The Immersive Luxury Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- SEO METADATA -->
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
+    <SEO 
+      title={title}
+      description={description}
+      canonical={canonicalURL.toString()}
+      openGraph={{
+        basic: {
+          title: title,
+          type: "website",
+          image: image,
+        },
+        image: {
+          alt: "Sanjeewa - Premium Web Development and Custom Website Design"
+        }
+      }}
+      twitter={{
+        card: "summary_large_image",
+        title: title,
+        description: description,
+        image: image,
+      }}
+      extend={{
+        // Fallback meta tags
+        meta: [
+          { name: "robots", content: "index, follow" },
+          { name: "author", content: "Sanjeewa Vipula Kumara" }
+        ]
+      }}
+    />
     
-    <!-- SCHEMA INJECTION -->
-    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
-    
-    <!-- G - ANALYTICS HERE -->
-  </head>
+    </head>
   <body>
-    <!-- The Universal Navigation -->
     <Nav />
     
-    <!-- Your page content (index.astro) gets injected here -->
     <slot />
     
-    <!-- The Universal Footer -->
     <Footer />
 
-    <!-- REQUIRED: Scroll Restoration Script -->
     <script is:inline>
         // 1. Tell Chrome NOT to remember the scroll position on reload
         if ('scrollRestoration' in history) {

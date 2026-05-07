@@ -874,34 +874,24 @@
 /* =========================================
    11. MOBILE RESPONSIVENESS
    ========================================= */
+/* =========================================
+   11. MOBILE RESPONSIVENESS (Upgraded)
+   ========================================= */
 @media (max-width: 1000px) {
-  .hero-grid,
+  /* Grid Stacking */
   .about-grid,
   .work-grid {
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  .hero-visual {
-    height: 400px;
-    order: -1;
-  }
-  .dynamic-text-wrapper {
-    min-width: auto;
-  }
-  .hero-actions {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
-  .ml-24 {
-    margin-left: 0;
-  }
 
+  /* The About Section Reverse Trick */
   .about-grid {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse; /* Puts the text on top of the image on mobile */
   }
 
+  /* Bento & Pricing Cards */
   .bento-grid,
   .pricing-grid {
     grid-template-columns: 1fr;
@@ -910,15 +900,40 @@
     margin-right: auto;
   }
 
+  /* Reduce Giant Whitespace for Mobile Screens */
+  .section-philosophy,
+  .section-about,
+  .section-faq,
+  .section-final-cta {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .section-expertise,
+  .section-work,
+  .section-google-reviews,
+  .section-pricing {
+    padding-bottom: 80px; /* Reduced from 160px/120px */
+  }
+
+  /* Fix Section Headers on Mobile */
+  .section-label-block {
+    margin-bottom: 48px; /* Reduced from 80px */
+  }
+
+  /* Adjust Review Slider Controls */
   .reviews-carousel-container {
     gap: 12px;
   }
+
   .slider-arrow {
     width: 40px;
     height: 40px;
   }
+
   .review-ctas {
     flex-direction: column;
     gap: 24px;
+    margin-top: 32px;
   }
 }

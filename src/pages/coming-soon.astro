@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/coming-soon.css'; 
+
+const pageTitle = "Coming Soon | Sanjeewa.dev";
+const pageDescription = "This page is currently under development. Check back soon for the full experience.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <main class="wip-page">
+        <div class="container wip-container text-center scroll-fade-up">
+            
+            <div class="status-badge">
+                <span class="pulse-dot"></span>
+                <span class="status-text">In Development</span>
+            </div>
+            
+            <h1 class="wip-title">Currently <span class="text-brand">Crafting.</span></h1>
+            
+            <p class="wip-text text-dark-muted">
+                I am meticulously building this section to ensure it meets the highest standards of performance and design. Please check back shortly for the final release.
+            </p>
+            
+            <div class="wip-action mt-32">
+                <a href="/" class="btn-brand">Return to Homepage</a>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../script/scroll.js"></script>
+</Layout>

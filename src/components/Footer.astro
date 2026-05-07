@@ -2,54 +2,45 @@
 import '../styles/footer.css';
 ---
 
-<!-- THE PREMIUM FOOTER -->
 <footer class="site-footer">
     <div class="container footer-container">
         
-        <!-- Main Grid (Brand + Links combined to save height) -->
         <div class="footer-main-grid">
             
-            <!-- Column 1: Brand Area -->
             <div class="footer-brand-column">
-                <h2 class="footer-logo">Sanjeewa<span class="text-brand">.dev</span></h2>
-                <p class="footer-tagline text-light-muted">Building high-performance websites for creative professionals and local businesses worldwide.</p>
+                <a href="/" class="footer-logo" aria-label="Homepage">Sanjeewa<span class="text-brand">.dev</span></a>
+                <p class="footer-tagline text-light-muted">High-converting custom website design for small businesses and creative professionals.</p>
             </div>
 
-            <!-- Column 2: Navigation -->
-            <div class="footer-column">
+            <nav class="footer-column" aria-label="Footer Navigation">
                 <h4 class="footer-heading">Navigation</h4>
                 <a href="/" class="footer-link">Home</a>
                 <a href="/#services" class="footer-link">Services</a>
-                <a href="/#work" class="footer-link">Recent Work</a>
+                <a href="/coming-soon" class="footer-link">Case Studies</a>
                 <a href="/#packages" class="footer-link">Pricing Plans</a>
-            </div>
+            </nav>
             
-            <!-- Column 3: Connect -->
-            <div class="footer-column">
+            <nav class="footer-column" aria-label="Social Links">
                 <h4 class="footer-heading">Connect</h4>
-                <a href="/contact" class="footer-link">Get in Touch</a>
-                <!-- Make sure to add your real links here! -->
-                <a href="https://linkedin.com/" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://github.com/" class="footer-link" target="_blank" rel="noopener">GitHub</a>
-            </div>
+                <a href="/contact" class="footer-link">Get a Free Quote</a>
+                <a href="https://linkedin.com/in/sanjeewadev" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/sanjeewadev" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+            </nav>
             
-            <!-- Column 4: Legal -->
-            <div class="footer-column">
+            <nav class="footer-column" aria-label="Legal Links">
                 <h4 class="footer-heading">Legal</h4>
-                <a href="#" class="footer-link">Privacy Policy</a>
-                <a href="#" class="footer-link">Terms of Service</a>
-            </div>
+                <a href="/coming-soon" class="footer-link">Privacy Policy</a>
+                <a href="/coming-soon" class="footer-link">Terms of Service</a>
+            </nav>
             
         </div>
 
-        <!-- Bottom: Meta & Copyright -->
         <div class="footer-bottom">
-            <p class="copyright text-light-muted">&copy; {new Date().getFullYear()} Sanjeewa Kumara. All rights reserved.</p>
+            <p class="copyright text-light-muted">&copy; {new Date().getFullYear()} Sanjeewa Vipula Kumara. All rights reserved.</p>
             
             <div class="footer-meta">
-                <span class="location-text">Engineered in Colombo, Sri Lanka</span>
+                <span class="location-text">Based in Sri Lanka • Serving Australia & Europe</span>
                 
-                <!-- NEW: Round Blue Back-to-Top Button -->
                 <button class="back-to-top-btn" aria-label="Back to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="12" y1="19" x2="12" y2="5"></line>

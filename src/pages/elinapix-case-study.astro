@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/case-study.css'; 
+
+// 1. IMPORT ASTRO'S IMAGE COMPONENT FOR PERFECT 100/100 SPEED
+import { Image } from 'astro:assets';
+
+import page_hero from '../assets/Project/elinapix-photography-portfolio-website.webp';
+
+// 2. IMPORT YOUR IMAGES FROM YOUR NEW ORGANIZED FOLDER
+import imgHero from '../assets/elinapix-case-study/1.png';
+import imgGallery from '../assets/elinapix-case-study/2.png'; 
+import imgContact from '../assets/elinapix-case-study/3.png'; 
+import imgMobile from '../assets/elinapix-case-study/4.png';   
+
+// THE BAIT (SEO Meta Data)
+const pageTitle = "ElinaPix Case Study | French Riviera Event Photography Web Design";
+const pageDescription = "See how I transformed a failing website into a high-converting WordPress booking platform for a French Riviera event photographer with perfect 100/100 SEO scores.";
+
+// Advanced AEO & SEO Schema
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Case Study: High-Converting Photography Website for ElinaPix",
+      "author": {
+        "@type": "Person",
+        "name": "Sanjeewa Vipula Kumara"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sanjeewa.dev"
+      },
+      "description": "How a custom WordPress build and technical SEO helped a French Riviera event photographer capture direct, automated bookings."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is website speed important for a photography portfolio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Photography websites usually load very slowly because of large, high-resolution images. By optimizing the images and writing clean custom code, I achieved a perfect 100/100 Google Lighthouse score, ensuring visitors stay on the page and book services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a WordPress website have automated payment gateways?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. For ElinaPix, I integrated a secure, automated payment gateway directly into her custom WordPress platform, allowing clients to book and pay for event photography without manual invoicing."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+    
+    <main class="case-study-page">
+        
+<header class="cs-hero-split">
+            <div class="container cs-hero-split-grid">
+                
+                <div class="cs-hero-content-left scroll-fade-up">
+                    <p class="section-kicker text-dark-muted">PROJECT HIGHLIGHT</p>
+                    <h1 class="cs-title">ElinaPix Photography</h1>
+                    <p class="cs-subtitle text-dark-muted">From zero website sales to automated client bookings in the French Riviera.</p>
+                    
+                    <div class="cs-meta-grid-left">
+                        <div class="meta-item">
+                            <span class="meta-label">Client Focus</span>
+                            <span class="meta-value">Event Photography</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Location</span>
+                            <span class="meta-value">French Riviera, Europe</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Tech Stack</span>
+                            <span class="meta-value">Custom WordPress + Stripe</span>
+                        </div>
+                    </div>
+
+                    <div class="cs-hero-action-left mt-32">
+                        <a href="https://elinapix.com" target="_blank" rel="noopener" class="btn-brand">Visit Live Website ↗</a>
+                    </div>
+                </div>
+
+                <div class="cs-hero-visual-right scroll-fade-up delay-150">
+                    <div class="cs-vertical-image-wrapper">
+                        <Image src={page_hero} alt="ElinaPix Custom Photography Website Interface" class="cs-vertical-image" />
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <section class="container cs-visual-section scroll-fade-up delay-150">
+            <div class="cs-main-image-wrapper">
+                <Image src={imgHero} alt="ElinaPix Custom Photography Website Design Displayed on Laptop" class="cs-main-image" />
+            </div>
+        </section>
+
+        <section class="container cs-story-section">
+            <div class="cs-story-grid">
+                
+                <div class="story-block scroll-fade-up">
+                    <h2 class="text-brand">The Challenge</h2>
+                    <p>Elina is an incredibly talented event photographer operating in the highly competitive French Riviera market. However, her previous website was failing her business. It was built poorly, ran slowly due to heavy image files, and completely failed to generate any sales or direct client leads through search engines.</p>
+                </div>
+
+                <div class="story-block scroll-fade-up delay-150">
+                    <h2 class="text-brand">The Engineering Solution</h2>
+                    <p>I tore down the old site and architected a completely custom WordPress platform built for speed and conversion.</p>
+                    <ul class="cs-solution-list">
+                        <li><strong>Performance:</strong> Implemented aggressive image optimization to keep high-res galleries loading instantly.</li>
+                        <li><strong>Local SEO Strategy:</strong> Structured the data and content to rank specifically for French Riviera event photography on Google.</li>
+                        <li><strong>Automated Revenue:</strong> Integrated a highly reliable contact system and a secure payment gateway so clients can book directly.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container cs-visual-tour scroll-fade-up">
+            <div class="section-label-block centered mb-64">
+                <p class="section-kicker text-dark-muted">PLATFORM INTERFACE</p>
+                <h2>High-Performance <span class="text-brand">Design.</span></h2>
+            </div>
+            
+            <div class="bento-tour-grid">
+                <div class="bento-tour-item tall scroll-fade-up delay-0">
+                    <Image src={imgGallery} alt="ElinaPix Photography Gallery UI" />
+                </div>
+                
+                <div class="bento-tour-item wide scroll-fade-up delay-150">
+                    <Image src={imgContact} alt="ElinaPix Custom Booking Form" />
+                </div>
+                
+                <div class="bento-tour-item small scroll-fade-up delay-300">
+                    <Image src={imgMobile} alt="ElinaPix Mobile Responsive View" />
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-proof-section">
+            <div class="container">
+                <div class="section-label-block centered mb-64">
+                    <h2 class="scroll-fade-up">The <span class="text-brand">Results.</span></h2>
+                </div>
+
+                <div class="metrics-grid scroll-fade-up">
+                    <div class="metric-card">
+                        <div class="metric-circle score-perfect">100</div>
+                        <h3>Performance Score</h3>
+                        <p>Perfect Google Lighthouse mobile loading speed.</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-circle score-perfect">100</div>
+                        <h3>SEO Score</h3>
+                        <p>Flawless technical search engine optimization.</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-circle score-perfect">100</div>
+                        <h3>Best Practices</h3>
+                        <p>Elite security and modern code standards.</p>
+                    </div>
+                </div>
+
+                <div class="cs-testimonial-wrapper scroll-fade-up delay-150">
+                    <div class="google-review-card featured-review">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar pink-bg">E</div>
+                                <div class="reviewer-details">
+                                    <span class="reviewer-name">Elina Kabakova</span>
+                                    <div class="review-stars">★★★★★</div>
+                                </div>
+                            </div>
+                            <div class="google-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="24" height="24" />
+                            </div>
+                        </div>
+                        <p class="review-text">"I’m happy with the work done by Sanjeewa. The website looks aesthetically beautiful and elegant, exactly as I envisioned. The entire project was handled with a high level of professionalism, and I truly appreciate the attention to detail. Highly recommended!"</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container section-faq">
+            <div class="section-label-block centered mb-64">
+                <p class="section-kicker text-dark-muted">PROJECT DETAILS</p>
+                <h2 class="scroll-fade-up">Technical <span class="text-brand">Insights.</span></h2>
+            </div>
+
+            <div class="faq-container">
+                
+                <div class="faq-item scroll-fade-up delay-0">
+                    <button class="faq-question">
+                        <span>Why is website speed important for a photography portfolio?</span>
+                        <div class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Photography websites usually load very slowly because of large, high-resolution images. By applying advanced image compression algorithms and writing lightweight custom code, I achieved a perfect 100/100 Google speed score. This ensures visitors do not leave the site out of frustration before seeing her work.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item scroll-fade-up delay-100">
+                    <button class="faq-question">
+                        <span>Can a custom WordPress website have automated payments?</span>
+                        <div class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. For this project, I integrated a highly secure payment gateway directly into the WordPress infrastructure. This allows international clients to book and pay for event photography instantly, saving the business owner hours of manual invoicing.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container section-final-cta scroll-fade-up">
+            <div class="final-cta-content">
+                <h2 class="final-cta-title">Want results like <span class="text-brand">ElinaPix?</span></h2>
+                <p class="final-cta-text">Stop losing customers to slow, broken websites. Let's build a custom platform that actually grows your business.</p>
+                <a href="/contact" class="btn-brand">Get Your Free Consultation</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../script/scroll.js"></script>
+    <script src="../script/faq.js"></script>
+</Layout>
