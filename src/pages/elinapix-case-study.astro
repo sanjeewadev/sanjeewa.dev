@@ -8,10 +8,12 @@ import { Image } from 'astro:assets';
 import page_hero from '../assets/Project/elinapix-photography-portfolio-website.webp';
 
 // 2. IMPORT YOUR IMAGES FROM YOUR NEW ORGANIZED FOLDER
-import imgHero from '../assets/elinapix-case-study/1.png';
-import imgGallery from '../assets/elinapix-case-study/2.png'; 
-import imgContact from '../assets/elinapix-case-study/3.png'; 
-import imgMobile from '../assets/elinapix-case-study/4.png';   
+import Heroimage from '../assets/elinapix-case-study/elinapix-full-website-desktop-preview.webp';
+import imgGallery1 from '../assets/elinapix-case-study/elinapix-custom-about-page-design-and-footer.webp'; 
+import imgGallery2 from '../assets/elinapix-case-study/elinapix-custom-contact-form-and-booking-page.webp'; 
+import imgGallery3 from '../assets/elinapix-case-study/elinapix-monaco-luxury-event-photography-services.webp';
+import imgGallery4 from '../assets/elinapix-case-study/elinapix-photographer-profile-and-portfolio-introduction.webp';
+import imgGallery5 from '../assets/elinapix-case-study/elinapix-photography-awards-and-client-reviews-section.webp'; 
 
 // THE BAIT (SEO Meta Data)
 const pageTitle = "ElinaPix Case Study | French Riviera Event Photography Web Design";
@@ -64,7 +66,7 @@ const schemaData = {
     
     <main class="case-study-page">
         
-<header class="cs-hero-split">
+        <header class="cs-hero-split">
             <div class="container cs-hero-split-grid">
                 
                 <div class="cs-hero-content-left scroll-fade-up">
@@ -103,7 +105,7 @@ const schemaData = {
 
         <section class="container cs-visual-section scroll-fade-up delay-150">
             <div class="cs-main-image-wrapper">
-                <Image src={imgHero} alt="ElinaPix Custom Photography Website Design Displayed on Laptop" class="cs-main-image" />
+                <Image src={Heroimage} alt="ElinaPix Custom Photography Website Design Displayed on Laptop" class="cs-main-image" />
             </div>
         </section>
 
@@ -134,17 +136,25 @@ const schemaData = {
                 <h2>High-Performance <span class="text-brand">Design.</span></h2>
             </div>
             
-            <div class="bento-tour-grid">
-                <div class="bento-tour-item tall scroll-fade-up delay-0">
-                    <Image src={imgGallery} alt="ElinaPix Photography Gallery UI" />
+            <div class="modular-gallery-grid">
+                <div class="gallery-item scroll-fade-up delay-0">
+                    <Image src={imgGallery1} alt="ElinaPix custom about page design featuring photographer profile and seamless footer integration" />
                 </div>
                 
-                <div class="bento-tour-item wide scroll-fade-up delay-150">
-                    <Image src={imgContact} alt="ElinaPix Custom Booking Form" />
+                <div class="gallery-item scroll-fade-up delay-100">
+                    <Image src={imgGallery2} alt="ElinaPix custom WordPress contact form and automated booking page for event photography" />
                 </div>
                 
-                <div class="bento-tour-item small scroll-fade-up delay-300">
-                    <Image src={imgMobile} alt="ElinaPix Mobile Responsive View" />
+                <div class="gallery-item scroll-fade-up delay-200">
+                    <Image src={imgGallery3} alt="ElinaPix luxury event photography services showcase for Monaco and French Riviera" />
+                </div>
+
+                <div class="gallery-item scroll-fade-up delay-300">
+                    <Image src={imgGallery4} alt="ElinaPix professional photographer profile and luxury portfolio introduction layout" />
+                </div>
+
+                <div class="gallery-item scroll-fade-up delay-400">
+                    <Image src={imgGallery5} alt="ElinaPix photography awards recognition and five-star client Google reviews section" />
                 </div>
             </div>
         </section>

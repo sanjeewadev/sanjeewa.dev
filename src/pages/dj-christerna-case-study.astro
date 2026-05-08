@@ -6,11 +6,14 @@ import '../styles/case-study.css';
 import { Image } from 'astro:assets';
 
 // 2. IMPORT YOUR IMAGES 
+import Page_hero from "../assets/Project/dj-christerna-dj-booking-website.webp";
+
 // (Make sure to save 4 screenshots of his site in this new folder!)
-import imgHero from '../assets/djchristerna-case-study/1.png';
-import imgTall from '../assets/djchristerna-case-study/2.png'; 
-import imgWide from '../assets/djchristerna-case-study/3.png'; 
-import imgMobile from '../assets/djchristerna-case-study/4.png';   
+import Heroimage from '../assets/djchristerna-case-study/dj-christerna-full-website-desktop-preview.webp';
+import galleryimage1 from '../assets/djchristerna-case-study/dj-christerna-custom-booking-form-and-contact-page.webp'; 
+import galleryimage2 from '../assets/djchristerna-case-study/dj-christerna-dubai-music-genres-and-services-section.webp'; 
+import galleryimage3 from '../assets/djchristerna-case-study/dj-christerna-professional-about-page-design.webp'; 
+import galleryimage4 from '../assets/djchristerna-case-study/dj-christerna-yacht-and-wedding-dj-services-layout.webp'; 
 
 // THE BAIT (SEO Meta Data)
 const pageTitle = "DJ Christerna Case Study | Dubai DJ Website Design & SEO";
@@ -93,7 +96,7 @@ const schemaData = {
 
                 <div class="cs-hero-visual-right scroll-fade-up delay-150">
                     <div class="cs-vertical-image-wrapper">
-                        <Image src={imgHero} alt="DJ Christerna Custom Website Design Dubai" class="cs-vertical-image" />
+                        <Image src={Page_hero} alt="DJ Christerna Custom Website Design Dubai" class="cs-vertical-image" />
                     </div>
                 </div>
 
@@ -102,7 +105,7 @@ const schemaData = {
 
         <section class="container cs-visual-section scroll-fade-up delay-150">
             <div class="cs-main-image-wrapper">
-                <Image src={imgWide} alt="DJ Christerna full website layout and event gallery" class="cs-main-image" />
+                <Image src={Heroimage} alt="DJ Christerna full website layout and event gallery" class="cs-main-image" />
             </div>
         </section>
 
@@ -133,17 +136,21 @@ const schemaData = {
                 <h2>High-Performance <span class="text-brand">Design.</span></h2>
             </div>
             
-            <div class="bento-tour-grid">
-                <div class="bento-tour-item tall scroll-fade-up delay-0">
-                    <Image src={imgTall} alt="DJ Christerna Booking Interface UI" />
+            <div class="modular-gallery-grid">
+                <div class="gallery-item scroll-fade-up delay-0">
+                    <Image src={galleryimage1} alt="DJ Christerna custom WordPress booking form and contact page design" />
                 </div>
                 
-                <div class="bento-tour-item wide scroll-fade-up delay-150">
-                    <Image src={imgWide} alt="DJ Christerna Event Highlights" />
+                <div class="gallery-item scroll-fade-up delay-100">
+                    <Image src={galleryimage2} alt="DJ Christerna Dubai music genres and premium DJ services section UI" />
                 </div>
                 
-                <div class="bento-tour-item small scroll-fade-up delay-300">
-                    <Image src={imgMobile} alt="DJ Website Mobile Responsive View" />
+                <div class="gallery-item scroll-fade-up delay-200">
+                    <Image src={galleryimage3} alt="DJ Christerna professional about page design and biography layout" />
+                </div>
+
+                <div class="gallery-item scroll-fade-up delay-300">
+                    <Image src={galleryimage4} alt="Luxury yacht party and wedding DJ services layout for Dubai events" />
                 </div>
             </div>
         </section>
@@ -186,7 +193,8 @@ const schemaData = {
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="24" height="24" />
                             </div>
                         </div>
-                        <p class="review-text">"Sanjeewa completely saved my business online. After being locked out by my last developer, I finally own my own website and domain. The new booking system works perfectly, and the site looks incredibly professional. Highly recommended for any business owner!"</p>
+                        <p class="review-text">"Wow this is amazing knowing how this guy building website for me
+He amazing he knows the work🙌🏿👍🏼"</p>
                     </div>
                 </div>
 

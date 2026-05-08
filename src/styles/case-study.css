@@ -155,7 +155,6 @@
   gap: 80px;
 }
 
-/* UPDATED: Much larger titles with more breathing room below */
 .story-block h2 {
   font-size: clamp(32px, 3.5vw, 44px);
   line-height: 1.1;
@@ -194,50 +193,38 @@
 }
 /* --- END: 2. STORY SECTION --- */
 
-/* --- START: 3. THE VISUAL TOUR (Bento Grid) --- */
+/* --- START: 3. THE VISUAL TOUR (Modular Gallery) --- */
 .cs-visual-tour {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
-.bento-tour-grid {
+/* NEW: The 2-Column Modular WordPress-Style Gallery */
+.modular-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Forces exactly 2 columns */
   gap: 32px;
+  align-items: start; /* Lets images keep their natural proportions */
 }
 
-.bento-tour-item {
-  border-radius: 24px;
+.gallery-item {
+  width: 100%;
   overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08); /* Premium shadow */
   background-color: var(--bg-soft-gray);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
   position: relative;
 }
 
-.bento-tour-item img {
+.gallery-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* Scales automatically based on the image size */
+  display: block; /* Removes tiny spaces below images */
   transition: transform 1s var(--transition-smooth);
 }
 
-.bento-tour-item:hover img {
-  transform: scale(1.03);
-}
-
-.bento-tour-item.tall {
-  grid-column: span 5;
-  height: 700px;
-}
-
-.bento-tour-item.wide {
-  grid-column: span 7;
-  height: 400px;
-}
-
-.bento-tour-item.small {
-  grid-column: span 7;
-  height: 268px;
+/* Optional Polish: If you have an odd number of images (like 5), this makes the very first image stretch across both columns like a giant featured header! */
+.modular-gallery-grid .gallery-item:first-child {
+  grid-column: span 2;
 }
 /* --- END: 3. THE VISUAL TOUR --- */
 
@@ -371,6 +358,7 @@
 }
 
 .faq-container {
+  margin-top: 2rem;
   border-top: 1px solid var(--accent-line-dark);
 }
 
@@ -505,12 +493,13 @@
     gap: 48px;
   }
 
-  .bento-tour-item.tall,
-  .bento-tour-item.wide,
-  .bento-tour-item.small {
-    grid-column: span 12;
-    height: auto;
-    aspect-ratio: 4/3;
+  /* NEW: Forces the modular gallery to 1 single column on mobile */
+  .modular-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modular-gallery-grid .gallery-item:first-child {
+    grid-column: span 1;
   }
 
   .metrics-grid {
