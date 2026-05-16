@@ -18,25 +18,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2. MOBILE MENU TOGGLE LOGIC
   if (mobileToggle && mobileMenu) {
     mobileToggle.addEventListener("click", () => {
+      // Toggle the slide-in menu
       mobileMenu.classList.toggle("is-open");
-      nav.classList.toggle("menu-open"); // Used to force dark text when menu is open at the top
 
-      // Optional: Animate the hamburger to an 'X'
-      const icon = mobileToggle.querySelector(".menu-icon");
-      if (mobileMenu.classList.contains("is-open")) {
-        icon.innerHTML = `<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>`;
-      } else {
-        icon.innerHTML = `<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>`;
-      }
+      // Toggle the hamburger 'X' animation state
+      nav.classList.toggle("menu-open");
+
+      // Lock or unlock background scrolling
+      document.body.classList.toggle("no-scroll");
     });
 
-    // Close menu when a link is clicked
+    // 3. CLOSE MENU WHEN A LINK IS CLICKED
     mobileLinks.forEach((link) => {
       link.addEventListener("click", () => {
+        // Reset everything back to default
         mobileMenu.classList.remove("is-open");
         nav.classList.remove("menu-open");
-        mobileToggle.querySelector(".menu-icon").innerHTML =
-          `<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>`;
+        document.body.classList.remove("no-scroll");
       });
     });
   }

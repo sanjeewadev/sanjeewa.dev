@@ -903,10 +903,14 @@
   /* Reduce Giant Whitespace for Mobile Screens */
   .section-philosophy,
   .section-about,
-  .section-faq,
+  .section-faq {
+    padding-top: 80px;
+    padding-bottom: 0px;
+  }
+
   .section-final-cta {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
   }
 
   .section-expertise,
@@ -921,9 +925,13 @@
     margin-bottom: 48px; /* Reduced from 80px */
   }
 
+  .google-review-card {
+    padding: 20px 10px;
+  }
+
   /* Adjust Review Slider Controls */
   .reviews-carousel-container {
-    gap: 12px;
+    gap: 8px;
   }
 
   .slider-arrow {

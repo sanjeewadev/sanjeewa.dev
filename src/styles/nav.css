@@ -80,58 +80,89 @@
   padding: 16px 0;
 }
 
-/* --- 3. MOBILE MENU BUTTON & OVERLAY --- */
+/* --- 3. MOBILE MENU BUTTON (The "X" Animation) --- */
 .mobile-toggle {
   display: none;
   background: none;
   border: none;
-  /* FIXED: Changed to dark main so it is visible on your white background! */
-  color: var(--text-dark-main);
   cursor: pointer;
-  z-index: 1001;
-  /* UPGRADED: Increased padding to make it a better "touch target" for thumbs */
-  padding: 12px;
-  margin-right: -12px; /* Pulls it slightly right so it aligns perfectly with the edge */
+  z-index: 1001; /* Must stay above the full-screen menu */
+
+  /* Make the button a large, easy-to-tap square */
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin-right: -12px;
+
+  /* Flexbox to center the lines perfectly */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px; /* Perfect spacing between the lines */
 }
 
-/* The Mobile Dropdown Background */
-.mobile-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--bg-pure-white);
-  padding-top: 80px;
-  padding-bottom: 40px;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+.hamburger-line {
+  display: block;
+  width: 24px; /* Explicit width so it never shrinks */
+  height: 2px;
+  background-color: var(--text-dark-main);
+  border-radius: 4px;
+  transition: all 0.4s cubic-bezier(0.77, 0.2, 0.05, 1); /* Apple-style smooth snap */
+  transform-origin: center;
+}
 
-  /* Hidden by default using transform and opacity */
+/* When the menu is open, animate the lines into an "X" */
+.main-nav.menu-open .hamburger-line:nth-child(1) {
+  /* Moves the top line down 8px and rotates it */
+  transform: translateY(8px) rotate(45deg);
+}
+
+.main-nav.menu-open .hamburger-line:nth-child(2) {
   opacity: 0;
-  visibility: hidden;
-  transform: translateY(-100%);
-  transition: all var(--transition-smooth);
-  z-index: 999;
+  transform: scale(0.2);
 }
 
-/* When the menu is active/open */
+.main-nav.menu-open .hamburger-line:nth-child(3) {
+  /* Moves the bottom line up 8px and rotates it */
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- 4. FULL SCREEN SLIDE-IN MENU --- */
+.mobile-menu {
+  position: fixed; /* Changed from absolute to fixed */
+  top: 0;
+  right: -100vw; /* Hidden completely to the right */
+  width: 100vw; /* Takes up the whole screen width */
+  height: 100vh; /* Takes up the whole screen height */
+  background-color: var(--bg-pure-white);
+  z-index: 999; /* Sits right below the logo and hamburger button */
+
+  /* Flexbox to perfectly center the links in the middle of the screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: right 0.6s cubic-bezier(0.77, 0.2, 0.05, 1); /* Premium slide effect */
+}
+
+/* When active, slide all the way to the left */
 .mobile-menu.is-open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  right: 0;
 }
 
 .mobile-menu-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  padding: 0 var(--container-padding);
+  gap: 32px; /* Increased gap for better touch targets */
+  width: 100%;
+  padding: 0 32px;
 }
 
 .mobile-link {
   font-family: var(--font-heading);
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 32px; /* Much larger for full-screen feel */
+  font-weight: 700;
   color: var(--text-dark-main);
   text-decoration: none;
   transition: color var(--transition-fast);
@@ -141,6 +172,11 @@
   color: var(--accent-brand);
 }
 
+/* Helper class to stop the background website from scrolling when menu is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
 /* Mobile Breakpoint */
 @media (max-width: 900px) {
   .desktop-links,
@@ -148,6 +184,6 @@
     display: none;
   }
   .mobile-toggle {
-    display: block;
+    display: flex; /* Changed from block to flex for the hamburger lines */
   }
 }
