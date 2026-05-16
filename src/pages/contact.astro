@@ -97,32 +97,34 @@ const schemaData = {
                 </div>
 
                 <div class="contact-form-wrapper scroll-fade-up delay-0">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="solid-premium-form">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="solid-premium-form" id="contactForm" novalidate>
                         
                         <input type="hidden" name="access_key" value="065ef0f5-7ba0-4210-add9-4534771c8b49">
-                        
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
                         <input type="hidden" name="subject" value="New Lead from Sanjeewa.dev!">
 
                         <div class="solid-input-group">
                             <label for="name">Name / Brand</label>
                             <input type="text" id="name" name="name" required placeholder="e.g. Sanjeewa">
+                            <span class="error-text">Please enter your name (at least 2 characters).</span>
                         </div>
                         
                         <div class="solid-input-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required placeholder="hello@yourbusiness.com">
+                            <span class="error-text">Please enter a valid email address.</span>
                         </div>
                         
                         <div class="solid-input-group">
                             <label for="country">Location (Country)</label>
                             <input type="text" id="country" name="country" required placeholder="e.g. Australia or Europe">
+                            <span class="error-text">Please let me know where you are located.</span>
                         </div>
                         
                         <div class="solid-input-group">
                             <label for="message">Project Details</label>
                             <textarea id="message" name="message" rows="5" required placeholder="Tell me about your business goals, current website problems, or ask me anything..."></textarea>
+                            <span class="error-text">Please provide a few more details (at least 10 characters).</span>
                         </div>
                         
                         <button type="submit" class="submit-btn btn-brand btn-full-width mt-32">Get Your Free Consultation</button>
@@ -149,5 +151,57 @@ const schemaData = {
                 }, 2000);
             });
         }
+        // --- REAL-TIME FORM VALIDATION ---
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("contactForm");
+            if (!form) return;
+
+            const nameInput = document.getElementById("name");
+            const emailInput = document.getElementById("email");
+            const countryInput = document.getElementById("country");
+            const messageInput = document.getElementById("message");
+
+            // Validation Logic Functions
+            const isValidName = () => nameInput.value.trim().length >= 2;
+            const isValidEmail = () => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim());
+            const isValidCountry = () => countryInput.value.trim().length >= 2;
+            const isValidMessage = () => messageInput.value.trim().length >= 10;
+
+            // UI Updater Function
+            const updateUI = (input, isValid) => {
+                if (isValid) {
+                    input.classList.remove("is-invalid");
+                    input.classList.add("is-valid");
+                } else {
+                    input.classList.remove("is-valid");
+                    input.classList.add("is-invalid");
+                }
+            };
+
+            // 1. Real-Time Feedback (Fires as the user types)
+            nameInput.addEventListener("input", () => updateUI(nameInput, isValidName()));
+            emailInput.addEventListener("input", () => updateUI(emailInput, isValidEmail()));
+            countryInput.addEventListener("input", () => updateUI(countryInput, isValidCountry()));
+            messageInput.addEventListener("input", () => updateUI(messageInput, isValidMessage()));
+
+            // 2. Submission Lock (Prevents sending if errors exist)
+            form.addEventListener("submit", (e) => {
+                const nameValid = isValidName();
+                const emailValid = isValidEmail();
+                const countryValid = isValidCountry();
+                const messageValid = isValidMessage();
+
+                // Force UI update on all fields in case they clicked submit while empty
+                updateUI(nameInput, nameValid);
+                updateUI(emailInput, emailValid);
+                updateUI(countryInput, countryValid);
+                updateUI(messageInput, messageValid);
+
+                // If ANY field is invalid, STOP the form from submitting
+                if (!nameValid || !emailValid || !countryValid || !messageValid) {
+                    e.preventDefault(); 
+                }
+            });
+        });
     </script>
 </Layout>

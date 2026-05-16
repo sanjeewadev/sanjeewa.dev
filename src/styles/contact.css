@@ -259,3 +259,34 @@
     border-radius: 20px;
   }
 }
+
+/* --- 5. FORM VALIDATION STYLES --- */
+
+/* Red Error State */
+.solid-input-group input.is-invalid,
+.solid-input-group textarea.is-invalid {
+  border-color: #ef4444 !important;
+  background-color: #fef2f2;
+}
+
+/* Green Success State */
+.solid-input-group input.is-valid,
+.solid-input-group textarea.is-valid {
+  border-color: #10b981 !important;
+}
+
+/* Error Text Styling (Hidden by default) */
+.error-text {
+  display: none;
+  color: #ef4444;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 6px;
+  padding-left: 4px;
+}
+
+/* Show error text ONLY when the input above it is invalid */
+.solid-input-group input.is-invalid ~ .error-text,
+.solid-input-group textarea.is-invalid ~ .error-text {
+  display: block;
+}
