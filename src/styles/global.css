@@ -1,0 +1,143 @@
+/* =========================================
+   COMMAND CENTER: APPLE-STYLE HYBRID LUXURY
+   (CSS Dictionary - Decentralized)
+   ========================================= */
+
+:root {
+  /* Warm Premium Light Palette */
+  --bg-page: #fcfbf8;
+  --bg-pure-white: #ffffff;
+  --bg-soft-gray: #f4f2ef;
+
+  /* Premium Dark Palette */
+  --bg-pitch-black: #141414;
+  --bg-dark-surface: #1f1f1f;
+
+  /* Typography */
+  --text-dark-main: #171717;
+  --text-dark-muted: #696866;
+  --text-light-main: #ffffff;
+  --text-light-muted: #a5a5a5;
+
+  /* Sapphire Brand Palette */
+  --accent-brand: #1769ff;
+  --accent-brand-hover: #0957dc;
+  --accent-brand-soft: #eef5ff;
+  --accent-soft: #e8ccd2;
+
+  /* UI Elements & Glassmorphism */
+  --accent-line-dark: #e5e2dd;
+  --accent-line-light: rgba(255, 255, 255, 0.15);
+  --glass-blur: blur(20px);
+
+  /* Typography - Premium Minimal */
+  --font-heading: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-body: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-editorial: "Instrument Serif", Georgia, serif;
+  --container-width: 1400px;
+  --container-padding: 5vw;
+
+  /* Cinematic Transitions */
+  --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s ease;
+}
+
+/* Global Styles (Resets & Typography) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-page);
+  color: var(--text-dark-main);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+.text-brand {
+  color: var(--accent-brand);
+  font-weight: 700;
+}
+
+/* Editorial accent is reserved for highlighted words inside major headings. */
+h1 .text-brand,
+h2 .text-brand {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Global Utility Classes */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+.text-pure-white {
+  color: var(--text-light-main) !important;
+}
+.text-dark-main {
+  color: var(--text-dark-main) !important;
+}
+.text-dark-muted {
+  color: var(--text-dark-muted) !important;
+}
+
+/* Global Buttons */
+.btn-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border-radius: 100px;
+  background-color: var(--accent-brand);
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+.btn-brand:hover {
+  background-color: var(--accent-brand-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(23, 105, 255, 0.3);
+}
+
+/* Animations & Delays */
+.scroll-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 1s var(--transition-smooth),
+    transform 1s var(--transition-smooth);
+}
+.scroll-fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.delay-0 {
+  transition-delay: 0ms;
+}
+.delay-150 {
+  transition-delay: 100ms;
+}
+.delay-300 {
+  transition-delay: 200ms;
+}
