@@ -5,19 +5,8 @@ export const metadata = {
   title: "404 - Page Not Found | Sanjeewa.dev",
   description: "Oops! The page you are looking for does not exist.",
   alternates: { canonical: "/" },
-  openGraph: {
-    title: "404 - Page Not Found | Sanjeewa.dev",
-    description: "Oops! The page you are looking for does not exist.",
-    url: "/",
-    type: "website",
-    images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "404 - Page Not Found | Sanjeewa.dev",
-    description: "Oops! The page you are looking for does not exist.",
-    images: ["/og-image.png"],
-  },
+  openGraph: { title: "404 - Page Not Found | Sanjeewa.dev", description: "Oops! The page you are looking for does not exist.", url: "/", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
+  twitter: { card: "summary_large_image", title: "404 - Page Not Found | Sanjeewa.dev", description: "Oops! The page you are looking for does not exist.", images: ["/og-image.png"] },
 };
 
 export default function NotFound() {

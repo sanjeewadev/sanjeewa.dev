@@ -5,19 +5,8 @@ export const metadata = {
   title: "Coming Soon | Sanjeewa.dev",
   description: "This page is currently under development. Check back soon for the full experience.",
   alternates: { canonical: "/coming-soon" },
-  openGraph: {
-    title: "Coming Soon | Sanjeewa.dev",
-    description: "This page is currently under development. Check back soon for the full experience.",
-    url: "/coming-soon",
-    type: "website",
-    images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Coming Soon | Sanjeewa.dev",
-    description: "This page is currently under development. Check back soon for the full experience.",
-    images: ["/og-image.png"],
-  },
+  openGraph: { title: "Coming Soon | Sanjeewa.dev", description: "This page is currently under development. Check back soon for the full experience.", url: "/coming-soon", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
+  twitter: { card: "summary_large_image", title: "Coming Soon | Sanjeewa.dev", description: "This page is currently under development. Check back soon for the full experience.", images: ["/og-image.png"] },
 };
 
 export default function ComingSoon() {
