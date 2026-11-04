@@ -1,5 +1,12 @@
 "use client";
+import { useEffect, useState } from "react";
+
 export default function Footer() {
+  const [year, setYear] = useState(2026);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
   return (
     <footer className="site-footer">
       <div className="container footer-container">
@@ -19,7 +26,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="footer-bottom">
-          <p className="copyright text-light-muted">&copy; {new Date().getFullYear()} Sanjeewa Vipula Kumara. All rights reserved.</p>
+          <p className="copyright text-light-muted">&copy; {year} Sanjeewa Vipula Kumara. All rights reserved.</p>
           <div className="footer-meta">
             <span className="location-text">Based in Sri Lanka • Serving Australia & Europe</span>
             <button className="back-to-top-btn" aria-label="Back to top" type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
