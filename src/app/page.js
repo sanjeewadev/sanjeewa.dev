@@ -242,7 +242,7 @@ export default function Home() {
                                   Ultra-fast, highly secure sites built to turn visitors into leads. <em>Note: Does not include a dashboard to change your own content.</em>
                               </p>
                               
-                              <hr className="card-divider">
+                              <hr className="card-divider" />
       
                               <ul className="package-features">
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Maximum loading speed</li>
@@ -265,7 +265,7 @@ export default function Home() {
                                   Includes a simple dashboard to change your own content, full e-commerce capabilities, and local search engine optimization.
                               </p>
       
-                              <hr className="card-divider">
+                              <hr className="card-divider" />
                               
                               <ul className="package-features">
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Easy content management</li>
@@ -287,7 +287,7 @@ export default function Home() {
                                   Elite architecture offering unbreakable security, 100% custom UI design, and significantly faster speeds than standard platforms.
                               </p>
       
-                              <hr className="card-divider">
+                              <hr className="card-divider" />
                               
                               <ul className="package-features">
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Enterprise-grade security</li>
