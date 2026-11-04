@@ -11,6 +11,7 @@ const eslintConfig = defineConfig([
       "@next/next/no-img-element": "off",
       "@next/next/no-page-custom-font": "off",
       "react/no-unescaped-entities": "off",
+      "react-hooks/set-state-in-effect": "off",
     },
   },
   globalIgnores([
