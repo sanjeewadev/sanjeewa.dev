@@ -1,0 +1,16 @@
+{
+  "name": "Sanjeewa.dev",
+  "short_name": "Sanjeewa.dev",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FCFBF8",
+  "theme_color": "#2855D9",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
