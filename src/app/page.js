@@ -31,8 +31,8 @@ const schemaData = {
       "@id": "https://sanjeewa.dev/#service",
       "url": "https://sanjeewa.dev",
       "name": "Sanjeewa Dev",
-      "description": "Thoughtful custom website development and ongoing website care for service businesses, creative professionals, boutique brands, and growing teams"
-      "priceRange": "$$"
+      "description": "Thoughtful custom website development and ongoing website care for service businesses, creative professionals, boutique brands, and growing teams",
+      "priceRange": "$"
     },
     {
       "@type": "FAQPage",
