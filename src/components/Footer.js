@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="footer-main-grid">
           <div className="footer-brand-column">
             <a href="/" className="footer-logo" aria-label="Homepage">Sanjeewa<span className="text-brand">.dev</span></a>
-            <p className="footer-tagline text-light-muted">High-converting custom website design for small businesses and creative professionals.</p>
+            <p className="footer-tagline text-light-muted">Thoughtful, high-performing websites and ongoing care for service businesses, creative professionals, and growing brands.</p>
           </div>
           <nav className="footer-column" aria-label="Footer Navigation">
             <h4 className="footer-heading">Navigation</h4><a href="/" className="footer-link">Home</a><a href="/#services" className="footer-link">Services</a><a href="/#work" className="footer-link">Case Studies</a><a href="/#packages" className="footer-link">Pricing Plans</a>
