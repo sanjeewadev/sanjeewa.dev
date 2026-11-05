@@ -4,10 +4,10 @@ import FaqInteractions from "@/components/FaqInteractions";
 
 export const metadata = {
   title: "DJ Christerna Case Study | Dubai DJ Website Design & SEO",
-  description: "How I rescued a Dubai DJ from a restrictive developer, built a custom WordPress booking platform, and delivered 100% digital ownership and top-tier SEO.",
+  description: "How I rebuilt DJ Christerna’s website around full ownership, a clearer booking journey, and stronger local visibility in Dubai.",
   alternates: { canonical: "/dj-christerna-case-study" },
-  openGraph: { title: "DJ Christerna Case Study | Dubai DJ Website Design & SEO", description: "How I rescued a Dubai DJ from a restrictive developer, built a custom WordPress booking platform, and delivered 100% digital ownership and top-tier SEO.", url: "/dj-christerna-case-study", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
-  twitter: { card: "summary_large_image", title: "DJ Christerna Case Study | Dubai DJ Website Design & SEO", description: "How I rescued a Dubai DJ from a restrictive developer, built a custom WordPress booking platform, and delivered 100% digital ownership and top-tier SEO.", images: ["/og-image.png"] },
+  openGraph: { title: "DJ Christerna Case Study | Dubai DJ Website Design & SEO", description: "How I rebuilt DJ Christerna’s website around full ownership, a clearer booking journey, and stronger local visibility in Dubai.", url: "/dj-christerna-case-study", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
+  twitter: { card: "summary_large_image", title: "DJ Christerna Case Study | Dubai DJ Website Design & SEO", description: "How I rebuilt DJ Christerna’s website around full ownership, a clearer booking journey, and stronger local visibility in Dubai.", images: ["/og-image.png"] },
 };
 
 const schemaData = {
@@ -62,7 +62,7 @@ export default function DjChristernaCaseStudy() {
                       <div className="cs-hero-content-left scroll-fade-up">
                           <p className="section-kicker text-dark-muted">PROJECT HIGHLIGHT</p>
                           <h1 className="cs-title">DJ Christerna</h1>
-                          <p className="cs-subtitle text-dark-muted">Reclaiming digital ownership and automating event bookings in Dubai.</p>
+                          <p className="cs-subtitle text-dark-muted">A professional website he fully owns, built around direct event enquiries in Dubai.</p>
                           
                           <div className="cs-meta-grid-left">
                               <div className="meta-item">
@@ -104,16 +104,16 @@ export default function DjChristernaCaseStudy() {
                       
                       <div className="story-block scroll-fade-up">
                           <h2 className="text-brand">The Challenge</h2>
-                          <p>Chris is an emerging DJ in the highly competitive Dubai nightlife market, but he was trapped. He had paid a previous developer for a website built on a restrictive site builder, but was completely locked out. He didn't own his domain, couldn't access his own site, and had no way to update his event schedule or receive direct bookings.</p>
+                          <p>Chris already had a website, but he did not have real control over it. He could not easily access or update the site, ownership of key digital assets was unclear, and the experience did not give event promoters a simple path to enquire about bookings.</p>
                       </div>
       
                       <div className="story-block scroll-fade-up delay-150">
-                          <h2 className="text-brand">The Engineering Solution</h2>
-                          <p>I rescued his digital presence by building a completely independent, custom WordPress architecture from the ground up.</p>
+                          <h2 className="text-brand">The Approach</h2>
+                          <p>I rebuilt his digital presence on independent hosting with full administrative control, clearer content, and a booking journey designed around the way promoters actually contact him.</p>
                           <ul className="cs-solution-list">
-                              <li><strong>100% Digital Ownership:</strong> Secured his domain and hosting, handing over full administrative rights so he can never be locked out again.</li>
-                              <li><strong>Automated Bookings:</strong> Developed a seamless inquiry system with custom email server configurations so he never misses a high-paying gig.</li>
-                              <li><strong>Aggressive Dubai SEO:</strong> Implemented a targeted local SEO strategy to help him rank above the noise in the UAE entertainment industry.</li>
+                              <li><strong>Ownership & Control:</strong> Set up independent hosting and full administrative access so the website and core digital assets stay under his control.</li>
+                              <li><strong>Booking Flow:</strong> Built a clearer enquiry system with reliable email routing so event promoters can contact him quickly and confidently.</li>
+                              <li><strong>Local Visibility:</strong> Strengthened the site structure and local SEO signals around his Dubai entertainment services.</li>
                           </ul>
                       </div>
       
@@ -229,7 +229,7 @@ export default function DjChristernaCaseStudy() {
               <section className="container section-final-cta scroll-fade-up">
                   <div className="final-cta-content">
                       <h2 className="final-cta-title">Want results like <span className="text-brand">DJ Christerna?</span></h2>
-                      <p className="final-cta-text">Stop renting your website from restrictive developers. Let's build a platform that you actually own.</p>
+                      <p className="final-cta-text">Let’s build a website you can fully own, understand, and grow with—without feeling dependent on someone else to control it.</p>
                       <a href="/contact" className="btn-brand">Get Your Free Consultation</a>
                   </div>
               </section>
