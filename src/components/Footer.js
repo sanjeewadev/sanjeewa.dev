@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <p className="copyright text-light-muted">&copy; {year} Sanjeewa Vipula Kumara. All rights reserved.</p>
           <div className="footer-meta">
-            <span className="location-text">Based in Sri Lanka • Serving Australia & Europe</span>
+            <span className="location-text">Based in Sri Lanka • Working Worldwide</span>
             <button className="back-to-top-btn" aria-label="Back to top" type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
             </button>
