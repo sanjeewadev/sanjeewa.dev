@@ -60,7 +60,7 @@ export default function Contact() {
 
                           <div className="support-intro">
                               <p className="section-kicker text-dark-muted">LET'S TALK</p>
-                              <h2>Tell me where you are now.<br /><span className="text-brand">I’ll help with the next step.</span></h2>
+                              <h2>Tell me where you are now.<br /><span className="editorial-accent text-editorial-ink">I’ll help with the next step.</span></h2>
                               <p>
                                   Tell me what feels frustrating, what you want to improve, or what you are hoping to launch. I’ll help turn that into a clear, practical next step.
                               </p>
@@ -154,7 +154,7 @@ export default function Contact() {
                               
                               <div className="solid-input-group">
                                   <label htmlFor="country">Location (Country)</label>
-                                  <input type="text" id="country" name="country" required placeholder="e.g. Australia or Europe" />
+                                  <input type="text" id="country" name="country" required placeholder="e.g. Australia, France, UAE" />
                                   <span className="error-text">Please let me know where you are located.</span>
                               </div>
                               
