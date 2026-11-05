@@ -4,10 +4,10 @@ import ContactInteractions from "@/components/ContactInteractions";
 
 export const metadata = {
   title: "Website Development & Maintenance Quote | Sanjeewa.dev",
-  description: "Request a quote for custom website development or monthly website maintenance. Tell me what you need and I will personally reply within 24 hours.",
+  description: "Tell me what you want to build, improve, or maintain. No technical brief required—just share the basics and I will personally reply within 24 hours.",
   alternates: { canonical: "/contact" },
-  openGraph: { title: "Website Development & Maintenance Quote | Sanjeewa.dev", description: "Request a quote for custom website development or monthly website maintenance. Tell me what you need and I will personally reply within 24 hours.", url: "/contact", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
-  twitter: { card: "summary_large_image", title: "Website Development & Maintenance Quote | Sanjeewa.dev", description: "Request a quote for custom website development or monthly website maintenance. Tell me what you need and I will personally reply within 24 hours.", images: ["/og-image.png"] },
+  openGraph: { title: "Website Development & Maintenance Quote | Sanjeewa.dev", description: "Tell me what you want to build, improve, or maintain. No technical brief required—just share the basics and I will personally reply within 24 hours.", url: "/contact", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
+  twitter: { card: "summary_large_image", title: "Website Development & Maintenance Quote | Sanjeewa.dev", description: "Tell me what you want to build, improve, or maintain. No technical brief required—just share the basics and I will personally reply within 24 hours.", images: ["/og-image.png"] },
 };
 
 const schemaData = {
@@ -40,10 +40,10 @@ export default function Contact() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <header className="contact-hero-minimal">
               <div className="container contact-hero-content-centered scroll-fade-up">
-                  <p className="hero-kicker">GET YOUR FREE QUOTE</p>
+                  <p className="hero-kicker">LET’S TALK ABOUT YOUR WEBSITE</p>
                   <h1 className="contact-title-minimal text-dark-main">Tell me <span className="editorial-accent text-editorial-ink">what you need.</span></h1>
                   <p className="contact-subtitle-minimal text-dark-muted">
-                      New website, monthly maintenance, or help with an existing site—send me the details and <strong>I will personally reply within 24 hours</strong>.
+                      You do not need a perfect brief. Tell me what you want to build, improve, or fix, and <strong>I will personally reply within 24 hours</strong> with a clear next step.
                   </p>
               </div>
           </header>
@@ -62,14 +62,14 @@ export default function Contact() {
                               <p className="section-kicker text-dark-muted">LET'S TALK</p>
                               <h2>Tell me where you are now.<br /><span className="text-brand">I’ll help with the next step.</span></h2>
                               <p>
-                                  You do not need to know the technical solution before contacting me. Tell me what you are trying to achieve, and I will help you work out the right approach.
+                                  Tell me what feels frustrating, what you want to improve, or what you are hoping to launch. I’ll help turn that into a clear, practical next step.
                               </p>
                           </div>
 
                           <div className="support-services">
-                              <span>New Website Development</span>
-                              <span>Monthly Website Maintenance</span>
-                              <span>Existing Website Fixes</span>
+                              <span>New Website</span>
+                              <span>Monthly Website Care</span>
+                              <span>Improve an Existing Site</span>
                           </div>
 
                           <div className="support-divider"></div>
@@ -121,7 +121,7 @@ export default function Contact() {
                           <div className="form-intro">
                               <p className="section-kicker text-dark-muted">START YOUR REQUEST</p>
                               <h2>Share the basics.</h2>
-                              <p>I only need enough information to understand what you need. We can work out the details together after I reply.</p>
+                              <p>Rough notes are completely fine. Share enough for me to understand the situation, and we can work out the details together after I reply.</p>
                           </div>
                           <form action="https://api.web3forms.com/submit" method="POST" className="solid-premium-form" id="contactForm" noValidate>
                               
@@ -160,7 +160,7 @@ export default function Contact() {
                               
                               <div className="solid-input-group">
                                   <label htmlFor="message">Website / Project Details</label>
-                                  <textarea id="message" name="message" rows="5" required placeholder="Tell me about your business, the website you need, or the existing site you want maintained..."></textarea>
+                                  <textarea id="message" name="message" rows="5" required placeholder="Tell me about your business, what you want the website to do better, or what feels difficult right now..."></textarea>
                                   <span className="error-text">Please provide a few more details (at least 10 characters).</span>
                               </div>
                               
