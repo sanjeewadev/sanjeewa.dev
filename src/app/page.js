@@ -4,11 +4,11 @@ import HomeInteractions from "@/components/HomeInteractions";
 import FaqInteractions from "@/components/FaqInteractions";
 
 export const metadata = {
-  title: "Custom Website Design for Small Businesses | Freelance Web Developer",
-  description: "Need a fast, stunning website? I am a freelance web developer building high-converting, custom websites for small businesses. Get more clients today.",
+  title: "Custom Website Development & Maintenance | Freelance Web Developer",
+  description: "Custom website development for small businesses, plus reliable monthly website maintenance for existing sites. Build, improve, and keep your website running properly.",
   alternates: { canonical: "/" },
-  openGraph: { title: "Custom Website Design for Small Businesses | Freelance Web Developer", description: "Need a fast, stunning website? I am a freelance web developer building high-converting, custom websites for small businesses. Get more clients today.", url: "/", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
-  twitter: { card: "summary_large_image", title: "Custom Website Design for Small Businesses | Freelance Web Developer", description: "Need a fast, stunning website? I am a freelance web developer building high-converting, custom websites for small businesses. Get more clients today.", images: ["/og-image.png"] },
+  openGraph: { title: "Custom Website Design for Small Businesses | Freelance Web Developer", description: "Custom website development for small businesses, plus reliable monthly website maintenance for existing sites. Build, improve, and keep your website running properly.", url: "/", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
+  twitter: { card: "summary_large_image", title: "Custom Website Design for Small Businesses | Freelance Web Developer", description: "Custom website development for small businesses, plus reliable monthly website maintenance for existing sites. Build, improve, and keep your website running properly.", images: ["/og-image.png"] },
 };
 
 const schemaData = {
@@ -30,7 +30,7 @@ const schemaData = {
       "@id": "https://sanjeewa.dev/#service",
       "url": "https://sanjeewa.dev",
       "name": "Sanjeewa Dev",
-      "description": "High-Converting Custom Website Design for Small Businesses",
+      "description": "Custom website development for small businesses with optional monthly website maintenance and ongoing technical support",
       "priceRange": "$$"
     },
     {
@@ -50,6 +50,14 @@ const schemaData = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. Every website I build includes a strict Technical SEO foundation—meaning it is lightning-fast and mobile-optimized so Google can read it easily and rank you higher."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer monthly website maintenance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. I offer monthly website maintenance plans for websites I build and for existing websites after a quick technical review. Plans can include health checks, small content updates, bug fixes, performance checks, security and update checks, and ongoing technical support."
           }
         }
       ]
@@ -87,6 +95,9 @@ export default function Home() {
                               <a href="/contact" className="btn-brand">Get Your Website in 7 Days</a>
                               <a href="/#work" className="btn-text-link text-dark-main ml-24">See Real Results ↗</a>
                           </div>
+                          <p className="hero-service-note text-dark-muted">
+                              Already have a website? <a href="/#maintenance">View monthly website maintenance →</a>
+                          </p>
                       </div>
       
                       
@@ -117,63 +128,56 @@ export default function Home() {
                   <section id="services" className="container section-expertise">
                       <div className="section-label-block">
                           <p className="section-kicker text-dark-muted">01 // MY SERVICES</p>
-                          <h2 className="scroll-fade-up">High-Converting Websites for <br /><span className="text-brand">Small Businesses</span></h2>
+                          <h2 className="scroll-fade-up">Website development first.<br /><span className="text-brand">Ongoing care when you need it.</span></h2>
+                          <p className="section-intro text-dark-muted scroll-fade-up delay-100">
+                              My main service is building high-converting websites from the ground up. I also provide monthly website maintenance for businesses that want reliable ongoing technical support after launch—or already have a website that needs looking after.
+                          </p>
                       </div>
-      
-                      <div className="bento-grid">
-                          
-                          <div className="competency-card scroll-fade-up delay-0">
-                              <div className="card-header">
-                                  <p className="card-num text-dark-muted">01</p>
-                                  <div className="card-icon">
-                                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                                  </div>
+
+                      <div className="service-pillars">
+                          <article className="service-pillar service-pillar-primary scroll-fade-up delay-0">
+                              <div className="service-pillar-top">
+                                  <span className="service-badge">PRIMARY SERVICE</span>
+                                  <span className="service-number">01</span>
                               </div>
-                              <h3>Ultra-Fast Landing Pages</h3>
-                              <p className="card-description">High-speed, custom-coded landing pages designed to capture leads immediately. Built for perfect Google scores, zero lag, and a flawless mobile experience to stop visitors from leaving.</p>
-                              <div className="tech-stack-row">
-                                  <span>Lightning Fast</span>
-                                  <span>Mobile Optimized</span>
-                                  <span>More Leads</span>
+                              <h3>Website Development</h3>
+                              <p className="service-pillar-description">
+                                  Custom websites designed and developed around your business goals—not a generic template. From fast landing pages to complete business, commerce, and portfolio websites.
+                              </p>
+                              <div className="service-feature-list">
+                                  <span>Custom Design</span>
+                                  <span>Responsive Development</span>
+                                  <span>Technical SEO</span>
+                                  <span>Performance Optimization</span>
+                                  <span>Business & Portfolio Sites</span>
+                                  <span>Commerce & Booking Solutions</span>
                               </div>
-                          </div>
-      
-                          <div className="competency-card highlight-blue scroll-fade-up delay-150">
-                              <div className="card-header">
-                                  <p className="card-num text-brand">02</p>
-                                  <div className="card-icon text-brand">
-                                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                                  </div>
+                              <a href="/#packages" className="btn-brand">View Website Packages</a>
+                          </article>
+
+                          <article className="service-pillar scroll-fade-up delay-150">
+                              <div className="service-pillar-top">
+                                  <span className="service-badge service-badge-muted">MONTHLY SERVICE</span>
+                                  <span className="service-number">02</span>
                               </div>
-                              <h3>Done-For-You Business Sites</h3>
-                              <p className="card-description">Fully tailored websites for service businesses. I handle the setup, SEO formatting, and secure contact forms so you can focus entirely on running your day-to-day business.</p>
-                              <div className="tech-stack-row">
-                                  <span>Easy to Manage</span>
-                                  <span>Local SEO Setup</span>
-                                  <span>Secure Forms</span>
+                              <h3>Website Maintenance</h3>
+                              <p className="service-pillar-description">
+                                  Already have a website? I can keep it updated, healthy, secure, and working properly every month so you do not have to deal with the technical side yourself.
+                              </p>
+                              <div className="service-feature-list">
+                                  <span>Website Health Checks</span>
+                                  <span>Small Content Updates</span>
+                                  <span>Bug Fixes</span>
+                                  <span>Performance Checks</span>
+                                  <span>Security & Update Checks</span>
+                                  <span>Ongoing Technical Support</span>
                               </div>
-                          </div>
-      
-                          <div className="competency-card scroll-fade-up delay-300">
-                              <div className="card-header">
-                                  <p className="card-num text-dark-muted">03</p>
-                                  <div className="card-icon">
-                                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                                  </div>
-                              </div>
-                              <h3>Premium Portfolio Designs</h3>
-                              <p className="card-description">Bespoke digital portfolios for creative professionals like DJs and photographers. Focused on stunning visuals and highly reliable email routing so you never miss a booking.</p>
-                              <div className="tech-stack-row">
-                                  <span>Increase Bookings</span>
-                                  <span>Reliable Email</span>
-                                  <span>Stunning Design</span>
-                              </div>
-                          </div>
-      
+                              <a href="/#maintenance" className="btn-text-link text-brand">View Maintenance Plans →</a>
+                          </article>
                       </div>
                   </section>
-      
-              
+
+                  
                   <section id="work" className="container section-work">
                       <div className="section-label-block">
                           <p className="section-kicker text-dark-muted">02 // PROVEN RESULTS</p>
@@ -224,34 +228,33 @@ export default function Home() {
                   
                   <section id="packages" className="container section-pricing">
                       <div className="section-label-block centered mb-64">
-                          <p className="section-kicker text-dark-muted">03 // UPFRONT PRICING</p>
-                          <h2 className="scroll-fade-up">Transparent pricing.<br /><span className="text-brand">No hidden fees.</span></h2>
+                          <p className="section-kicker text-dark-muted">03 // WEBSITE DEVELOPMENT</p>
+                          <h2 className="scroll-fade-up">Choose the right website<br /><span className="text-brand">for your business.</span></h2>
+                          <p className="section-intro text-dark-muted scroll-fade-up delay-100">
+                              One-time website development packages. Every project is built around your business, with clear scope and no surprise development fees.
+                          </p>
                       </div>
-      
+
                       <div className="pricing-grid">
-                          
                           <div className="pricing-card scroll-fade-up delay-0">
                               <h3 className="package-name">Static Launch</h3>
                               <div className="price-block">
                                   <span className="price-label">Starting at</span>
                                   <div className="price-amount">$99</div>
                               </div>
-                              
                               <p className="package-desc">
                                   <strong>Perfect for simple portfolios.</strong><br /><br />
                                   Ultra-fast, highly secure sites built to turn visitors into leads. <em>Note: Does not include a dashboard to change your own content.</em>
                               </p>
-                              
                               <hr className="card-divider" />
-      
                               <ul className="package-features">
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Maximum loading speed</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Flawless mobile layout</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Technical SEO Foundation</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Zero ongoing maintenance</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Technical SEO foundation</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Clean custom build</li>
                               </ul>
                           </div>
-      
+
                           <div className="pricing-card highlight-blue scroll-fade-up delay-150">
                               <div className="popular-badge">MOST POPULAR</div>
                               <h3 className="package-name">Business & Commerce</h3>
@@ -259,36 +262,30 @@ export default function Home() {
                                   <span className="price-label">Starting at</span>
                                   <div className="price-amount text-brand">$199</div>
                               </div>
-                              
                               <p className="package-desc">
                                   <strong>The complete business engine.</strong><br /><br />
                                   Includes a simple dashboard to change your own content, full e-commerce capabilities, and local search engine optimization.
                               </p>
-      
                               <hr className="card-divider" />
-                              
                               <ul className="package-features">
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Easy content management</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Full online store integration</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced SEO Configuration</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced SEO configuration</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Secure payment gateways</li>
                               </ul>
                           </div>
-      
+
                           <div className="pricing-card scroll-fade-up delay-300">
                               <h3 className="package-name">Bespoke Enterprise</h3>
                               <div className="price-block">
                                   <span className="price-label">Starting at</span>
                                   <div className="price-amount">$299</div>
                               </div>
-                              
                               <p className="package-desc">
                                   <strong>For high-end, scaling brands.</strong><br /><br />
                                   Elite architecture offering unbreakable security, 100% custom UI design, and significantly faster speeds than standard platforms.
                               </p>
-      
                               <hr className="card-divider" />
-                              
                               <ul className="package-features">
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Enterprise-grade security</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Unrestricted custom design</li>
@@ -296,24 +293,104 @@ export default function Home() {
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom admin dashboard</li>
                               </ul>
                           </div>
-      
                       </div>
-      
-                      
-                      <div className="seo-upsell-block scroll-fade-up delay-450">
-                          <div className="seo-upsell-content">
-                              <h3>Already have a website? Need more traffic?</h3>
-                              <p>In addition to web design, I offer dedicated Monthly SEO Campaigns. Whether I built your site or someone else did, I can optimize your platform to bring you more clients.</p>
-                              <a href="/contact" className="btn-text-link text-brand">Get a Free SEO Audit ↗</a>
+                  </section>
+
+                  <section id="maintenance" className="container section-maintenance">
+                      <div className="maintenance-heading">
+                          <div>
+                              <p className="section-kicker text-dark-muted">04 // WEBSITE MAINTENANCE</p>
+                              <h2 className="scroll-fade-up">Your website should not be<br /><span className="text-brand">forgotten after launch.</span></h2>
+                          </div>
+                          <p className="maintenance-heading-copy text-dark-muted scroll-fade-up delay-100">
+                              Monthly website care for businesses that want their site kept updated, healthy, and working properly without worrying about the technical side. You can use this service even if I did not build your website.
+                          </p>
+                      </div>
+
+                      <div className="pricing-grid maintenance-pricing-grid">
+                          <div className="pricing-card maintenance-card scroll-fade-up delay-0">
+                              <span className="maintenance-plan-label">MONTHLY CARE</span>
+                              <h3 className="package-name">Essential Care</h3>
+                              <div className="price-block">
+                                  <span className="price-label">Per month</span>
+                                  <div className="price-amount">$29<span className="price-period">/mo</span></div>
+                              </div>
+                              <p className="package-desc">
+                                  <strong>For simple websites that need a dependable monthly check-in.</strong>
+                              </p>
+                              <hr className="card-divider" />
+                              <ul className="package-features">
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Monthly website health check</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 small content update / month</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Broken link & form checks</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Basic minor bug fixes</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Email support</li>
+                              </ul>
+                          </div>
+
+                          <div className="pricing-card maintenance-card highlight-blue scroll-fade-up delay-150">
+                              <div className="popular-badge">MOST POPULAR</div>
+                              <span className="maintenance-plan-label text-brand">MONTHLY CARE</span>
+                              <h3 className="package-name">Business Care</h3>
+                              <div className="price-block">
+                                  <span className="price-label">Per month</span>
+                                  <div className="price-amount text-brand">$59<span className="price-period">/mo</span></div>
+                              </div>
+                              <p className="package-desc">
+                                  <strong>For active business websites that need regular updates and faster support.</strong>
+                              </p>
+                              <hr className="card-divider" />
+                              <ul className="package-features">
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Essential Care</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 3 small content updates / month</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Performance review</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Security & software update checks</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Backup verification where supported</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority support</li>
+                              </ul>
+                          </div>
+
+                          <div className="pricing-card maintenance-card scroll-fade-up delay-300">
+                              <span className="maintenance-plan-label">MONTHLY CARE</span>
+                              <h3 className="package-name">Premium Care</h3>
+                              <div className="price-block">
+                                  <span className="price-label">Per month</span>
+                                  <div className="price-amount">$99<span className="price-period">/mo</span></div>
+                              </div>
+                              <p className="package-desc">
+                                  <strong>For websites that need hands-on care, faster fixes, and continuous improvements.</strong>
+                              </p>
+                              <hr className="card-divider" />
+                              <ul className="package-features">
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Business Care</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 6 small content updates / month</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 1 hour improvement work / month</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority minor bug fixes</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Monthly improvement recommendations</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Fastest support priority</li>
+                              </ul>
                           </div>
                       </div>
-      
+
+                      <div className="maintenance-scope scroll-fade-up delay-300">
+                          <div>
+                              <p className="maintenance-scope-eyebrow">CLEAR SCOPE. NO CONFUSION.</p>
+                              <h3>What counts as a maintenance update?</h3>
+                              <p>
+                                  Small updates include things like changing text or images, updating contact details, minor layout corrections, checking forms and links, small bug fixes, and routine software or security checks where applicable.
+                              </p>
+                              <p className="maintenance-scope-note">
+                                  New pages, redesigns, new functionality, e-commerce features, major development work, or large content uploads are quoted separately.
+                              </p>
+                          </div>
+                          <a href="/contact" className="btn-brand">Ask About Maintenance</a>
+                      </div>
                   </section>
-      
+
                   
                   <section className="container section-google-reviews">
                       <div className="section-label-block">
-                          <p className="section-kicker text-dark-muted">04 // CLIENT TRUST</p>
+                          <p className="section-kicker text-dark-muted">05 // CLIENT TRUST</p>
                           <h2 className="scroll-fade-up">Verified <span className="text-brand">Google Reviews</span></h2>
                       </div>
       
@@ -384,15 +461,15 @@ export default function Home() {
                           
                           <div className="about-content">
                               <div className="about-header">
-                                  <p className="section-kicker text-dark-muted">05 // YOUR DEVELOPER</p>
+                                  <p className="section-kicker text-dark-muted">06 // YOUR DEVELOPER</p>
                                   <h2 className="scroll-fade-up delay-150 about-title">The partner <br /><span className="text-brand">behind your growth.</span></h2>
                               </div>
                               <div className="about-text scroll-fade-up delay-300">
-                                  <p>Hi, I’m Sanjeewa. I am an independent web developer based in Sri Lanka, dedicated to building high-converting websites for businesses across Australia, Europe, and worldwide.</p>
+                                  <p>Hi, I’m Sanjeewa. I am an independent web developer based in Sri Lanka, dedicated to building high-converting websites for businesses across Australia, Europe, and worldwide—and providing reliable monthly maintenance when clients want ongoing support.</p>
                                   
                                   <p>I understand that hiring an international developer can be stressful. My approach is built on clear communication, absolute reliability, and delivering exactly what I promise. While my technical foundation is backed by a Software Engineering degree from <strong className="text-dark-main">Cardiff Metropolitan University</strong>, my daily focus is entirely on solving your business problems. I handle the complex technology, so you can focus on running your business.</p>
                                   
-                                  <p>I don't just write code; I build digital assets that help you grow. Whether we are launching a lightning-fast portfolio to showcase your work or a dynamic WordPress engine to capture local leads, my priority is getting you a return on your investment.</p>
+                                  <p>I don't just write code; I build digital assets that help you grow. Whether we are launching a lightning-fast portfolio, building a complete business website, or keeping an existing site healthy month after month, my priority is giving you dependable technical support and a return on your investment.</p>
                                   
                                   <p>When I step away from the keyboard, I focus on analog creativity—studying photography and the visual arts.</p>
                               </div>
@@ -403,7 +480,7 @@ export default function Home() {
                   
                   <section id="faq" className="container section-faq">
                       <div className="section-label-block centered mb-64">
-                          <p className="section-kicker text-dark-muted">06 // PROJECT DETAILS</p>
+                          <p className="section-kicker text-dark-muted">07 // PROJECT DETAILS</p>
                           <h2 className="scroll-fade-up">Common <span className="text-brand">Questions.</span></h2>
                       </div>
       
@@ -457,6 +534,30 @@ export default function Home() {
                               </div>
                           </div>
       
+                          <div className="faq-item scroll-fade-up delay-350">
+                              <button className="faq-question">
+                                  <span>Can you maintain a website that you did not build?</span>
+                                  <div className="faq-icon">
+                                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                  </div>
+                              </button>
+                              <div className="faq-answer">
+                                  <p>Yes. You do not need to have had your website built by me. I can take over ongoing maintenance for an existing website after a quick technical review to make sure I have the access and setup needed to support it properly.</p>
+                              </div>
+                          </div>
+
+                          <div className="faq-item scroll-fade-up delay-400">
+                              <button className="faq-question">
+                                  <span>What is included in monthly website maintenance?</span>
+                                  <div className="faq-icon">
+                                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                  </div>
+                              </button>
+                              <div className="faq-answer">
+                                  <p>Maintenance covers the ongoing care defined by your plan, such as health checks, small content changes, minor bug fixes, form and link checks, performance reviews, and software or security checks where applicable. Major redesigns, new pages, or new features are separate development work.</p>
+                              </div>
+                          </div>
+
                           <div className="faq-item scroll-fade-up delay-400">
                               <button className="faq-question">
                                   <span>Do I own the website and the domain?</span>
@@ -475,9 +576,12 @@ export default function Home() {
                   
                   <section className="container section-final-cta scroll-fade-up">
                       <div className="final-cta-content">
-                          <h2 className="final-cta-title">Ready to get <span className="text-brand">more customers?</span></h2>
-                          <p className="final-cta-text">Let's discuss your business goals and build a website that actually generates revenue.</p>
-                          <a href="/contact" className="btn-brand">Get Your Free Consultation</a>
+                          <h2 className="final-cta-title">Need a new website—or help <span className="text-brand">looking after one?</span></h2>
+                          <p className="final-cta-text">Start a new website project with me, or choose monthly maintenance for an existing site. Either way, you get clear communication and reliable technical support.</p>
+                          <div className="final-cta-actions">
+                              <a href="/contact" className="btn-brand">Start a Website Project</a>
+                              <a href="/#maintenance" className="btn-text-link text-dark-main">View Maintenance Plans →</a>
+                          </div>
                       </div>
                   </section>
       
