@@ -16,14 +16,14 @@
   display: grid;
   /* 1.2fr gives the text more room, 1fr shrinks the image container */
   grid-template-columns: 1.2fr 1fr;
-  gap: 80px;
+  gap: 68px;
   align-items: center;
   width: 100%;
 }
 
 /* --- Left Content Styles --- */
 .hero-split-content {
-  max-width: 650px; /* Increased to stop the text from wrapping awkwardly */
+  max-width: 720px; /* Increased to stop the text from wrapping awkwardly */
 }
 
 .hero-kicker {
@@ -77,7 +77,7 @@
 .hero-description-split {
   font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   max-width: 550px;
 }
 
@@ -187,7 +187,7 @@
 
 .section-label-block {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 64px;
 }
 
 .section-kicker {
@@ -204,8 +204,8 @@
 }
 
 .section-philosophy {
-  padding-top: 120px;
-  padding-bottom: 80px;
+  padding-top: 96px;
+  padding-bottom: 64px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -221,7 +221,7 @@
    ========================================= */
 .section-expertise {
   padding-top: 80px;
-  padding-bottom: 160px;
+  padding-bottom: 120px;
 }
 
 .bento-grid {
@@ -335,7 +335,7 @@
    4. SELECTED WORK (Case Studies)
    ========================================= */
 .section-work {
-  padding-bottom: 160px;
+  padding-bottom: 120px;
 }
 
 .work-grid {
@@ -379,7 +379,7 @@
 }
 
 .work-meta h3 {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 8px;
   color: var(--text-dark-main);
 }
@@ -394,10 +394,10 @@
 }
 
 .work-description {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 15.5px;
+  line-height: 1.65;
   color: var(--text-dark-muted);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .work-tags {
@@ -411,7 +411,7 @@
 .view-all-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 64px;
+  margin-top: 48px;
 }
 
 /* =========================================
@@ -420,14 +420,14 @@
 .section-pricing {
   max-width: 1280px;
   margin: 0 auto;
-  padding-bottom: 120px;
+  padding-bottom: 96px;
 }
 
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
 .pricing-card {
@@ -553,7 +553,8 @@
    6. CLIENT TRUST (Reviews Slider)
    ========================================= */
 .section-google-reviews {
-  padding-bottom: 160px;
+  padding-top: 24px;
+  padding-bottom: 110px;
 }
 
 .reviews-carousel-container {
@@ -561,7 +562,7 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
-  max-width: 850px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
@@ -584,7 +585,7 @@
   background-color: var(--bg-pure-white);
   border: 1px solid var(--accent-line-dark);
   border-radius: 16px;
-  padding: 40px;
+  padding: 44px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
 }
@@ -675,9 +676,12 @@
    7. THE ARCHITECT (About Section)
    ========================================= */
 .section-about {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  border-top: 1px solid var(--accent-line-dark);
+  margin-bottom: 96px;
+  padding-top: 88px;
+  padding-bottom: 88px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid var(--accent-line-dark);
+  border-radius: 32px;
 }
 
 .about-grid {
@@ -714,17 +718,17 @@
   margin: 0;
 }
 .about-text p {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--text-dark-muted);
-  line-height: 1.6;
-  margin-bottom: 24px;
+  line-height: 1.65;
+  margin-bottom: 20px;
 }
 
 /* =========================================
    8. FAQ ACCORDION
    ========================================= */
 .section-faq {
-  padding-bottom: 120px;
+  padding-bottom: 96px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -789,13 +793,13 @@
    9. FINAL CTA
    ========================================= */
 .section-final-cta {
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 }
 
 .final-cta-content {
   text-align: center;
   background-color: var(--bg-soft-gray);
-  padding: 80px 40px;
+  padding: 68px 40px;
   border-radius: 24px;
 }
 .final-cta-title {
@@ -1006,6 +1010,11 @@
   border-color: rgba(23, 105, 255, 0.18);
 }
 
+.service-pillar-maintenance {
+  border-top: 3px solid rgba(23, 105, 255, 0.45);
+  background: linear-gradient(180deg, rgba(238, 245, 255, 0.46) 0%, var(--bg-pure-white) 38%);
+}
+
 .service-pillar-top {
   width: 100%;
   display: flex;
@@ -1033,7 +1042,7 @@
 
 .service-badge-muted {
   color: var(--text-dark-muted);
-  background: var(--bg-soft-gray);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .service-number {
@@ -1078,18 +1087,24 @@
 }
 
 .section-maintenance {
+  width: 100%;
+  margin: 12px 0 108px;
+  padding: 88px 0 92px;
+  background: linear-gradient(180deg, #f1f6ff 0%, #eef5ff 50%, #f6f9ff 100%);
+  border-top: 1px solid rgba(23, 105, 255, 0.10);
+  border-bottom: 1px solid rgba(23, 105, 255, 0.10);
+}
+
+.maintenance-inner {
   max-width: 1280px;
-  margin: 0 auto;
-  padding-top: 48px;
-  padding-bottom: 160px;
 }
 
 .maintenance-heading {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: end;
-  gap: 64px;
-  margin-bottom: 72px;
+  gap: 56px;
+  margin-bottom: 56px;
 }
 
 .maintenance-heading h2 {
@@ -1195,8 +1210,8 @@
   }
 
   .section-maintenance {
-    padding-top: 20px;
-    padding-bottom: 80px;
+    padding-top: 68px;
+    padding-bottom: 72px;
   }
 
   .final-cta-actions {
@@ -1220,5 +1235,114 @@
 
   .hero-service-note {
     max-width: 320px;
+  }
+}
+
+
+/* Pricing conversion links */
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.package-features {
+  flex-grow: 1;
+}
+
+.package-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 13px 18px;
+  border: 1px solid var(--accent-line-dark);
+  border-radius: 999px;
+  color: var(--text-dark-main);
+  background: var(--bg-pure-white);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all var(--transition-fast);
+}
+
+.package-cta:hover {
+  border-color: rgba(23, 105, 255, 0.42);
+  color: var(--accent-brand);
+  transform: translateY(-1px);
+}
+
+.package-cta-primary {
+  background: var(--accent-brand);
+  color: #fff;
+  border-color: var(--accent-brand);
+}
+
+.package-cta-primary:hover {
+  background: var(--accent-brand-hover);
+  border-color: var(--accent-brand-hover);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(23, 105, 255, 0.18);
+}
+
+/* Compact credibility row */
+.about-credentials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.about-credentials > div {
+  padding: 16px 14px;
+  border: 1px solid var(--accent-line-dark);
+  border-radius: 14px;
+  background: rgba(252, 251, 248, 0.72);
+}
+
+.credential-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-dark-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.about-credentials strong {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+@media (max-width: 1000px) {
+  .section-maintenance {
+    margin-bottom: 72px;
+    padding: 68px 0 72px;
+  }
+
+  .section-about {
+    margin-bottom: 72px;
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .about-credentials {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-maintenance {
+    padding: 58px 0 62px;
+  }
+
+  .section-about {
+    border-radius: 24px;
+  }
+
+  .package-cta {
+    width: 100%;
   }
 }
