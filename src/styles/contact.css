@@ -192,6 +192,7 @@
 }
 
 .solid-input-group input,
+.solid-input-group select,
 .solid-input-group textarea {
   width: 100%;
   padding: 16px 20px;
@@ -213,6 +214,7 @@
 
 /* Beautiful Focus Animation */
 .solid-input-group input:focus,
+.solid-input-group select:focus,
 .solid-input-group textarea:focus {
   background-color: var(--bg-pure-white);
   border-color: var(--accent-brand); /* Blue highlight */
@@ -264,6 +266,7 @@
 
 /* Red Error State */
 .solid-input-group input.is-invalid,
+.solid-input-group select.is-invalid,
 .solid-input-group textarea.is-invalid {
   border-color: #ef4444 !important;
   background-color: #fef2f2;
@@ -271,6 +274,7 @@
 
 /* Green Success State */
 .solid-input-group input.is-valid,
+.solid-input-group select.is-valid,
 .solid-input-group textarea.is-valid {
   border-color: #10b981 !important;
 }
@@ -287,6 +291,23 @@
 
 /* Show error text ONLY when the input above it is invalid */
 .solid-input-group input.is-invalid ~ .error-text,
+.solid-input-group select.is-invalid ~ .error-text,
 .solid-input-group textarea.is-invalid ~ .error-text {
   display: block;
+}
+
+
+.solid-input-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--text-dark-muted) 50%),
+    linear-gradient(135deg, var(--text-dark-muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) 50%,
+    calc(100% - 15px) 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 48px;
 }
