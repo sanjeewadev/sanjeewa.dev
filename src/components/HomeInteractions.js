@@ -26,16 +26,59 @@ export default function HomeInteractions() {
     const track = document.getElementById("reviewsTrack");
     const prev = document.querySelector(".prev-arrow");
     const next = document.querySelector(".next-arrow");
+    const dots = Array.from(document.querySelectorAll(".review-dot"));
     const totalSlides = track ? track.children.length : 0;
-    let currentIndex = 0, autoplay;
-    const updateSlider = () => { if (track) track.style.transform = `translateX(-${currentIndex * 100}%)`; };
-    const nextSlide = () => { if (totalSlides) { currentIndex = (currentIndex + 1) % totalSlides; updateSlider(); } };
-    const prevSlide = () => { if (totalSlides) { currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; updateSlider(); } };
-    const restart = () => { if (autoplay) window.clearInterval(autoplay); if (totalSlides > 1) autoplay = window.setInterval(nextSlide, 5000); };
-    const onNext = () => { nextSlide(); restart(); };
-    const onPrev = () => { prevSlide(); restart(); };
-    next?.addEventListener("click", onNext); prev?.addEventListener("click", onPrev); restart();
-    return () => { stopped = true; if (typingTimer) window.clearTimeout(typingTimer); if (autoplay) window.clearInterval(autoplay); next?.removeEventListener("click", onNext); prev?.removeEventListener("click", onPrev); };
+    const mobileQuery = window.matchMedia("(max-width: 900px)");
+    let currentIndex = 0;
+
+    const updateSlider = () => {
+      if (!track) return;
+      if (mobileQuery.matches) {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      } else {
+        currentIndex = 0;
+        track.style.transform = "";
+      }
+      dots.forEach((dot, index) => dot.classList.toggle("active", index === currentIndex));
+    };
+
+    const nextSlide = () => {
+      if (!mobileQuery.matches || !totalSlides) return;
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+    };
+
+    const prevSlide = () => {
+      if (!mobileQuery.matches || !totalSlides) return;
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    };
+
+    const onDotClick = (event) => {
+      if (!mobileQuery.matches) return;
+      const index = Number(event.currentTarget.dataset.reviewIndex);
+      if (Number.isInteger(index)) {
+        currentIndex = index;
+        updateSlider();
+      }
+    };
+
+    const onViewportChange = () => updateSlider();
+
+    next?.addEventListener("click", nextSlide);
+    prev?.addEventListener("click", prevSlide);
+    dots.forEach((dot) => dot.addEventListener("click", onDotClick));
+    mobileQuery.addEventListener?.("change", onViewportChange);
+    updateSlider();
+
+    return () => {
+      stopped = true;
+      if (typingTimer) window.clearTimeout(typingTimer);
+      next?.removeEventListener("click", nextSlide);
+      prev?.removeEventListener("click", prevSlide);
+      dots.forEach((dot) => dot.removeEventListener("click", onDotClick));
+      mobileQuery.removeEventListener?.("change", onViewportChange);
+    };
   }, []);
   return null;
 }
