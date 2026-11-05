@@ -3,18 +3,18 @@ import ScrollReveal from "@/components/ScrollReveal";
 import ContactInteractions from "@/components/ContactInteractions";
 
 export const metadata = {
-  title: "Hire a Freelance Web Developer | Get a Free Website Quote",
-  description: "Ready to grow your business? Hire an expert freelance web developer for a high-converting, custom website. Request a free quote today. I reply within 24 hours.",
+  title: "Website Development & Maintenance Quote | Sanjeewa.dev",
+  description: "Request a quote for custom website development or monthly website maintenance. Tell me what you need and I will personally reply within 24 hours.",
   alternates: { canonical: "/contact" },
-  openGraph: { title: "Hire a Freelance Web Developer | Get a Free Website Quote", description: "Ready to grow your business? Hire an expert freelance web developer for a high-converting, custom website. Request a free quote today. I reply within 24 hours.", url: "/contact", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
-  twitter: { card: "summary_large_image", title: "Hire a Freelance Web Developer | Get a Free Website Quote", description: "Ready to grow your business? Hire an expert freelance web developer for a high-converting, custom website. Request a free quote today. I reply within 24 hours.", images: ["/og-image.png"] },
+  openGraph: { title: "Website Development & Maintenance Quote | Sanjeewa.dev", description: "Request a quote for custom website development or monthly website maintenance. Tell me what you need and I will personally reply within 24 hours.", url: "/contact", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
+  twitter: { card: "summary_large_image", title: "Website Development & Maintenance Quote | Sanjeewa.dev", description: "Request a quote for custom website development or monthly website maintenance. Tell me what you need and I will personally reply within 24 hours.", images: ["/og-image.png"] },
 };
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "name": "Contact Sanjeewa Vipula Kumara",
-  "description": "Get a free quote for custom website design and development.",
+  "description": "Get a free quote for custom website development or monthly website maintenance.",
   "url": "https://sanjeewa.dev/contact",
   "mainEntity": {
     "@type": "Person",
@@ -43,7 +43,7 @@ export default function Contact() {
                   <p className="hero-kicker">GET YOUR FREE QUOTE</p>
                   <h1 className="contact-title-minimal text-dark-main">Start getting <br /><span className="text-brand">more customers.</span></h1>
                   <p className="contact-subtitle-minimal text-dark-muted">
-                      Whether you need a lightning-fast portfolio or a complete business engine, let's discuss your goals. Fill out the form below, and <strong>I will personally reply within 24 hours</strong> to discuss your project.
+                      Whether you need a brand-new website or reliable monthly maintenance for a site you already have, tell me what you need below. <strong>I will personally reply within 24 hours</strong> to discuss the right next step.
                   </p>
               </div>
           </header>
@@ -119,18 +119,29 @@ export default function Contact() {
                               </div>
                               
                               <div className="solid-input-group">
+                                  <label htmlFor="service">What do you need?</label>
+                                  <select id="service" name="service" required defaultValue="">
+                                      <option value="" disabled>Select a service</option>
+                                      <option value="Website Development">Website Development — New Website</option>
+                                      <option value="Website Maintenance">Website Maintenance — Monthly Care</option>
+                                      <option value="Not Sure Yet">Not Sure Yet — Help Me Choose</option>
+                                  </select>
+                                  <span className="error-text">Please select the service you are interested in.</span>
+                              </div>
+                              
+                              <div className="solid-input-group">
                                   <label htmlFor="country">Location (Country)</label>
                                   <input type="text" id="country" name="country" required placeholder="e.g. Australia or Europe" />
                                   <span className="error-text">Please let me know where you are located.</span>
                               </div>
                               
                               <div className="solid-input-group">
-                                  <label htmlFor="message">Project Details</label>
-                                  <textarea id="message" name="message" rows="5" required placeholder="Tell me about your business goals, current website problems, or ask me anything..."></textarea>
+                                  <label htmlFor="message">Website / Project Details</label>
+                                  <textarea id="message" name="message" rows="5" required placeholder="Tell me about your business, the website you need, or the existing site you want maintained..."></textarea>
                                   <span className="error-text">Please provide a few more details (at least 10 characters).</span>
                               </div>
                               
-                              <button type="submit" className="submit-btn btn-brand btn-full-width mt-32">Get Your Free Consultation</button>
+                              <button type="submit" className="submit-btn btn-brand btn-full-width mt-32">Send My Request</button>
                               
                               <p style={{ textAlign: "center", marginTop: "16px", fontSize: "0.85rem", color: "#666" }}>
                                   🔒 Your information is secure. No commitment required.
