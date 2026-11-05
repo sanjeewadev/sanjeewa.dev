@@ -16,13 +16,10 @@ export default function Footer() {
             <p className="footer-tagline text-light-muted">High-converting custom website design for small businesses and creative professionals.</p>
           </div>
           <nav className="footer-column" aria-label="Footer Navigation">
-            <h4 className="footer-heading">Navigation</h4><a href="/" className="footer-link">Home</a><a href="/#services" className="footer-link">Services</a><a href="/coming-soon" className="footer-link">Case Studies</a><a href="/#packages" className="footer-link">Pricing Plans</a>
+            <h4 className="footer-heading">Navigation</h4><a href="/" className="footer-link">Home</a><a href="/#services" className="footer-link">Services</a><a href="/#work" className="footer-link">Case Studies</a><a href="/#packages" className="footer-link">Pricing Plans</a>
           </nav>
           <nav className="footer-column" aria-label="Social Links">
             <h4 className="footer-heading">Connect</h4><a href="/contact" className="footer-link">Get a Free Quote</a><a href="https://linkedin.com/in/sanjeewadev" className="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/sanjeewadev" className="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </nav>
-          <nav className="footer-column" aria-label="Legal Links">
-            <h4 className="footer-heading">Legal</h4><a href="/coming-soon" className="footer-link">Privacy Policy</a><a href="/coming-soon" className="footer-link">Terms of Service</a>
           </nav>
         </div>
         <div className="footer-bottom">
