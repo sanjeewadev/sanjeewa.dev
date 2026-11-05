@@ -129,7 +129,7 @@ export default function Home() {
                   <section id="services" className="container section-expertise">
                       <div className="section-label-block">
                           <p className="section-kicker text-dark-muted">01 // MY SERVICES</p>
-                          <h2 className="scroll-fade-up">Website development first.<br /><span className="text-brand editorial-accent">Ongoing care when you need it.</span></h2>
+                          <h2 className="scroll-fade-up">Website development first.<br /><span className="editorial-accent text-editorial-ink">Ongoing care when you need it.</span></h2>
                           <p className="section-intro text-dark-muted scroll-fade-up delay-100">
                               My main service is building high-converting websites from the ground up. I also provide monthly website maintenance for businesses that want reliable ongoing technical support after launch—or already have a website that needs looking after.
                           </p>
@@ -414,7 +414,7 @@ export default function Home() {
                                   <article className="google-review-card">
                                       <div className="review-header">
                                           <div className="reviewer-info">
-                                              <div className="reviewer-avatar">E</div>
+                                              <div className="reviewer-avatar warm-avatar">E</div>
                                               <div className="reviewer-details">
                                                   <span className="reviewer-name">Elina Kabakova</span>
                                                   <div className="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
@@ -490,7 +490,7 @@ export default function Home() {
                           <div className="about-content">
                               <div className="about-header">
                                   <p className="section-kicker text-dark-muted">06 // YOUR DEVELOPER</p>
-                                  <h2 className="scroll-fade-up delay-150 about-title">The partner <br /><span className="text-brand editorial-accent">behind your growth.</span></h2>
+                                  <h2 className="scroll-fade-up delay-150 about-title">The partner <br /><span className="editorial-accent text-editorial-ink">behind your growth.</span></h2>
                               </div>
                               <div className="about-text scroll-fade-up delay-300">
                                   <p>Hi, I’m Sanjeewa—an independent web developer based in Sri Lanka, working with businesses across Australia, Europe, and worldwide. I build high-converting websites and provide reliable monthly maintenance when clients want ongoing support.</p>
@@ -608,7 +608,7 @@ export default function Home() {
                   
                   <section className="container section-final-cta scroll-fade-up">
                       <div className="final-cta-content">
-                          <h2 className="final-cta-title">Need a new website—or help <span className="text-brand editorial-accent">looking after one?</span></h2>
+                          <h2 className="final-cta-title">Need a new website—or help <span className="editorial-accent text-editorial-ink">looking after one?</span></h2>
                           <p className="final-cta-text">Start a new website project with me, or choose monthly maintenance for an existing site. Either way, you get clear communication and reliable technical support.</p>
                           <div className="final-cta-actions">
                               <a href="/contact" className="btn-brand">Start a Website Project</a>
