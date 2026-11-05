@@ -8,7 +8,7 @@ export const metadata = {
   description: "Premium custom website design and web development for small businesses and creative professionals.",
   robots: { index: true, follow: true },
   authors: [{ name: "Sanjeewa Vipula Kumara" }],
-  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/favicon.png", type: "image/png" }, { url: "/favicon.ico", type: "image/x-icon" }] },
+  icons: {\n    icon: [{ url: "/favicon.svg?v=2", type: "image/svg+xml", sizes: "any" }],\n    shortcut: "/favicon.svg?v=2",\n  },\n  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {
