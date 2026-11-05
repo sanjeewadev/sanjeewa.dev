@@ -9,17 +9,18 @@ export default function ContactInteractions() {
     });
     const form = document.getElementById("contactForm");
     if (!form) return () => copyCleanups.forEach((fn) => fn());
-    const nameInput = document.getElementById("name"), emailInput = document.getElementById("email"), countryInput = document.getElementById("country"), messageInput = document.getElementById("message");
+    const nameInput = document.getElementById("name"), emailInput = document.getElementById("email"), serviceInput = document.getElementById("service"), countryInput = document.getElementById("country"), messageInput = document.getElementById("message");
     const validName = () => nameInput.value.trim().length >= 2;
     const validEmail = () => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim());
+    const validService = () => serviceInput.value.trim().length >= 2;
     const validCountry = () => countryInput.value.trim().length >= 2;
     const validMessage = () => messageInput.value.trim().length >= 10;
     const update = (input, valid) => { input.classList.toggle("is-valid", valid); input.classList.toggle("is-invalid", !valid); };
-    const handlers = [[nameInput, () => update(nameInput, validName())],[emailInput, () => update(emailInput, validEmail())],[countryInput, () => update(countryInput, validCountry())],[messageInput, () => update(messageInput, validMessage())]];
+    const handlers = [[nameInput, () => update(nameInput, validName())],[emailInput, () => update(emailInput, validEmail())],[serviceInput, () => update(serviceInput, validService())],[countryInput, () => update(countryInput, validCountry())],[messageInput, () => update(messageInput, validMessage())]];
     handlers.forEach(([input, handler]) => input?.addEventListener("input", handler));
     const onSubmit = (event) => {
-      const values = [validName(), validEmail(), validCountry(), validMessage()];
-      update(nameInput, values[0]); update(emailInput, values[1]); update(countryInput, values[2]); update(messageInput, values[3]);
+      const values = [validName(), validEmail(), validService(), validCountry(), validMessage()];
+      update(nameInput, values[0]); update(emailInput, values[1]); update(serviceInput, values[2]); update(countryInput, values[3]); update(messageInput, values[4]);
       if (values.some((value) => !value)) event.preventDefault();
     };
     form.addEventListener("submit", onSubmit);
