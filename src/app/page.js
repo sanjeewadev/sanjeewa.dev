@@ -219,10 +219,7 @@ export default function Home() {
                           </a>
       
                       </div>
-      
-                      <div className="view-all-wrapper scroll-fade-up delay-300">
-                          <a href="/coming-soon" className="btn-brand">View All Case Studies</a>
-                      </div>
+
                   </section>
                   
                   
