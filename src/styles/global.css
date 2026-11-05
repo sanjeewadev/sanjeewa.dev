@@ -74,12 +74,11 @@ h6 {
   font-weight: 700;
 }
 
-/* Editorial accent is reserved for highlighted words inside major headings. */
-h1 .text-brand,
-h2 .text-brand {
+/* Editorial accent is intentionally selective so it stays special. */
+.editorial-accent {
   font-family: var(--font-editorial);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 400 !important;
   letter-spacing: -0.01em;
 }
 
