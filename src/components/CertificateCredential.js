@@ -1,9 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 export default function CertificateCredential() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -22,6 +28,39 @@ export default function CertificateCredential() {
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [open]);
+
+  const modal = (
+    <div className="certificate-modal" role="dialog" aria-modal="true" aria-label="Software Engineering diploma certificate">
+      <button
+        className="certificate-modal-backdrop"
+        type="button"
+        aria-label="Close certificate viewer"
+        onClick={() => setOpen(false)}
+      ></button>
+
+      <button
+        className="certificate-modal-close"
+        type="button"
+        aria-label="Close certificate viewer"
+        onClick={() => setOpen(false)}
+      >
+        ×
+      </button>
+
+      <div className="certificate-modal-panel">
+        <div className="certificate-document-frame">
+          <img
+            src="/assets/certificate/software-engineering-diploma-placeholder.svg"
+            alt="Temporary Software Engineering diploma certificate preview"
+          />
+        </div>
+
+        <p className="certificate-modal-caption">
+          Software Engineering Diploma · Cardiff Metropolitan University
+        </p>
+      </div>
+    </div>
+  );
 
   return (
     <>
@@ -48,37 +87,7 @@ export default function CertificateCredential() {
         </div>
       </div>
 
-      {open && (
-        <div className="certificate-modal" role="dialog" aria-modal="true" aria-label="Software Engineering diploma certificate">
-          <button
-            className="certificate-modal-backdrop"
-            type="button"
-            aria-label="Close certificate viewer"
-            onClick={() => setOpen(false)}
-          ></button>
-
-          <div className="certificate-modal-panel">
-            <button
-              className="certificate-modal-close"
-              type="button"
-              aria-label="Close certificate viewer"
-              onClick={() => setOpen(false)}
-            >
-              ×
-            </button>
-
-            <img
-              src="/assets/certificate/software-engineering-diploma-placeholder.svg"
-              alt="Temporary Software Engineering diploma certificate preview"
-            />
-
-            <div className="certificate-modal-caption">
-              <strong>Software Engineering Diploma</strong>
-              <span>Temporary preview — replace this file with the real certificate when ready.</span>
-            </div>
-          </div>
-        </div>
-      )}
+      {mounted && open ? createPortal(modal, document.body) : null}
     </>
   );
 }
