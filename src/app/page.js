@@ -8,8 +8,8 @@ export const metadata = {
   title: "Thoughtful Website Development & Maintenance | Sanjeewa.dev",
   description: "Thoughtful, high-performing custom websites and monthly maintenance for service businesses, creative professionals, boutique brands, and growing teams.",
   alternates: { canonical: "/" },
-  openGraph: { title: "Custom Website Design for Small Businesses | Freelance Web Developer", description: "Thoughtful, high-performing custom websites and monthly maintenance for service businesses, creative professionals, boutique brands, and growing teams.", url: "/", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
-  twitter: { card: "summary_large_image", title: "Custom Website Design for Small Businesses | Freelance Web Developer", description: "Thoughtful, high-performing custom websites and monthly maintenance for service businesses, creative professionals, boutique brands, and growing teams.", images: ["/og-image.png"] },
+  openGraph: { title: "Thoughtful Website Development & Maintenance | Sanjeewa.dev", description: "Thoughtful, high-performing custom websites and monthly maintenance for service businesses, creative professionals, boutique brands, and growing teams.", url: "/", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
+  twitter: { card: "summary_large_image", title: "Thoughtful Website Development & Maintenance | Sanjeewa.dev", description: "Thoughtful, high-performing custom websites and monthly maintenance for service businesses, creative professionals, boutique brands, and growing teams.", images: ["/og-image.png"] },
 };
 
 const schemaData = {
@@ -50,7 +50,7 @@ const schemaData = {
           "name": "Do I need SEO for my small business website?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Every website I build includes a strict Technical SEO foundation—meaning it is lightning-fast and mobile-optimized so Google can read it easily and rank you higher."
+            "text": "Every website I build includes a strong technical SEO foundation, including fast performance and mobile optimization so search engines can understand the site properly. Ongoing SEO campaigns are separate from website maintenance."
           }
         },
         {
