@@ -7,26 +7,27 @@
   /* Warm Premium Light Palette */
   --bg-page: #fcfbf8;
   --bg-pure-white: #ffffff;
-  --bg-soft-gray: #f4f2ef;
+  --bg-soft-gray: #f5f2ee;
 
   /* Premium Dark Palette */
-  --bg-pitch-black: #141414;
-  --bg-dark-surface: #1f1f1f;
+  --bg-pitch-black: #16181d;
+  --bg-dark-surface: #202329;
 
   /* Typography */
   --text-dark-main: #171717;
-  --text-dark-muted: #696866;
+  --text-dark-muted: #6d6966;
   --text-light-main: #ffffff;
   --text-light-muted: #a5a5a5;
 
-  /* Sapphire Brand Palette */
-  --accent-brand: #1769ff;
-  --accent-brand-hover: #0957dc;
-  --accent-brand-soft: #eef5ff;
-  --accent-soft: #e8ccd2;
+  /* Refined Deep Cobalt Brand Palette */
+  --accent-brand: #2855d9;
+  --accent-brand-hover: #1e45bc;
+  --accent-brand-soft: #eef2ff;
+  --accent-warm: #b97d8b;
+  --accent-warm-soft: #f7edef;
 
   /* UI Elements & Glassmorphism */
-  --accent-line-dark: #e5e2dd;
+  --accent-line-dark: #e7e2dc;
   --accent-line-light: rgba(255, 255, 255, 0.15);
   --glass-blur: blur(20px);
 
@@ -79,7 +80,15 @@ h6 {
   font-family: var(--font-editorial);
   font-style: italic;
   font-weight: 400 !important;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
+}
+
+.text-editorial-ink {
+  color: #3b3837 !important;
+}
+
+.text-warm-accent {
+  color: var(--accent-warm) !important;
 }
 
 /* Global Utility Classes */
@@ -104,9 +113,9 @@ h6 {
   align-items: center;
   justify-content: center;
   font-size: 13px;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 16px 32px;
+  font-weight: 700;
+  text-transform: none;
+  padding: 15px 28px;
   border-radius: 100px;
   background-color: var(--accent-brand);
   color: #ffffff !important;
@@ -116,7 +125,7 @@ h6 {
 .btn-brand:hover {
   background-color: var(--accent-brand-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(23, 105, 255, 0.3);
+  box-shadow: 0 10px 24px rgba(40, 85, 217, 0.18);
 }
 
 /* Animations & Delays */
