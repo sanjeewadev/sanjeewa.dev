@@ -506,7 +506,7 @@ export default function Home() {
                                   </div>
                               </button>
                               <div className="faq-answer">
-                                  <p>Yes. Every website I build includes a strict Technical SEO foundation—meaning it is lightning-fast and mobile-optimized so Google can read it easily and rank you higher. We can also discuss ongoing monthly SEO campaigns if you want to aggressively outrank your local competitors.</p>
+                                  <p>Yes. Every website I build includes a strong technical SEO foundation, including performance and mobile optimization so search engines can understand the site properly. The monthly maintenance plans focus on ongoing website care rather than SEO campaigns.</p>
                               </div>
                           </div>
       
