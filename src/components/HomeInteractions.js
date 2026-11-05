@@ -4,7 +4,7 @@ export default function HomeInteractions() {
   useEffect(() => {
     const dynamicText = document.querySelector(".dynamic-word");
     const slides = Array.from(document.querySelectorAll(".hero-slide"));
-    const words = ["Creative Studios.", "Independent Artists.", "Premium Brands."];
+    const words = ["Service Businesses.", "Creative Studios.", "Boutique Brands."];
     let wordIndex = 0, charIndex = 0, deleting = false, typingTimer, stopped = false;
     const typeEffect = () => {
       if (stopped || !dynamicText) return;
