@@ -4,10 +4,10 @@ import FaqInteractions from "@/components/FaqInteractions";
 
 export const metadata = {
   title: "ElinaPix Case Study | French Riviera Event Photography Web Design",
-  description: "See how I transformed a failing website into a high-converting WordPress booking platform for a French Riviera event photographer with perfect 100/100 SEO scores.",
+  description: "How I reshaped ElinaPix into a faster, more polished photography website with clearer services, local visibility, and a smoother path to direct bookings.",
   alternates: { canonical: "/elinapix-case-study" },
-  openGraph: { title: "ElinaPix Case Study | French Riviera Event Photography Web Design", description: "See how I transformed a failing website into a high-converting WordPress booking platform for a French Riviera event photographer with perfect 100/100 SEO scores.", url: "/elinapix-case-study", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
-  twitter: { card: "summary_large_image", title: "ElinaPix Case Study | French Riviera Event Photography Web Design", description: "See how I transformed a failing website into a high-converting WordPress booking platform for a French Riviera event photographer with perfect 100/100 SEO scores.", images: ["/og-image.png"] },
+  openGraph: { title: "ElinaPix Case Study | French Riviera Event Photography Web Design", description: "How I reshaped ElinaPix into a faster, more polished photography website with clearer services, local visibility, and a smoother path to direct bookings.", url: "/elinapix-case-study", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
+  twitter: { card: "summary_large_image", title: "ElinaPix Case Study | French Riviera Event Photography Web Design", description: "How I reshaped ElinaPix into a faster, more polished photography website with clearer services, local visibility, and a smoother path to direct bookings.", images: ["/og-image.png"] },
 };
 
 const schemaData = {
@@ -62,7 +62,7 @@ export default function ElinaPixCaseStudy() {
                       <div className="cs-hero-content-left scroll-fade-up">
                           <p className="section-kicker text-dark-muted">PROJECT HIGHLIGHT</p>
                           <h1 className="cs-title">ElinaPix Photography</h1>
-                          <p className="cs-subtitle text-dark-muted">From zero website sales to automated client bookings in the French Riviera.</p>
+                          <p className="cs-subtitle text-dark-muted">A more polished client journey—from first impression to direct booking.</p>
                           
                           <div className="cs-meta-grid-left">
                               <div className="meta-item">
@@ -104,16 +104,16 @@ export default function ElinaPixCaseStudy() {
                       
                       <div className="story-block scroll-fade-up">
                           <h2 className="text-brand">The Challenge</h2>
-                          <p>Elina is an incredibly talented event photographer operating in the highly competitive French Riviera market. However, her previous website was failing her business. It was built poorly, ran slowly due to heavy image files, and completely failed to generate any sales or direct client leads through search engines.</p>
+                          <p>Elina’s previous website was not doing justice to the quality of her photography. Large image files made the experience feel slow, the services were harder to navigate, and potential clients did not have a clear, confident path from browsing her work to making an enquiry or booking.</p>
                       </div>
       
                       <div className="story-block scroll-fade-up delay-150">
-                          <h2 className="text-brand">The Engineering Solution</h2>
-                          <p>I tore down the old site and architected a completely custom WordPress platform built for speed and conversion.</p>
+                          <h2 className="text-brand">The Approach</h2>
+                          <p>I rebuilt the experience around the way clients actually discover and choose a photographer: strong visuals, fast browsing, clear services, and an easy path to enquire or book.</p>
                           <ul className="cs-solution-list">
-                              <li><strong>Performance:</strong> Implemented aggressive image optimization to keep high-res galleries loading instantly.</li>
-                              <li><strong>Local SEO Strategy:</strong> Structured the data and content to rank specifically for French Riviera event photography on Google.</li>
-                              <li><strong>Automated Revenue:</strong> Integrated a highly reliable contact system and a secure payment gateway so clients can book directly.</li>
+                              <li><strong>Performance:</strong> Optimized high-resolution galleries so the photography stays visually rich without slowing down the experience.</li>
+                              <li><strong>Local Visibility:</strong> Structured the content and technical SEO around French Riviera event photography so the right local clients can find her.</li>
+                              <li><strong>Booking Experience:</strong> Connected enquiries and secure payments so interested clients can move from browsing to booking with less friction.</li>
                           </ul>
                       </div>
       
@@ -232,7 +232,7 @@ export default function ElinaPixCaseStudy() {
               <section className="container section-final-cta scroll-fade-up">
                   <div className="final-cta-content">
                       <h2 className="final-cta-title">Want results like <span className="text-brand">ElinaPix?</span></h2>
-                      <p className="final-cta-text">Stop losing customers to slow, broken websites. Let's build a custom platform that actually grows your business.</p>
+                      <p className="final-cta-text">Let’s build a website that feels as polished as the work you do—and makes it easier for the right clients to take the next step.</p>
                       <a href="/contact" className="btn-brand">Get Your Free Consultation</a>
                   </div>
               </section>
