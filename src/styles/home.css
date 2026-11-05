@@ -1075,25 +1075,6 @@
     margin-bottom: 48px; /* Reduced from 80px */
   }
 
-  .google-review-card {
-    padding: 20px 10px;
-  }
-
-  /* Adjust Review Slider Controls */
-  .reviews-carousel-container {
-    gap: 8px;
-  }
-
-  .slider-arrow {
-    width: 40px;
-    height: 40px;
-  }
-
-  .review-ctas {
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 32px;
-  }
 }
 
 
