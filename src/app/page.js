@@ -83,7 +83,7 @@ export default function Home() {
                           <h2 className="hero-subtitle-split text-dark-muted">
                               High-converting designs for <br />
                               <span className="dynamic-word-wrapper">
-                                  <span className="dynamic-word text-brand">Small Businesses.</span><span className="type-cursor">|</span>
+                                  <span className="dynamic-word text-brand editorial-accent">Small Businesses.</span><span className="type-cursor">|</span>
                               </span>
                           </h2>
                           
@@ -128,7 +128,7 @@ export default function Home() {
                   <section id="services" className="container section-expertise">
                       <div className="section-label-block">
                           <p className="section-kicker text-dark-muted">01 // MY SERVICES</p>
-                          <h2 className="scroll-fade-up">Website development first.<br /><span className="text-brand">Ongoing care when you need it.</span></h2>
+                          <h2 className="scroll-fade-up">Website development first.<br /><span className="text-brand editorial-accent">Ongoing care when you need it.</span></h2>
                           <p className="section-intro text-dark-muted scroll-fade-up delay-100">
                               My main service is building high-converting websites from the ground up. I also provide monthly website maintenance for businesses that want reliable ongoing technical support after launch—or already have a website that needs looking after.
                           </p>
@@ -155,7 +155,7 @@ export default function Home() {
                               <a href="/#packages" className="btn-brand">View Website Packages</a>
                           </article>
 
-                          <article className="service-pillar scroll-fade-up delay-150">
+                          <article className="service-pillar service-pillar-maintenance scroll-fade-up delay-150">
                               <div className="service-pillar-top">
                                   <span className="service-badge service-badge-muted">MONTHLY SERVICE</span>
                                   <span className="service-number">02</span>
@@ -193,7 +193,7 @@ export default function Home() {
                               <div className="work-meta">
                                   <h3>ElinaPix (French Riviera)</h3>
                                   <p className="work-subtitle">Event Photography Booking Platform</p>
-                                  <p className="work-description">Her previous website was failing to generate sales. I engineered a custom, lightning-fast WordPress platform with integrated local SEO and a secure payment gateway. Today, the business consistently ranks on Google and captures direct, automated client bookings.</p>
+                                  <p className="work-description">I replaced a website that was failing to convert with a fast custom WordPress platform, local SEO, and secure payments—giving ElinaPix a clearer path from visitor to direct booking.</p>
                                   <div className="tech-stack-row work-tags">
                                       <span>Custom WordPress</span>
                                       <span>Local SEO</span>
@@ -209,7 +209,7 @@ export default function Home() {
                               <div className="work-meta">
                                   <h3>DJ Christerna (Dubai)</h3>
                                   <p className="work-subtitle">Custom Website & SEO Strategy</p>
-                                  <p className="work-description">The client was locked out of his previous website by a restrictive developer. I rebuilt his entire digital presence using custom WordPress, handing over 100% ownership of his domain, hosting, and code. I also implemented an aggressive SEO strategy to help him grow in the highly competitive Dubai market.</p>
+                                  <p className="work-description">I rebuilt Christerna’s restricted old setup into a custom WordPress website he fully owns, then strengthened the site for search visibility and direct bookings in the competitive Dubai market.</p>
                                   <div className="tech-stack-row work-tags">
                                       <span>100% Ownership</span>
                                       <span>Custom WordPress</span>
@@ -253,6 +253,7 @@ export default function Home() {
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Technical SEO foundation</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Clean custom build</li>
                               </ul>
+                              <a href="/contact" className="package-cta">Choose Static Launch →</a>
                           </div>
 
                           <div className="pricing-card highlight-blue scroll-fade-up delay-150">
@@ -273,6 +274,7 @@ export default function Home() {
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced SEO configuration</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Secure payment gateways</li>
                               </ul>
+                              <a href="/contact" className="package-cta package-cta-primary">Choose Business & Commerce →</a>
                           </div>
 
                           <div className="pricing-card scroll-fade-up delay-300">
@@ -292,15 +294,17 @@ export default function Home() {
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Elite performance metrics</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom admin dashboard</li>
                               </ul>
+                              <a href="/contact" className="package-cta">Choose Bespoke Enterprise →</a>
                           </div>
                       </div>
                   </section>
 
-                  <section id="maintenance" className="container section-maintenance">
+                  <section id="maintenance" className="section-maintenance">
+                      <div className="container maintenance-inner">
                       <div className="maintenance-heading">
                           <div>
                               <p className="section-kicker text-dark-muted">04 // WEBSITE MAINTENANCE</p>
-                              <h2 className="scroll-fade-up">Your website should not be<br /><span className="text-brand">forgotten after launch.</span></h2>
+                              <h2 className="scroll-fade-up">Your website should not be<br /><span className="text-brand editorial-accent">forgotten after launch.</span></h2>
                           </div>
                           <p className="maintenance-heading-copy text-dark-muted scroll-fade-up delay-100">
                               Monthly website care for businesses that want their site kept updated, healthy, and working properly without worrying about the technical side. You can use this service even if I did not build your website.
@@ -326,6 +330,7 @@ export default function Home() {
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Basic minor bug fixes</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Email support</li>
                               </ul>
+                              <a href="/contact" className="package-cta">Choose Essential Care →</a>
                           </div>
 
                           <div className="pricing-card maintenance-card highlight-blue scroll-fade-up delay-150">
@@ -348,6 +353,7 @@ export default function Home() {
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Backup verification where supported</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority support</li>
                               </ul>
+                              <a href="/contact" className="package-cta package-cta-primary">Choose Business Care →</a>
                           </div>
 
                           <div className="pricing-card maintenance-card scroll-fade-up delay-300">
@@ -369,6 +375,7 @@ export default function Home() {
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Monthly improvement recommendations</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Fastest support priority</li>
                               </ul>
+                              <a href="/contact" className="package-cta">Choose Premium Care →</a>
                           </div>
                       </div>
 
@@ -384,6 +391,7 @@ export default function Home() {
                               </p>
                           </div>
                           <a href="/contact" className="btn-brand">Ask About Maintenance</a>
+                      </div>
                       </div>
                   </section>
 
@@ -462,16 +470,18 @@ export default function Home() {
                           <div className="about-content">
                               <div className="about-header">
                                   <p className="section-kicker text-dark-muted">06 // YOUR DEVELOPER</p>
-                                  <h2 className="scroll-fade-up delay-150 about-title">The partner <br /><span className="text-brand">behind your growth.</span></h2>
+                                  <h2 className="scroll-fade-up delay-150 about-title">The partner <br /><span className="text-brand editorial-accent">behind your growth.</span></h2>
                               </div>
                               <div className="about-text scroll-fade-up delay-300">
-                                  <p>Hi, I’m Sanjeewa. I am an independent web developer based in Sri Lanka, dedicated to building high-converting websites for businesses across Australia, Europe, and worldwide—and providing reliable monthly maintenance when clients want ongoing support.</p>
+                                  <p>Hi, I’m Sanjeewa—an independent web developer based in Sri Lanka, working with businesses across Australia, Europe, and worldwide. I build high-converting websites and provide reliable monthly maintenance when clients want ongoing support.</p>
                                   
-                                  <p>I understand that hiring an international developer can be stressful. My approach is built on clear communication, absolute reliability, and delivering exactly what I promise. While my technical foundation is backed by a Software Engineering degree from <strong className="text-dark-main">Cardiff Metropolitan University</strong>, my daily focus is entirely on solving your business problems. I handle the complex technology, so you can focus on running your business.</p>
-                                  
-                                  <p>I don't just write code; I build digital assets that help you grow. Whether we are launching a lightning-fast portfolio, building a complete business website, or keeping an existing site healthy month after month, my priority is giving you dependable technical support and a return on your investment.</p>
-                                  
-                                  <p>When I step away from the keyboard, I focus on analog creativity—studying photography and the visual arts.</p>
+                                  <p>My approach is simple: clear communication, dependable delivery, and technology that solves a real business problem. My technical foundation includes Software Engineering studies at <strong className="text-dark-main">Cardiff Metropolitan University</strong>, but my focus is always on making the web side of your business easier to run.</p>
+
+                                  <div className="about-credentials" aria-label="Developer highlights">
+                                      <div><span className="credential-label">Focus</span><strong>Web Development</strong></div>
+                                      <div><span className="credential-label">Also</span><strong>Monthly Maintenance</strong></div>
+                                      <div><span className="credential-label">Based in</span><strong>Sri Lanka • Worldwide</strong></div>
+                                  </div>
                               </div>
                           </div>
                       </div>
@@ -576,7 +586,7 @@ export default function Home() {
                   
                   <section className="container section-final-cta scroll-fade-up">
                       <div className="final-cta-content">
-                          <h2 className="final-cta-title">Need a new website—or help <span className="text-brand">looking after one?</span></h2>
+                          <h2 className="final-cta-title">Need a new website—or help <span className="text-brand editorial-accent">looking after one?</span></h2>
                           <p className="final-cta-text">Start a new website project with me, or choose monthly maintenance for an existing site. Either way, you get clear communication and reliable technical support.</p>
                           <div className="final-cta-actions">
                               <a href="/contact" className="btn-brand">Start a Website Project</a>
