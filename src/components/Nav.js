@@ -26,7 +26,7 @@ export default function Nav() {
         <nav className="nav-links desktop-links" aria-label="Main navigation">
           <a href="/#services">Web Development</a>
           <a href="/#maintenance">Maintenance</a>
-          <a href="/coming-soon">Case Studies</a>
+          <a href="/#work">Case Studies</a>
           <a href="/#packages">Pricing</a>
         </nav>
         <div className="nav-cta desktop-cta"><a href="/contact" className="btn-brand-small">Get a Free Quote</a></div>
