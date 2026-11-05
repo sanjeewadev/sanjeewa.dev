@@ -1690,3 +1690,30 @@
   background: var(--accent-warm-soft);
   color: var(--accent-warm);
 }
+
+
+/* Chat 2: ideal-client messaging */
+.best-fit-block {
+  margin: 26px 0 18px;
+  padding: 18px 20px;
+  border-left: 2px solid var(--accent-warm);
+  background: var(--accent-warm-soft);
+  border-radius: 0 14px 14px 0;
+}
+
+.best-fit-block .credential-label {
+  margin-bottom: 6px;
+}
+
+.best-fit-block p {
+  margin: 0 !important;
+  color: var(--text-dark-main);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+@media (max-width: 640px) {
+  .best-fit-block {
+    padding: 16px 17px;
+  }
+}
