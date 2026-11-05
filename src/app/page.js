@@ -2,6 +2,7 @@ import "@/styles/home.css";
 import ScrollReveal from "@/components/ScrollReveal";
 import HomeInteractions from "@/components/HomeInteractions";
 import FaqInteractions from "@/components/FaqInteractions";
+import CertificateCredential from "@/components/CertificateCredential";
 
 export const metadata = {
   title: "Custom Website Development & Maintenance | Freelance Web Developer",
@@ -501,6 +502,8 @@ export default function Home() {
                                       <div><span className="credential-label">Also</span><strong>Monthly Maintenance</strong></div>
                                       <div><span className="credential-label">Based in</span><strong>Sri Lanka • Worldwide</strong></div>
                                   </div>
+
+                                  <CertificateCredential />
                               </div>
                           </div>
                       </div>
