@@ -397,67 +397,89 @@ export default function Home() {
 
                   
                   <section className="container section-google-reviews">
-                      <div className="section-label-block">
+                      <div className="section-label-block reviews-heading">
                           <p className="section-kicker text-dark-muted">05 // CLIENT TRUST</p>
                           <h2 className="scroll-fade-up">Verified <span className="text-brand">Google Reviews</span></h2>
+                          <p className="section-intro text-dark-muted scroll-fade-up delay-100">
+                              Real feedback from clients I have worked with. The third card is a temporary demo placeholder until the next verified review is added.
+                          </p>
                       </div>
       
                       <div className="reviews-carousel-container scroll-fade-up delay-150">
-                          
-                          <button className="slider-arrow prev-arrow" aria-label="Previous Review">
+                          <button className="slider-arrow prev-arrow" aria-label="Previous review" type="button">
                               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
                           </button>
       
                           <div className="reviews-slider-wrapper">
                               <div className="reviews-track" id="reviewsTrack">
                                   
-                                  <div className="google-review-card">
+                                  <article className="google-review-card">
                                       <div className="review-header">
                                           <div className="reviewer-info">
                                               <div className="reviewer-avatar">E</div>
                                               <div className="reviewer-details">
                                                   <span className="reviewer-name">Elina Kabakova</span>
-                                                  <div className="review-stars">★★★★★</div>
+                                                  <div className="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
                                               </div>
                                           </div>
                                           <div className="google-logo">
-                                              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="24" height="24" />
+                                              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" width="24" height="24" />
                                           </div>
                                       </div>
                                       <p className="review-text">I’m happy with the work done by Sanjeewa. The website looks aesthetically beautiful and elegant, exactly as I envisioned. The entire project was handled with a high level of professionalism, and I truly appreciate the attention to detail. Highly recommended!</p>
-                                  </div>
+                                  </article>
       
-                                  <div className="google-review-card">
+                                  <article className="google-review-card">
                                       <div className="review-header">
                                           <div className="reviewer-info">
                                               <div className="reviewer-avatar brand-bg">C</div>
                                               <div className="reviewer-details">
-                                                  <span className="reviewer-name">chris terna</span>
-                                                  <div className="review-stars">★★★★★</div>
+                                                  <span className="reviewer-name">Chris Terna</span>
+                                                  <div className="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
                                               </div>
                                           </div>
                                           <div className="google-logo">
-                                              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="24" height="24" />
+                                              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" width="24" height="24" />
                                           </div>
                                       </div>
-                                      <p className="review-text">Wow this is amazing knowing how this guy building website for me
-      He amazing he knows the work🙌🏿👍🏼</p>
-                                  </div>
+                                      <p className="review-text">Wow this is amazing knowing how this guy building website for me. He amazing he knows the work 🙌🏿👍🏼</p>
+                                  </article>
+      
+                                  <article className="google-review-card demo-review-card">
+                                      <div className="review-header">
+                                          <div className="reviewer-info">
+                                              <div className="reviewer-avatar demo-avatar">D</div>
+                                              <div className="reviewer-details">
+                                                  <span className="reviewer-name">Demo Client</span>
+                                                  <div className="review-stars" aria-label="Demo 5-star rating">★★★★★</div>
+                                              </div>
+                                          </div>
+                                          <span className="demo-review-badge">DEMO</span>
+                                      </div>
+                                      <p className="review-text">Sanjeewa was clear, responsive, and easy to work with. The website feels polished, performs smoothly, and the whole process was handled professionally from start to finish.</p>
+                                      <p className="demo-review-note">Temporary placeholder — replace with your next verified Google review.</p>
+                                  </article>
       
                               </div>
                           </div>
       
-                          <button className="slider-arrow next-arrow" aria-label="Next Review">
+                          <button className="slider-arrow next-arrow" aria-label="Next review" type="button">
                               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
                           </button>
-                          
-                      </div> 
-      
-                      <div className="review-ctas scroll-fade-up delay-300">
-                          <a href="#" className="btn-brand" target="_blank" rel="noopener">Leave a Review</a>
-                          <a href="#" className="btn-text-link text-dark-main" target="_blank" rel="noopener">View all on Google ↗</a>
                       </div>
       
+                      <div className="review-dots" aria-label="Review navigation">
+                          <button className="review-dot active" type="button" aria-label="Show review 1" data-review-index="0"></button>
+                          <button className="review-dot" type="button" aria-label="Show review 2" data-review-index="1"></button>
+                          <button className="review-dot" type="button" aria-label="Show review 3" data-review-index="2"></button>
+                      </div>
+      
+                      <div className="review-trust-line scroll-fade-up delay-300">
+                          <span className="review-trust-stars">★★★★★</span>
+                          <span>Google client feedback</span>
+                          <span className="review-trust-separator">•</span>
+                          <span>2 verified reviews + 1 demo placeholder</span>
+                      </div>
                   </section>
       
          
