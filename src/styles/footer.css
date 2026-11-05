@@ -102,7 +102,7 @@
   justify-content: center;
   cursor: pointer;
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 16px rgba(23, 105, 255, 0.2); /* Soft blue glow */
+  box-shadow: 0 4px 16px rgba(40, 85, 217, 0.14); /* Soft blue glow */
   padding: 0;
 }
 
@@ -114,7 +114,7 @@
 
 .back-to-top-btn:hover {
   background-color: var(--accent-brand-hover);
-  box-shadow: 0 6px 20px rgba(23, 105, 255, 0.4);
+  box-shadow: 0 6px 20px rgba(40, 85, 217, 0.22);
 }
 
 /* Hovering makes the arrow point up playfully */
