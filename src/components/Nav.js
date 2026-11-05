@@ -24,7 +24,8 @@ export default function Nav() {
       <div className="container nav-container">
         <a href="/" className="nav-brand" aria-label="Sanjeewa.dev Homepage" onClick={closeMenu}>Sanjeewa<span className="text-brand">.dev</span></a>
         <nav className="nav-links desktop-links" aria-label="Main navigation">
-          <a href="/#services">Services</a>
+          <a href="/#services">Web Development</a>
+          <a href="/#maintenance">Maintenance</a>
           <a href="/coming-soon">Case Studies</a>
           <a href="/#packages">Pricing</a>
         </nav>
@@ -35,9 +36,10 @@ export default function Nav() {
       </div>
       <div className={`mobile-menu${menuOpen ? " is-open" : ""}`}>
         <nav className="mobile-menu-inner" aria-label="Mobile navigation">
-          <a href="/#services" className="mobile-link" onClick={closeMenu}>Services</a>
+          <a href="/#services" className="mobile-link" onClick={closeMenu}>Web Development</a>
+          <a href="/#maintenance" className="mobile-link" onClick={closeMenu}>Website Maintenance</a>
           <a href="/coming-soon" className="mobile-link" onClick={closeMenu}>Case Studies</a>
-          <a href="/#packages" className="mobile-link" onClick={closeMenu}>Pricing</a>
+          <a href="/#packages" className="mobile-link" onClick={closeMenu}>Website Pricing</a>
           <a href="/contact" className="btn-brand" style={{ marginTop: "24px", width: "100%" }} onClick={closeMenu}>Get a Free Quote</a>
         </nav>
       </div>
