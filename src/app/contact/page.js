@@ -41,7 +41,7 @@ export default function Contact() {
       <header className="contact-hero-minimal">
               <div className="container contact-hero-content-centered scroll-fade-up">
                   <p className="hero-kicker">GET YOUR FREE QUOTE</p>
-                  <h1 className="contact-title-minimal text-dark-main">Tell me <span className="text-brand editorial-accent">what you need.</span></h1>
+                  <h1 className="contact-title-minimal text-dark-main">Tell me <span className="editorial-accent text-editorial-ink">what you need.</span></h1>
                   <p className="contact-subtitle-minimal text-dark-muted">
                       New website, monthly maintenance, or help with an existing site—send me the details and <strong>I will personally reply within 24 hours</strong>.
                   </p>
