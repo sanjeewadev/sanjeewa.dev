@@ -41,9 +41,9 @@ export default function Contact() {
       <header className="contact-hero-minimal">
               <div className="container contact-hero-content-centered scroll-fade-up">
                   <p className="hero-kicker">GET YOUR FREE QUOTE</p>
-                  <h1 className="contact-title-minimal text-dark-main">Start getting <br /><span className="text-brand">more customers.</span></h1>
+                  <h1 className="contact-title-minimal text-dark-main">Tell me <span className="text-brand editorial-accent">what you need.</span></h1>
                   <p className="contact-subtitle-minimal text-dark-muted">
-                      Whether you need a brand-new website or reliable monthly maintenance for a site you already have, tell me what you need below. <strong>I will personally reply within 24 hours</strong> to discuss the right next step.
+                      New website, monthly maintenance, or help with an existing site—send me the details and <strong>I will personally reply within 24 hours</strong>.
                   </p>
               </div>
           </header>
@@ -52,54 +52,77 @@ export default function Contact() {
               <div className="container">
                   <div className="contact-grid">
                       
-                      <div className="contact-channels scroll-fade-up delay-0">
-                          
-                          <div className="channel-card">
-                              <h3>Direct Email</h3>
-                              <div className="copy-link-group">
-                                  <a href="mailto:hello.sanjeewa@outlook.com" className="channel-link">hello.sanjeewa@outlook.com ↗</a>
-                                  <button className="copy-btn" data-copy="hello.sanjeewa@outlook.com" aria-label="Copy Email">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                  </button>
+                      <aside className="contact-support-panel scroll-fade-up delay-0">
+                          <div className="response-badge">
+                              <span className="response-dot"></span>
+                              Usually replies within 24 hours
+                          </div>
+
+                          <div className="support-intro">
+                              <p className="section-kicker text-dark-muted">LET'S TALK</p>
+                              <h2>Tell me where you are now.<br /><span className="text-brand">I’ll help with the next step.</span></h2>
+                              <p>
+                                  You do not need to know the technical solution before contacting me. Tell me what you are trying to achieve, and I will help you work out the right approach.
+                              </p>
+                          </div>
+
+                          <div className="support-services">
+                              <span>New Website Development</span>
+                              <span>Monthly Website Maintenance</span>
+                              <span>Existing Website Fixes</span>
+                          </div>
+
+                          <div className="support-divider"></div>
+
+                          <div className="contact-channels">
+                              <div className="channel-card">
+                                  <h3>Email</h3>
+                                  <div className="copy-link-group">
+                                      <a href="mailto:hello.sanjeewa@outlook.com" className="channel-link">hello.sanjeewa@outlook.com ↗</a>
+                                      <button className="copy-btn" data-copy="hello.sanjeewa@outlook.com" aria-label="Copy Email" type="button">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div className="channel-card">
+                                  <h3>WhatsApp</h3>
+                                  <div className="copy-link-group">
+                                      <a href="https://wa.me/94776369256" className="channel-link" target="_blank" rel="noopener noreferrer">+94 77 636 9256 ↗</a>
+                                      <button className="copy-btn" data-copy="+94776369256" aria-label="Copy Phone Number" type="button">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div className="channel-card">
+                                  <h3>Connect</h3>
+                                  <div className="modern-social-grid">
+                                      <a href="https://linkedin.com/in/sanjeewadev" className="social-link-minimal" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                              <rect x="2" y="9" width="4" height="12"></rect>
+                                              <circle cx="4" cy="4" r="2"></circle>
+                                          </svg>
+                                      </a>
+                                      <a href="https://github.com/sanjeewadev" className="social-link-minimal" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                          </svg>
+                                      </a>
+                                  </div>
                               </div>
                           </div>
-                          
-                          <div className="channel-card">
-                              <h3>WhatsApp Direct</h3>
-                              <div className="copy-link-group">
-                                  <a href="https://wa.me/94776369256" className="channel-link" target="_blank" rel="noopener">+94 77 636 9256 ↗</a>
-                                  <button className="copy-btn" data-copy="+94776369256" aria-label="Copy Phone Number">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                  </button>
-                              </div>
+                      </aside>
+      
+                      <div className="contact-form-wrapper scroll-fade-up delay-100">
+                          <div className="form-intro">
+                              <p className="section-kicker text-dark-muted">START YOUR REQUEST</p>
+                              <h2>Share the basics.</h2>
+                              <p>I only need enough information to understand what you need. We can work out the details together after I reply.</p>
                           </div>
-                          
-                          <div className="channel-card">
-                              <h3>Social Network</h3>
-                              <div className="modern-social-grid">
-                                  
-                                  <a href="https://linkedin.com/in/sanjeewadev" className="social-link-minimal" aria-label="LinkedIn" target="_blank" rel="noopener">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                          <rect x="2" y="9" width="4" height="12"></rect>
-                                          <circle cx="4" cy="4" r="2"></circle>
-                                      </svg>
-                                  </a>
-      
-                                  <a href="https://github.com/sanjeewadev" className="social-link-minimal" aria-label="GitHub" target="_blank" rel="noopener">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                      </svg>
-                                  </a>
-      
-                              </div>
-                          </div>
-                          
-                      </div>
-      
-                      <div className="contact-form-wrapper scroll-fade-up delay-0">
                           <form action="https://api.web3forms.com/submit" method="POST" className="solid-premium-form" id="contactForm" noValidate>
                               
                               <input type="hidden" name="access_key" value="065ef0f5-7ba0-4210-add9-4534771c8b49" />
@@ -143,8 +166,8 @@ export default function Contact() {
                               
                               <button type="submit" className="submit-btn btn-brand btn-full-width mt-32">Send My Request</button>
                               
-                              <p style={{ textAlign: "center", marginTop: "16px", fontSize: "0.85rem", color: "#666" }}>
-                                  🔒 Your information is secure. No commitment required.
+                              <p className="form-privacy-note">
+                                  <span aria-hidden="true">🔒</span> Your information is secure. No commitment required.
                               </p>
                           </form>
                       </div>
