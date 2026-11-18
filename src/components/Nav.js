@@ -29,7 +29,7 @@ export default function Nav() {
           <a href="/#work">Case Studies</a>
           <a href="/#packages">Pricing</a>
         </nav>
-        <div className="nav-cta desktop-cta"><a href="/contact" className="btn-brand-small">Get a Free Quote</a></div>
+        <div className="nav-cta desktop-cta"><a href="/contact" className="btn-brand-small">Contact Me</a></div>
         <button className="mobile-toggle" aria-label="Toggle Menu" aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)} type="button">
           <span className="hamburger-line"></span><span className="hamburger-line"></span><span className="hamburger-line"></span>
         </button>
@@ -38,9 +38,9 @@ export default function Nav() {
         <nav className="mobile-menu-inner" aria-label="Mobile navigation">
           <a href="/#services" className="mobile-link" onClick={closeMenu}>Web Development</a>
           <a href="/#maintenance" className="mobile-link" onClick={closeMenu}>Website Maintenance</a>
-          <a href="/coming-soon" className="mobile-link" onClick={closeMenu}>Case Studies</a>
+          <a href="/#work" className="mobile-link" onClick={closeMenu}>Case Studies</a>
           <a href="/#packages" className="mobile-link" onClick={closeMenu}>Website Pricing</a>
-          <a href="/contact" className="btn-brand" style={{ marginTop: "24px", width: "100%" }} onClick={closeMenu}>Get a Free Quote</a>
+          <a href="/contact" className="btn-brand" style={{ marginTop: "24px", width: "100%" }} onClick={closeMenu}>Contact Me</a>
         </nav>
       </div>
     </header>
