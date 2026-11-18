@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export const metadata = {
   metadataBase: new URL("https://sanjeewa.dev"),
   title: "Sanjeewa.dev",
-  description: "Premium custom website design and web development for small businesses and creative professionals.",
+  description: "Professional website development and ongoing website care for small businesses and creative professionals.",
   robots: { index: true, follow: true },
   authors: [{ name: "Sanjeewa Vipula Kumara" }],
   icons: {
