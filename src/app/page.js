@@ -2,7 +2,6 @@ import "@/styles/home.css";
 import ScrollReveal from "@/components/ScrollReveal";
 import HomeInteractions from "@/components/HomeInteractions";
 import FaqInteractions from "@/components/FaqInteractions";
-import CertificateCredential from "@/components/CertificateCredential";
 
 export const metadata = {
   title: "Thoughtful Website Development & Maintenance | Sanjeewa.dev",
@@ -407,7 +406,7 @@ export default function Home() {
                           <p className="section-kicker text-dark-muted">05 // CLIENT TRUST</p>
                           <h2 className="scroll-fade-up">Verified <span className="text-brand">Google Reviews</span></h2>
                           <p className="section-intro text-dark-muted scroll-fade-up delay-100">
-                              Feedback from clients who trusted me with their business online. Two reviews below are verified; the third card is a temporary placeholder until the next client review is added.
+                              Feedback from clients who trusted me with their business online.
                           </p>
                       </div>
       
@@ -451,21 +450,7 @@ export default function Home() {
                                       <p className="review-text">Wow this is amazing knowing how this guy building website for me. He amazing he knows the work 🙌🏿👍🏼</p>
                                   </article>
       
-                                  <article className="google-review-card demo-review-card">
-                                      <div className="review-header">
-                                          <div className="reviewer-info">
-                                              <div className="reviewer-avatar demo-avatar">D</div>
-                                              <div className="reviewer-details">
-                                                  <span className="reviewer-name">Demo Client</span>
-                                                  <div className="review-stars" aria-label="Demo 5-star rating">★★★★★</div>
-                                              </div>
-                                          </div>
-                                          <span className="demo-review-badge">DEMO</span>
-                                      </div>
-                                      <p className="review-text">Sanjeewa was clear, responsive, and easy to work with. The website feels polished, performs smoothly, and the whole process was handled professionally from start to finish.</p>
-                                      <p className="demo-review-note">Temporary placeholder — replace with your next verified Google review.</p>
-                                  </article>
-      
+
                               </div>
                           </div>
       
@@ -477,14 +462,11 @@ export default function Home() {
                       <div className="review-dots" aria-label="Review navigation">
                           <button className="review-dot active" type="button" aria-label="Show review 1" data-review-index="0"></button>
                           <button className="review-dot" type="button" aria-label="Show review 2" data-review-index="1"></button>
-                          <button className="review-dot" type="button" aria-label="Show review 3" data-review-index="2"></button>
                       </div>
       
                       <div className="review-trust-line scroll-fade-up delay-300">
                           <span className="review-trust-stars">★★★★★</span>
                           <span>Google client feedback</span>
-                          <span className="review-trust-separator">•</span>
-                          <span>2 verified reviews + 1 demo placeholder</span>
                       </div>
                   </section>
       
@@ -516,7 +498,6 @@ export default function Home() {
                                       <div><span className="credential-label">Based in</span><strong>Sri Lanka • Worldwide</strong></div>
                                   </div>
 
-                                  <CertificateCredential />
                               </div>
                           </div>
                       </div>
