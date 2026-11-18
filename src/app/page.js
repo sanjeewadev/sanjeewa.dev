@@ -4,11 +4,11 @@ import HomeInteractions from "@/components/HomeInteractions";
 import FaqInteractions from "@/components/FaqInteractions";
 
 export const metadata = {
-  title: "Thoughtful Website Development & Maintenance | Sanjeewa.dev",
-  description: "Thoughtful, high-performing custom websites and monthly maintenance for service businesses, creative professionals, boutique brands, and growing teams.",
+  title: "Website Development & Maintenance | Sanjeewa.dev",
+  description: "Professional custom websites and practical monthly website care for service businesses, creative professionals, and growing brands.",
   alternates: { canonical: "/" },
-  openGraph: { title: "Thoughtful Website Development & Maintenance | Sanjeewa.dev", description: "Thoughtful, high-performing custom websites and monthly maintenance for service businesses, creative professionals, boutique brands, and growing teams.", url: "/", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
-  twitter: { card: "summary_large_image", title: "Thoughtful Website Development & Maintenance | Sanjeewa.dev", description: "Thoughtful, high-performing custom websites and monthly maintenance for service businesses, creative professionals, boutique brands, and growing teams.", images: ["/og-image.png"] },
+  openGraph: { title: "Website Development & Maintenance | Sanjeewa.dev", description: "Professional custom websites and practical monthly website care for service businesses, creative professionals, and growing brands.", url: "/", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
+  twitter: { card: "summary_large_image", title: "Website Development & Maintenance | Sanjeewa.dev", description: "Professional custom websites and practical monthly website care for service businesses, creative professionals, and growing brands.", images: ["/og-image.png"] },
 };
 
 const schemaData = {
@@ -30,7 +30,7 @@ const schemaData = {
       "@id": "https://sanjeewa.dev/#service",
       "url": "https://sanjeewa.dev",
       "name": "Sanjeewa Dev",
-      "description": "Thoughtful custom website development and ongoing website care for service businesses, creative professionals, boutique brands, and growing teams",
+      "description": "Professional custom website development and ongoing website care for service businesses, creative professionals, and growing brands",
       "priceRange": "$"
     },
     {
@@ -41,7 +41,7 @@ const schemaData = {
           "name": "How much does a custom small business website cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A high-performance custom website starts at $99 for a fast, static landing page. Full business and commerce websites with content management start at $199."
+            "text": "Website projects start at $199 for a simple professional website, $299 for a business website with more flexibility, and $399 for a more custom build."
           }
         },
         {
@@ -86,7 +86,7 @@ export default function Home() {
                       
                       <div className="hero-split-content scroll-fade-up">
                           <p className="hero-kicker">Freelance Web Developer</p>
-                          <h1 className="hero-title-split">Build a website that feels right for your brand—and helps your business grow.</h1>
+                          <h1 className="hero-title-split">A professional website that makes your business easier to trust—and easier to contact.</h1>
                           
                           <h2 className="hero-subtitle-split text-dark-muted">
                               Thoughtful websites for <br />
@@ -96,11 +96,11 @@ export default function Home() {
                           </h2>
                           
                           <p className="hero-description-split text-dark-muted">
-                              I design and build polished, high-performing websites that make your business feel credible, clear, and easy to choose—without turning the process into a technical headache.
+                              I design and build fast, polished websites for service businesses and creative professionals—with clear pricing, straightforward communication, and no technical headache.
                           </p>
                           
                           <div className="hero-actions-split">
-                              <a href="/contact" className="btn-brand">Start Your Website Project</a>
+                              <a href="/contact" className="btn-brand">Tell Me About Your Website</a>
                               <a href="/#work" className="btn-text-link text-dark-main ml-24">View My Work ↗</a>
                           </div>
                           <p className="hero-service-note text-dark-muted">
@@ -128,7 +128,7 @@ export default function Home() {
                   <section className="container section-philosophy text-center">
                       <p className="section-kicker text-dark-muted">THE STANDARD</p>
                       <h2 className="scroll-fade-up philosophy-title">
-                          A good website should feel like your business at its best. It should build trust quickly, make what you offer easy to understand, and give the right people a <strong className="text-brand">clear next step</strong>. I combine thoughtful design, fast performance, and conversion-focused structure so it looks polished and works hard for your business.
+                          A good website should feel like your business at its best. It should build trust quickly, make what you offer easy to understand, and give the right people a <strong className="text-brand">clear next step</strong>. I combine clear design, fast performance, and a simple customer journey so your website looks professional and makes it easy for people to understand what you offer and contact you.
                       </h2>
                   </section>
       
@@ -242,14 +242,14 @@ export default function Home() {
 
                       <div className="pricing-grid">
                           <div className="pricing-card scroll-fade-up delay-0">
-                              <h3 className="package-name">Static Launch</h3>
+                              <h3 className="package-name">Starter Website</h3>
                               <div className="price-block">
                                   <span className="price-label">Starting at</span>
                                   <div className="price-amount">$199</div>
                               </div>
                               <p className="package-desc">
-                                  <strong>For a focused portfolio or simple service business.</strong><br /><br />
-                                  A polished, fast website for businesses that need a professional presence without frequent self-editing. <em>Note: This plan does not include a content dashboard.</em>
+                                  <strong>For a simple portfolio or service business website.</strong><br /><br />
+                                  A fast, professional website for businesses that need a strong online presence without a content dashboard.
                               </p>
                               <hr className="card-divider" />
                               <ul className="package-features">
@@ -258,19 +258,19 @@ export default function Home() {
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Technical SEO foundation</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Clean custom build</li>
                               </ul>
-                              <a href="/contact" className="package-cta">Choose Static Launch →</a>
+                              <a href="/contact" className="package-cta">Ask About Starter Website →</a>
                           </div>
 
                           <div className="pricing-card highlight-blue scroll-fade-up delay-150">
                               <div className="popular-badge">MOST POPULAR</div>
-                              <h3 className="package-name">Business & Commerce</h3>
+                              <h3 className="package-name">Business Website</h3>
                               <div className="price-block">
                                   <span className="price-label">Starting at</span>
                                   <div className="price-amount text-brand">$299</div>
                               </div>
                               <p className="package-desc">
                                   <strong>For growing businesses that need more flexibility.</strong><br /><br />
-                                  Ideal for editable content, booking or commerce features, and a stronger search foundation as your business grows.
+                                  Ideal for editable content, bookings, online payments, and a stronger foundation as your business grows.
                               </p>
                               <hr className="card-divider" />
                               <ul className="package-features">
@@ -279,18 +279,18 @@ export default function Home() {
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Strong SEO foundation</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Secure payment gateways</li>
                               </ul>
-                              <a href="/contact" className="package-cta package-cta-primary">Choose Business & Commerce →</a>
+                              <a href="/contact" className="package-cta package-cta-primary">Ask About Business Website →</a>
                           </div>
 
                           <div className="pricing-card scroll-fade-up delay-300">
-                              <h3 className="package-name">Bespoke Enterprise</h3>
+                              <h3 className="package-name">Custom Website</h3>
                               <div className="price-block">
                                   <span className="price-label">Starting at</span>
                                   <div className="price-amount">$399</div>
                               </div>
                               <p className="package-desc">
-                                  <strong>For brands that need something more tailored.</strong><br /><br />
-                                  A custom solution for larger websites, distinctive design systems, or functionality built around a specific business workflow.
+                                  <strong>For businesses that need something more tailored.</strong><br /><br />
+                                  A more custom build for larger websites, distinctive design, or functionality shaped around a specific business workflow.
                               </p>
                               <hr className="card-divider" />
                               <ul className="package-features">
@@ -299,7 +299,7 @@ export default function Home() {
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced performance optimization</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom admin experience</li>
                               </ul>
-                              <a href="/contact" className="package-cta">Choose Bespoke Enterprise →</a>
+                              <a href="/contact" className="package-cta">Ask About Custom Website →</a>
                           </div>
                       </div>
                   </section>
@@ -309,10 +309,10 @@ export default function Home() {
                       <div className="maintenance-heading">
                           <div>
                               <p className="section-kicker text-dark-muted">04 // WEBSITE MAINTENANCE</p>
-                              <h2 className="scroll-fade-up">Your website should not be<br /><span className="text-brand editorial-accent">forgotten after launch.</span></h2>
+                              <h2 className="scroll-fade-up">Keep your website<br /><span className="text-brand editorial-accent">healthy after launch.</span></h2>
                           </div>
                           <p className="maintenance-heading-copy text-dark-muted scroll-fade-up delay-100">
-                              You run the business; I’ll keep the website healthy. Monthly care can cover updates, checks, small fixes, and ongoing support so you do not have to keep thinking about the technical side. I can also maintain websites I did not originally build.
+                              You run the business; I’ll handle the routine website care. Plans cover practical checks, updates, small edits, and technical support on your existing hosting. I can also maintain websites I did not originally build.
                           </p>
                       </div>
 
@@ -322,20 +322,20 @@ export default function Home() {
                               <h3 className="package-name">Essential Care</h3>
                               <div className="price-block">
                                   <span className="price-label">Per month</span>
-                                  <div className="price-amount">$29<span className="price-period">/mo</span></div>
+                                  <div className="price-amount">$19<span className="price-period">/mo</span></div>
+                                  <span className="maintenance-annual-price">or $190/year</span>
                               </div>
                               <p className="package-desc">
-                                  <strong>For simple websites that need dependable routine care.</strong>
+                                  <strong>For static sites, simple portfolios, and lightweight websites.</strong>
                               </p>
                               <hr className="card-divider" />
                               <ul className="package-features">
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Monthly website health check</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 small content update / month</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Broken link & form checks</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Basic minor bug fixes</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Uptime & SSL check</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Broken link & form test</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 small edit / month (~15 mins)</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Email support</li>
                               </ul>
-                              <a href="/contact" className="package-cta">Choose Essential Care →</a>
+                              <a href="/contact" className="package-cta">Ask About Essential Care →</a>
                           </div>
 
                           <div className="pricing-card maintenance-card highlight-blue scroll-fade-up delay-150">
@@ -344,21 +344,21 @@ export default function Home() {
                               <h3 className="package-name">Business Care</h3>
                               <div className="price-block">
                                   <span className="price-label">Per month</span>
-                                  <div className="price-amount text-brand">$59<span className="price-period">/mo</span></div>
+                                  <div className="price-amount text-brand">$39<span className="price-period">/mo</span></div>
+                                  <span className="maintenance-annual-price">or $390/year</span>
                               </div>
                               <p className="package-desc">
-                                  <strong>For active businesses that need regular updates and quicker support.</strong>
+                                  <strong>For WordPress, CMS, booking, and regularly updated websites.</strong>
                               </p>
                               <hr className="card-divider" />
                               <ul className="package-features">
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Essential Care</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 3 small content updates / month</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Performance review</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Security & software update checks</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Backup verification where supported</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Bi-weekly plugin & security updates</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Backup check</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Speed check</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 3 small edits / month (~30–45 mins)</li>
                                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority support</li>
                               </ul>
-                              <a href="/contact" className="package-cta package-cta-primary">Choose Business Care →</a>
+                              <a href="/contact" className="package-cta package-cta-primary">Ask About Business Care →</a>
                           </div>
 
                           <div className="pricing-card maintenance-card scroll-fade-up delay-300">
@@ -366,21 +366,21 @@ export default function Home() {
                               <h3 className="package-name">Premium Care</h3>
                               <div className="price-block">
                                   <span className="price-label">Per month</span>
-                                  <div className="price-amount">$99<span className="price-period">/mo</span></div>
+                                  <div className="price-amount">$69<span className="price-period">/mo</span></div>
+                                  <span className="maintenance-annual-price">or $690/year</span>
                               </div>
                               <p className="package-desc">
-                                  <strong>For brands that want more hands-on care and room for ongoing improvements.</strong>
+                                  <strong>For active businesses that need regular updates and faster support.</strong>
                               </p>
                               <hr className="card-divider" />
                               <ul className="package-features">
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Business Care</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 6 small content updates / month</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 1 hour improvement work / month</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority minor bug fixes</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Monthly improvement recommendations</li>
-                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Fastest support priority</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Weekly website checks</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority fixes</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 5 small edits / month</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 1 hour design/dev improvements</li>
+                                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> ~1.5 hrs total hands-on work / month</li>
                               </ul>
-                              <a href="/contact" className="package-cta">Choose Premium Care →</a>
+                              <a href="/contact" className="package-cta">Ask About Premium Care →</a>
                           </div>
                       </div>
 
@@ -393,6 +393,9 @@ export default function Home() {
                               </p>
                               <p className="maintenance-scope-note">
                                   New pages, redesigns, new functionality, e-commerce features, major development work, or large content uploads are quoted separately.
+                              </p>
+                              <p className="maintenance-scope-note">
+                                  <strong>Hosting & domains:</strong> You pay your hosting and domain providers directly, so you keep 100% ownership and control of those accounts. My care plans cover hands-on technical management, monitoring, updates, and content edits on your existing hosting.
                               </p>
                           </div>
                           <a href="/contact" className="btn-brand">Ask About Maintenance</a>
@@ -520,7 +523,7 @@ export default function Home() {
                                   </div>
                               </button>
                               <div className="faq-answer">
-                                  <p>A high-performance custom website starts at $99 for a fast, static landing page. Full business and commerce websites with content management start at $199. I provide transparent pricing with absolutely no hidden fees.</p>
+                                  <p>Website projects start at $199 for a simple professional website, $299 for a business website with more flexibility, and $399 for a more custom build. I keep the pricing clear, and any extra work is discussed before it is added.</p>
                               </div>
                           </div>
       
@@ -604,7 +607,7 @@ export default function Home() {
                                   </div>
                               </button>
                               <div className="faq-answer">
-                                  <p>Absolutely. I build transparent partnerships. Once the final invoice is paid, you have 100% ownership of your domain, hosting, and all project files. You are never locked into a contract.</p>
+                                  <p>Yes. Your domain and hosting accounts stay in your name, and you pay those providers directly so you keep control of them. Once the project is paid in full, you also own the website project files provided as part of the agreed scope.</p>
                               </div>
                           </div>
       
@@ -617,7 +620,7 @@ export default function Home() {
                           <h2 className="final-cta-title">Have a website idea—or a site that needs <span className="editorial-accent text-editorial-ink">a little more care?</span></h2>
                           <p className="final-cta-text">Tell me what you are building, changing, or struggling with. You do not need a technical brief—just tell me what you want your business and website to do better.</p>
                           <div className="final-cta-actions">
-                              <a href="/contact" className="btn-brand">Tell Me About Your Project</a>
+                              <a href="/contact" className="btn-brand">Contact Me</a>
                               <a href="/#maintenance" className="btn-text-link text-dark-main">View Maintenance Plans →</a>
                           </div>
                       </div>
