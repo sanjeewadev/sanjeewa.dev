@@ -24,7 +24,7 @@ const schemaData = {
         "@type": "Organization",
         "name": "Sanjeewa.dev"
       },
-      "description": "Providing 100% digital ownership, custom email routing, and local SEO for a Dubai-based DJ."
+      "description": "How I rebuilt DJ Christerna’s website with clearer ownership, reliable email routing, and a stronger local SEO foundation for Dubai."
     },
     {
       "@type": "FAQPage",
@@ -34,7 +34,7 @@ const schemaData = {
           "name": "Why is it important to own your own website domain and hosting?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Many site builders or restrictive developers lock clients out of their own assets. By building with custom WordPress on independent hosting, I ensure business owners have 100% legal ownership and administrative control over their digital presence."
+            "text": "Keeping the domain and hosting in the client’s own accounts gives the business clear administrative control and reduces dependence on a third party. For this project, the website was rebuilt on independent hosting with full administrative access."
           }
         },
         {
@@ -42,7 +42,7 @@ const schemaData = {
           "name": "Do DJs and entertainers need automated booking systems?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. A professional automated booking system with dedicated email server routing ensures that an entertainer never misses a gig inquiry while traveling or performing."
+            "text": "A clear enquiry flow and reliable email routing can make booking requests easier to manage, especially when the entertainer is travelling or performing."
           }
         }
       ]
@@ -154,18 +154,18 @@ export default function DjChristernaCaseStudy() {
                       <div className="metrics-grid scroll-fade-up">
                           <div className="metric-card">
                               <div className="metric-circle score-perfect">100</div>
-                              <h3>Total Ownership</h3>
-                              <p>100% control over domain, hosting, and code.</p>
+                              <h3>Client Control</h3>
+                              <p>Domain, hosting, and website access kept under the client’s control.</p>
                           </div>
                           <div className="metric-card">
                               <div className="metric-circle score-perfect">100</div>
                               <h3>SEO Score</h3>
-                              <p>Optimized perfectly for Dubai Google searches.</p>
+                              <p>Strong technical and local SEO foundation for Dubai searches.</p>
                           </div>
                           <div className="metric-card">
                               <div className="metric-circle score-perfect">100</div>
-                              <h3>Uptime & Delivery</h3>
-                              <p>Flawless email routing and server stability.</p>
+                              <h3>Email Delivery</h3>
+                              <p>Dedicated routing configured for more reliable booking enquiries.</p>
                           </div>
                       </div>
       
@@ -207,7 +207,7 @@ export default function DjChristernaCaseStudy() {
                               </div>
                           </button>
                           <div className="faq-answer">
-                              <p>Many "drag-and-drop" site builders or restrictive agencies keep legal ownership of your domain name to lock you into their services. By building a custom WordPress site on independent hosting, I guarantee my clients have 100% legal and administrative control over their digital business assets.</p>
+                              <p>Keeping your domain and hosting in your own accounts gives you clearer control over your website and reduces dependence on a third party. For this project, Chris’s website was rebuilt on independent hosting with full administrative access.</p>
                           </div>
                       </div>
       
@@ -219,7 +219,7 @@ export default function DjChristernaCaseStudy() {
                               </div>
                           </button>
                           <div className="faq-answer">
-                              <p>Standard website contact forms often send inquiries straight to a client's spam folder. I configured dedicated email routing for DJ Christerna to ensure that every time a club or event promoter requests a booking, the notification hits his inbox instantly, securing the gig.</p>
+                              <p>Contact forms can fail or land in spam if email delivery is not configured properly. I set up dedicated email routing for DJ Christerna to make booking enquiries more reliable and easier to receive.</p>
                           </div>
                       </div>
       
@@ -228,9 +228,9 @@ export default function DjChristernaCaseStudy() {
       
               <section className="container section-final-cta scroll-fade-up">
                   <div className="final-cta-content">
-                      <h2 className="final-cta-title">Want results like <span className="text-brand">DJ Christerna?</span></h2>
-                      <p className="final-cta-text">Let’s build a website you can fully own, understand, and grow with—without feeling dependent on someone else to control it.</p>
-                      <a href="/contact" className="btn-brand">Get Your Free Consultation</a>
+                      <h2 className="final-cta-title">Need a website you can <span className="text-brand">properly own and control?</span></h2>
+                      <p className="final-cta-text">Tell me what you have now and what you would like to improve. I’ll help you work out a clear next step.</p>
+                      <a href="/contact" className="btn-brand">Contact Me</a>
                   </div>
               </section>
       
