@@ -245,7 +245,7 @@ export default function Home() {
                               <h3 className="package-name">Static Launch</h3>
                               <div className="price-block">
                                   <span className="price-label">Starting at</span>
-                                  <div className="price-amount">$99</div>
+                                  <div className="price-amount">$199</div>
                               </div>
                               <p className="package-desc">
                                   <strong>For a focused portfolio or simple service business.</strong><br /><br />
@@ -266,7 +266,7 @@ export default function Home() {
                               <h3 className="package-name">Business & Commerce</h3>
                               <div className="price-block">
                                   <span className="price-label">Starting at</span>
-                                  <div className="price-amount text-brand">$199</div>
+                                  <div className="price-amount text-brand">$299</div>
                               </div>
                               <p className="package-desc">
                                   <strong>For growing businesses that need more flexibility.</strong><br /><br />
@@ -286,7 +286,7 @@ export default function Home() {
                               <h3 className="package-name">Bespoke Enterprise</h3>
                               <div className="price-block">
                                   <span className="price-label">Starting at</span>
-                                  <div className="price-amount">$299</div>
+                                  <div className="price-amount">$399</div>
                               </div>
                               <p className="package-desc">
                                   <strong>For brands that need something more tailored.</strong><br /><br />
