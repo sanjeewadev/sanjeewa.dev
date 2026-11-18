@@ -15,7 +15,7 @@ const schemaData = {
   "@graph": [
     {
       "@type": "Article",
-      "headline": "Case Study: High-Converting Photography Website for ElinaPix",
+      "headline": "Case Study: Photography Website for ElinaPix",
       "author": {
         "@type": "Person",
         "name": "Sanjeewa Vipula Kumara"
@@ -24,7 +24,7 @@ const schemaData = {
         "@type": "Organization",
         "name": "Sanjeewa.dev"
       },
-      "description": "How a custom WordPress build and technical SEO helped a French Riviera event photographer capture direct, automated bookings."
+      "description": "How a custom WordPress build improved performance, clarified services, and made direct enquiries and bookings easier for a French Riviera event photographer."
     },
     {
       "@type": "FAQPage",
@@ -34,7 +34,7 @@ const schemaData = {
           "name": "Why is website speed important for a photography portfolio?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Photography websites usually load very slowly because of large, high-resolution images. By optimizing the images and writing clean custom code, I achieved a perfect 100/100 Google Lighthouse score, ensuring visitors stay on the page and book services."
+            "text": "Photography websites can become slow because of large, high-resolution images. By optimizing the images and keeping the implementation lightweight, the site achieved a 100/100 Google Lighthouse performance score in the measured test."
           }
         },
         {
@@ -42,7 +42,7 @@ const schemaData = {
           "name": "Can a WordPress website have automated payment gateways?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. For ElinaPix, I integrated a secure, automated payment gateway directly into her custom WordPress platform, allowing clients to book and pay for event photography without manual invoicing."
+            "text": "Yes. For ElinaPix, I integrated a secure payment gateway into the WordPress website so clients can move from enquiry or booking to payment with less manual work."
           }
         }
       ]
@@ -123,7 +123,7 @@ export default function ElinaPixCaseStudy() {
               <section className="container cs-visual-tour scroll-fade-up">
                   <div className="section-label-block centered mb-64">
                       <p className="section-kicker text-dark-muted">PLATFORM INTERFACE</p>
-                      <h2>High-Performance <span className="text-brand">Design.</span></h2>
+                      <h2>Fast, Clear <span className="text-brand">Design.</span></h2>
                   </div>
                   
                   <div className="modular-gallery-grid">
@@ -159,17 +159,17 @@ export default function ElinaPixCaseStudy() {
                           <div className="metric-card">
                               <div className="metric-circle score-perfect">100</div>
                               <h3>Performance Score</h3>
-                              <p>Perfect Google Lighthouse mobile loading speed.</p>
+                              <p>100/100 Google Lighthouse performance score in the measured test.</p>
                           </div>
                           <div className="metric-card">
                               <div className="metric-circle score-perfect">100</div>
                               <h3>SEO Score</h3>
-                              <p>Flawless technical search engine optimization.</p>
+                              <p>Strong technical SEO foundation.</p>
                           </div>
                           <div className="metric-card">
                               <div className="metric-circle score-perfect">100</div>
                               <h3>Best Practices</h3>
-                              <p>Elite security and modern code standards.</p>
+                              <p>Modern development and security best practices.</p>
                           </div>
                       </div>
       
@@ -210,7 +210,7 @@ export default function ElinaPixCaseStudy() {
                               </div>
                           </button>
                           <div className="faq-answer">
-                              <p>Photography websites usually load very slowly because of large, high-resolution images. By applying advanced image compression algorithms and writing lightweight custom code, I achieved a perfect 100/100 Google speed score. This ensures visitors do not leave the site out of frustration before seeing her work.</p>
+                              <p>Photography websites can become slow because of large, high-resolution images. By optimizing the images and keeping the implementation lightweight, the site achieved a 100/100 Google Lighthouse performance score in the measured test, while keeping the photography visually strong.</p>
                           </div>
                       </div>
       
@@ -222,7 +222,7 @@ export default function ElinaPixCaseStudy() {
                               </div>
                           </button>
                           <div className="faq-answer">
-                              <p>Absolutely. For this project, I integrated a highly secure payment gateway directly into the WordPress infrastructure. This allows international clients to book and pay for event photography instantly, saving the business owner hours of manual invoicing.</p>
+                              <p>Yes. For this project, I integrated a secure payment gateway into the WordPress website so clients can move from enquiry or booking to payment with less manual work for the business owner.</p>
                           </div>
                       </div>
       
@@ -231,9 +231,9 @@ export default function ElinaPixCaseStudy() {
       
               <section className="container section-final-cta scroll-fade-up">
                   <div className="final-cta-content">
-                      <h2 className="final-cta-title">Want results like <span className="text-brand">ElinaPix?</span></h2>
-                      <p className="final-cta-text">Let’s build a website that feels as polished as the work you do—and makes it easier for the right clients to take the next step.</p>
-                      <a href="/contact" className="btn-brand">Get Your Free Consultation</a>
+                      <h2 className="final-cta-title">Need a website that presents your work <span className="text-brand">professionally?</span></h2>
+                      <p className="final-cta-text">Tell me about your business and what you want the website to improve. I’ll help you work out the right next step.</p>
+                      <a href="/contact" className="btn-brand">Contact Me</a>
                   </div>
               </section>
       
