@@ -123,7 +123,7 @@ export default function DjChristernaCaseStudy() {
               <section className="container cs-visual-tour scroll-fade-up">
                   <div className="section-label-block centered mb-64">
                       <p className="section-kicker text-dark-muted">PLATFORM INTERFACE</p>
-                      <h2>High-Performance <span className="text-brand">Design.</span></h2>
+                      <h2>Clear, Reliable <span className="text-brand">Design.</span></h2>
                   </div>
                   
                   <div className="modular-gallery-grid">
