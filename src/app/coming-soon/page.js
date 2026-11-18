@@ -5,6 +5,7 @@ export const metadata = {
   title: "Coming Soon | Sanjeewa.dev",
   description: "This page is currently under development. Check back soon for the full experience.",
   alternates: { canonical: "/coming-soon" },
+  robots: { index: false, follow: false },
   openGraph: { title: "Coming Soon | Sanjeewa.dev", description: "This page is currently under development. Check back soon for the full experience.", url: "/coming-soon", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
   twitter: { card: "summary_large_image", title: "Coming Soon | Sanjeewa.dev", description: "This page is currently under development. Check back soon for the full experience.", images: ["/og-image.png"] },
 };
@@ -23,7 +24,7 @@ export default function ComingSoon() {
                   <h1 className="wip-title">Currently <span className="text-brand">Crafting.</span></h1>
                   
                   <p className="wip-text text-dark-muted">
-                      I am meticulously building this section to ensure it meets the highest standards of performance and design. Please check back shortly for the final release.
+                      This page is not ready yet. Please check back later or return to the homepage.
                   </p>
                   
                   <div className="wip-action mt-32">
