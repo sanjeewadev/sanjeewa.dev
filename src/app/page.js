@@ -219,7 +219,7 @@ export default function Home() {
                                   <p className="work-subtitle">A clearer, fully owned platform for direct enquiries</p>
                                   <p className="work-description">Chris needed control of his own website and a more professional way for promoters to book him. I rebuilt the site on hosting he owns, clarified the enquiry journey, and strengthened local search visibility.</p>
                                   <div className="tech-stack-row work-tags">
-                                      <span>100% Ownership</span>
+                                      <span>Client Control</span>
                                       <span>Custom WordPress</span>
                                       <span>Dubai SEO</span>
                                   </div>
@@ -486,7 +486,7 @@ export default function Home() {
                                   <h2 className="scroll-fade-up delay-150 about-title">The partner <br /><span className="editorial-accent text-editorial-ink">behind your growth.</span></h2>
                               </div>
                               <div className="about-text scroll-fade-up delay-300">
-                                  <p>Hi, I’m Sanjeewa—an independent web developer based in Sri Lanka, working remotely with clients worldwide. I build thoughtful, high-performing websites for people who care about how their business looks, feels, and works online.</p>
+                                  <p>Hi, I’m Sanjeewa—an independent web developer based in Sri Lanka, working remotely with clients worldwide. I build professional, reliable websites for people who care about how their business looks, feels, and works online.</p>
                                   
                                   <p>You do not need to speak tech to work with me. I keep the process clear, collaborative, and straightforward: I listen first, explain decisions in plain language, and make sure you always know what is happening next. My technical foundation includes Software Engineering studies at <strong className="text-dark-main">Cardiff Metropolitan University</strong>, but my job is to make the web side of your business feel easier.</p>
 
