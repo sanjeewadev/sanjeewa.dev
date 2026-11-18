@@ -3,18 +3,18 @@ import ScrollReveal from "@/components/ScrollReveal";
 import ContactInteractions from "@/components/ContactInteractions";
 
 export const metadata = {
-  title: "Website Development & Maintenance Quote | Sanjeewa.dev",
+  title: "Contact Sanjeewa | Website Development & Maintenance",
   description: "Tell me what you want to build, improve, or maintain. No technical brief required—just share the basics and I will personally reply within 24 hours.",
   alternates: { canonical: "/contact" },
-  openGraph: { title: "Website Development & Maintenance Quote | Sanjeewa.dev", description: "Tell me what you want to build, improve, or maintain. No technical brief required—just share the basics and I will personally reply within 24 hours.", url: "/contact", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
-  twitter: { card: "summary_large_image", title: "Website Development & Maintenance Quote | Sanjeewa.dev", description: "Tell me what you want to build, improve, or maintain. No technical brief required—just share the basics and I will personally reply within 24 hours.", images: ["/og-image.png"] },
+  openGraph: { title: "Contact Sanjeewa | Website Development & Maintenance", description: "Tell me what you want to build, improve, or maintain. No technical brief required—just share the basics and I will personally reply within 24 hours.", url: "/contact", type: "website", images: [{ url: "/og-image.png", alt: "Sanjeewa - Premium Web Development and Custom Website Design" }] },
+  twitter: { card: "summary_large_image", title: "Contact Sanjeewa | Website Development & Maintenance", description: "Tell me what you want to build, improve, or maintain. No technical brief required—just share the basics and I will personally reply within 24 hours.", images: ["/og-image.png"] },
 };
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "name": "Contact Sanjeewa Vipula Kumara",
-  "description": "Get a free quote for custom website development or monthly website maintenance.",
+  "description": "Contact Sanjeewa about a new website, improving an existing website, or monthly website maintenance.",
   "url": "https://sanjeewa.dev/contact",
   "mainEntity": {
     "@type": "Person",
@@ -119,7 +119,7 @@ export default function Contact() {
       
                       <div className="contact-form-wrapper scroll-fade-up delay-100">
                           <div className="form-intro">
-                              <p className="section-kicker text-dark-muted">START YOUR REQUEST</p>
+                              <p className="section-kicker text-dark-muted">SEND ME A MESSAGE</p>
                               <h2>Share the basics.</h2>
                               <p>Rough notes are completely fine. Share enough for me to understand the situation, and we can work out the details together after I reply.</p>
                           </div>
@@ -164,10 +164,10 @@ export default function Contact() {
                                   <span className="error-text">Please provide a few more details (at least 10 characters).</span>
                               </div>
                               
-                              <button type="submit" className="submit-btn btn-brand btn-full-width mt-32">Send My Request</button>
+                              <button type="submit" className="submit-btn btn-brand btn-full-width mt-32">Send Message</button>
                               
                               <p className="form-privacy-note">
-                                  <span aria-hidden="true">🔒</span> Your information is secure. No commitment required.
+                                  <span aria-hidden="true">🔒</span> Your details are only used to reply to your enquiry.
                               </p>
                           </form>
                       </div>
