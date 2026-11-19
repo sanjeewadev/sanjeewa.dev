@@ -101,7 +101,7 @@ export default function Home() {
                           
                           <div className="hero-actions-split">
                               <a href="/contact" className="btn-brand">Tell Me About Your Website</a>
-                              <a href="/#work" className="btn-text-link text-dark-main ml-24">View My Work ↗</a>
+                              <a href="/work" className="btn-text-link text-dark-main ml-24">View My Work ↗</a>
                           </div>
                           <p className="hero-service-note text-dark-muted">
                               Already have a website? <a href="/#maintenance">I can look after it each month →</a>
@@ -188,8 +188,8 @@ export default function Home() {
                   
                   <section id="work" className="container section-work">
                       <div className="section-label-block">
-                          <p className="section-kicker text-dark-muted">02 // PROVEN RESULTS</p>
-                          <h2 className="scroll-fade-up">Client <span className="text-brand">Success Stories</span></h2>
+                          <p className="section-kicker text-dark-muted">02 // CLIENT WORK</p>
+                          <h2 className="scroll-fade-up">Selected Client <span className="text-brand">Work</span></h2>
                       </div>
       
                       <div className="work-grid">
@@ -226,6 +226,10 @@ export default function Home() {
                               </div>
                           </a>
       
+                      </div>
+
+                      <div className="view-all-wrapper scroll-fade-up delay-150">
+                          <a href="/work" className="btn-text-link text-dark-main">View all work ↗</a>
                       </div>
 
                   </section>
