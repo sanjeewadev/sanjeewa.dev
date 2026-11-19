@@ -13,14 +13,14 @@ export const metadata = {
       "Selected client websites and self-initiated website concepts designed and developed by Sanjeewa.",
     url: "/work",
     type: "website",
-    images: [{ url: "/og-image.png", alt: "Selected website work by Sanjeewa.dev" }],
+    images: [{ url: "/assets/hero/premium-website-design-for-creative-studios.webp", alt: "Selected website work by Sanjeewa.dev" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Selected Work | Sanjeewa.dev",
     description:
       "Selected client websites and self-initiated website concepts designed and developed by Sanjeewa.",
-    images: ["/og-image.png"],
+    images: ["/assets/hero/premium-website-design-for-creative-studios.webp"],
   },
 };
 
@@ -125,13 +125,13 @@ function ConceptWebsitePreview({ project }) {
 
   return (
     <div className={`work-page-media work-page-media-browser work-concept-preview ${isTerrain ? "work-concept-terrain" : "work-concept-aurelia"}`}>
-      <BrowserBar label={isTerrain ? "terrain-outdoor.co" : "aurelia-motorcoach.com"} />
+      <BrowserBar label={isTerrain ? "Concept preview · Terrain Outdoor Co." : "Concept preview · Aurelia Motorcoach"} />
       <div className="work-page-site-window">
         <img className="work-concept-backdrop" src={project.image} alt="" loading="lazy" />
         <div className="work-concept-shade" aria-hidden="true" />
 
         {isTerrain ? (
-          <div className="work-mini-site work-mini-terrain" aria-label={project.alt}>
+          <div className="work-mini-site work-mini-terrain" role="img" aria-label={project.alt}>
             <div className="work-mini-header">
               <div className="work-mini-brand"><strong>Terrain</strong><span>Outdoor Co.</span></div>
               <div className="work-mini-nav" aria-hidden="true"><span>Services</span><span>Projects</span><span>About</span></div>
@@ -146,7 +146,7 @@ function ConceptWebsitePreview({ project }) {
             <div className="work-mini-rail" aria-hidden="true"><span>Design + build + care</span><span>Austin, Texas</span><span>Residential outdoor environments</span></div>
           </div>
         ) : (
-          <div className="work-mini-site work-mini-aurelia" aria-label={project.alt}>
+          <div className="work-mini-site work-mini-aurelia" role="img" aria-label={project.alt}>
             <div className="work-mini-header">
               <div className="work-mini-brand"><strong>Aurelia</strong><span>Motorcoach</span></div>
               <div className="work-mini-nav" aria-hidden="true"><span>Our Fleet</span><span>Destinations</span><span>How It Works</span></div>
@@ -260,8 +260,7 @@ export default function WorkPage() {
                     <p className="work-page-summary">{project.summary}</p>
                     <ProjectTags tags={project.tags} />
                     <div className="work-page-demo-note">
-                      <span>Interactive concept build</span>
-                      <strong>Live demo URL ready to connect</strong>
+                      <span>Interactive multi-page concept</span>
                     </div>
                   </div>
                 </article>
