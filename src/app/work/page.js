@@ -32,7 +32,7 @@ const clientProjects = [
     type: "Client Project",
     summary:
       "A polished photography website rebuilt around stronger presentation, faster browsing, local visibility, and a clearer path from first impression to direct booking.",
-    image: "/assets/Project/elinapix-photography-portfolio-website.webp",
+    image: "/assets/elinapix-case-study/elinapix-full-website-desktop-preview.webp",
     alt: "ElinaPix photography portfolio website for a French Riviera event photographer",
     caseStudy: "/elinapix-case-study",
     liveUrl: "https://elinapix.com",
@@ -45,7 +45,7 @@ const clientProjects = [
     type: "Client Project",
     summary:
       "A clearer, fully owned website for an event professional, with stronger direct-enquiry flow, reliable email routing, and a better local-search foundation.",
-    image: "/assets/Project/dj-christerna-dj-booking-website.webp",
+    image: "/assets/djchristerna-case-study/dj-christerna-full-website-desktop-preview.webp",
     alt: "DJ Christerna custom booking website for a Dubai event professional",
     caseStudy: "/dj-christerna-case-study",
     liveUrl: "https://djchristerna.com/",
@@ -63,7 +63,8 @@ const conceptProjects = [
       "A complete premium service-business concept with dedicated Services, Projects, About, and Contact experiences, built to demonstrate a high-end residential outdoor brand.",
     image:
       "https://images.unsplash.com/photo-1783125127199-860da9744dcc?auto=format&fit=crop&w=1800&q=84",
-    alt: "Modern home with landscaped lawn, patio, and pool representing the Terrain Outdoor Co. website concept",
+    alt: "Terrain Outdoor Co. homepage preview",
+    preview: "terrain",
     tags: ["Next.js", "Responsive Design", "Multi-page"],
   },
   {
@@ -75,7 +76,8 @@ const conceptProjects = [
       "A cinematic premium-rental experience exploring fleet discovery, destinations, trip planning, and a reusable CMS-backed architecture for high-value service businesses.",
     image:
       "https://images.unsplash.com/photo-1699115836378-10957ad67c48?auto=format&fit=crop&w=1800&q=84",
-    alt: "Luxury motorcoach in a dramatic travel setting representing the Aurelia Motorcoach website concept",
+    alt: "Aurelia Motorcoach homepage preview",
+    preview: "aurelia",
     tags: ["Next.js", "Payload CMS", "Premium UX"],
   },
 ];
@@ -89,6 +91,84 @@ function ProjectTags({ tags }) {
     </div>
   );
 }
+
+function BrowserBar({ label }) {
+  return (
+    <div className="work-browser-bar" aria-hidden="true">
+      <span className="work-browser-dots"><i /><i /><i /></span>
+      <span className="work-browser-address">{label}</span>
+      <span className="work-browser-open">↗</span>
+    </div>
+  );
+}
+
+function ClientWebsitePreview({ project, eager }) {
+  return (
+    <Link
+      className="work-page-media work-page-media-browser"
+      href={project.caseStudy}
+      aria-label={`View ${project.name} case study`}
+    >
+      <BrowserBar label={project.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")} />
+      <div className="work-page-site-window work-page-site-screenshot">
+        <img src={project.image} alt={project.alt} loading={eager ? "eager" : "lazy"} />
+      </div>
+      <span className="work-page-media-index">{project.number}</span>
+      <span className="work-page-type work-page-type-client">{project.type}</span>
+      <span className="work-page-view-hint">View project <b aria-hidden="true">↗</b></span>
+    </Link>
+  );
+}
+
+function ConceptWebsitePreview({ project }) {
+  const isTerrain = project.preview === "terrain";
+
+  return (
+    <div className={`work-page-media work-page-media-browser work-concept-preview ${isTerrain ? "work-concept-terrain" : "work-concept-aurelia"}`}>
+      <BrowserBar label={isTerrain ? "terrain-outdoor.co" : "aurelia-motorcoach.com"} />
+      <div className="work-page-site-window">
+        <img className="work-concept-backdrop" src={project.image} alt="" loading="lazy" />
+        <div className="work-concept-shade" aria-hidden="true" />
+
+        {isTerrain ? (
+          <div className="work-mini-site work-mini-terrain" aria-label={project.alt}>
+            <div className="work-mini-header">
+              <div className="work-mini-brand"><strong>Terrain</strong><span>Outdoor Co.</span></div>
+              <div className="work-mini-nav" aria-hidden="true"><span>Services</span><span>Projects</span><span>About</span></div>
+              <span className="work-mini-action">Free estimate ↗</span>
+            </div>
+            <div className="work-mini-hero-copy">
+              <p>Landscape · Hardscape · Pool Care</p>
+              <h4>Outdoor spaces,<br /><em>thoughtfully built.</em></h4>
+              <span>Design, build, and care brought together with one consistent standard.</span>
+              <div><b>Request a free estimate ↗</b><small>Explore our work ↓</small></div>
+            </div>
+            <div className="work-mini-rail" aria-hidden="true"><span>Design + build + care</span><span>Austin, Texas</span><span>Residential outdoor environments</span></div>
+          </div>
+        ) : (
+          <div className="work-mini-site work-mini-aurelia" aria-label={project.alt}>
+            <div className="work-mini-header">
+              <div className="work-mini-brand"><strong>Aurelia</strong><span>Motorcoach</span></div>
+              <div className="work-mini-nav" aria-hidden="true"><span>Our Fleet</span><span>Destinations</span><span>How It Works</span></div>
+              <span className="work-mini-action">Send an enquiry ↗</span>
+            </div>
+            <div className="work-mini-hero-copy">
+              <p>Private motorcoach journeys · American West</p>
+              <h4>The road is<br /><em>yours.</em></h4>
+              <span>Travel privately. Stay longer. Take the extraordinary route.</span>
+              <div><b>Explore the journey ↓</b></div>
+            </div>
+            <div className="work-mini-rail" aria-hidden="true"><span>01 · Featured coach</span><strong>The Signature 45</strong><span>Sleeps 4 · Seats 6 · 45 ft</span></div>
+          </div>
+        )}
+      </div>
+      <span className="work-page-media-index">{project.number}</span>
+      <span className="work-page-type work-page-type-concept">{project.type}</span>
+      <span className="work-page-preview-label">Website preview</span>
+    </div>
+  );
+}
+
 
 export default function WorkPage() {
   return (
@@ -131,11 +211,7 @@ export default function WorkPage() {
           <div className="work-page-grid work-page-grid-client">
             {clientProjects.map((project, index) => (
               <article className="work-page-card scroll-fade-up" key={project.name} style={{ transitionDelay: index ? "120ms" : "0ms" }}>
-                <Link className="work-page-media" href={project.caseStudy} aria-label={`View ${project.name} case study`}>
-                  <img src={project.image} alt={project.alt} loading={index === 0 ? "eager" : "lazy"} />
-                  <span className="work-page-media-index">{project.number}</span>
-                  <span className="work-page-type work-page-type-client">{project.type}</span>
-                </Link>
+                <ClientWebsitePreview project={project} eager={index === 0} />
                 <div className="work-page-card-body">
                   <div className="work-page-card-heading">
                     <div>
@@ -173,11 +249,7 @@ export default function WorkPage() {
             <div className="work-page-grid work-page-grid-concepts">
               {conceptProjects.map((project, index) => (
                 <article className="work-page-card work-page-card-concept scroll-fade-up" key={project.name} style={{ transitionDelay: index ? "120ms" : "0ms" }}>
-                  <div className="work-page-media">
-                    <img src={project.image} alt={project.alt} loading="lazy" />
-                    <span className="work-page-media-index">{project.number}</span>
-                    <span className="work-page-type work-page-type-concept">{project.type}</span>
-                  </div>
+                  <ConceptWebsitePreview project={project} />
                   <div className="work-page-card-body">
                     <div className="work-page-card-heading">
                       <div>
@@ -187,9 +259,10 @@ export default function WorkPage() {
                     </div>
                     <p className="work-page-summary">{project.summary}</p>
                     <ProjectTags tags={project.tags} />
-                    <p className="work-page-demo-note">
-                      Live demo link will be connected once the deployment URL is confirmed.
-                    </p>
+                    <div className="work-page-demo-note">
+                      <span>Interactive concept build</span>
+                      <strong>Live demo URL ready to connect</strong>
+                    </div>
                   </div>
                 </article>
               ))}
