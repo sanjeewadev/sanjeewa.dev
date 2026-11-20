@@ -288,147 +288,6 @@
     linear-gradient(180deg, rgba(7, 12, 11, 0.28), rgba(7, 12, 11, 0.45));
 }
 
-.work-concept-jglow .work-concept-backdrop {
-  object-position: 74% center;
-  filter: saturate(0.82) brightness(0.96);
-}
-
-.work-concept-jglow .work-concept-shade {
-  background:
-    linear-gradient(90deg, #f3e7df 0%, #f3e7df 49%, rgba(243, 231, 223, 0.2) 70%, rgba(45, 31, 28, 0.08) 100%),
-    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(76,52,45,0.12));
-}
-
-.work-mini-jglow {
-  color: #322725;
-}
-
-.work-jglow-banner {
-  min-height: 8%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(222, 185, 184, 0.92);
-  color: #5c4541;
-  font-size: clamp(5px, 0.55vw, 8px);
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.work-mini-jglow .work-mini-header {
-  min-height: 17%;
-  border-bottom-color: rgba(84, 61, 55, 0.16);
-  background: rgba(255, 249, 245, 0.88);
-  color: #332725;
-}
-
-.work-jglow-brand {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-  color: #9b755f;
-}
-
-.work-jglow-brand strong {
-  font-family: var(--font-editorial);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.work-jglow-brand span {
-  color: #9b755f;
-  font-size: clamp(4px, 0.45vw, 7px);
-  letter-spacing: 0.22em;
-}
-
-.work-mini-jglow .work-mini-nav {
-  color: #5f504d;
-}
-
-.work-mini-jglow .work-mini-action {
-  border-color: #6c554f;
-  background: #3e302d;
-  color: #fffaf7;
-}
-
-.work-jglow-copy {
-  width: 51%;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-left: 4.2%;
-}
-
-.work-jglow-copy > p {
-  margin-bottom: 9px;
-  color: #9b755f;
-  font-size: clamp(5px, 0.58vw, 8px);
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.work-jglow-copy h4 {
-  margin: 0;
-  color: #2f2422;
-  font-family: var(--font-editorial);
-  font-size: clamp(24px, 3.25vw, 50px);
-  font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: -0.035em;
-}
-
-.work-jglow-copy h4 em {
-  color: #2f2422;
-  font-weight: 400;
-}
-
-.work-jglow-copy > span {
-  display: block;
-  max-width: 360px;
-  margin-top: 10px;
-  color: #685753;
-  font-size: clamp(6px, 0.7vw, 10px);
-  line-height: 1.5;
-}
-
-.work-jglow-copy > div {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 14px;
-  font-size: clamp(6px, 0.66vw, 9px);
-}
-
-.work-jglow-copy b {
-  padding: 7px 11px;
-  border-radius: 999px;
-  background: #3e302d;
-  color: #fffaf7;
-  font-weight: 750;
-}
-
-.work-jglow-copy small {
-  color: #6c5651;
-}
-
-.work-jglow-features {
-  min-height: 13%;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 0 4.2%;
-  border-top: 1px solid rgba(84, 61, 55, 0.14);
-  background: rgba(255, 249, 245, 0.74);
-  color: #7d655f;
-  font-size: clamp(5px, 0.56vw, 8px);
-}
-
-.work-jglow-features span + span {
-  padding-left: 16px;
-  border-left: 1px solid rgba(84, 61, 55, 0.16);
-}
-
 .work-mini-site {
   position: absolute;
   inset: 0;
@@ -957,12 +816,7 @@
   .work-mini-aurelia .work-mini-hero-copy {
     width: 66%;
   }
-
-  .work-jglow-copy {
-    width: 62%;
-  }
-
-  .work-page-card-body {
+.work-page-card-body {
     padding-top: 21px;
   }
 
@@ -1050,16 +904,7 @@
   .work-mini-aurelia .work-mini-hero-copy {
     width: 78%;
   }
-
-  .work-jglow-copy {
-    width: 76%;
-  }
-
-  .work-jglow-features span:nth-child(3) {
-    display: none;
-  }
-
-  .work-mini-rail span:last-child {
+.work-mini-rail span:last-child {
     display: none;
   }
 
