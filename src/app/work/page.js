@@ -70,17 +70,16 @@ const conceptProjects = [
   },
   {
     number: "04",
-    name: "J.GLOW Makeup",
-    market: "Beauty Education · Makeup Artist",
+    name: "Elara Vale",
+    market: "Makeup Artistry · Bridal & Editorial",
     type: "Concept Website",
     summary:
-      "A polished makeup-education concept built around lesson discovery, video-led learning, confidence-building content, and a refined blush-and-cream visual system.",
-    image:
-      "https://images.unsplash.com/photo-1741774397357-91dcb4a889cd?auto=format&fit=crop&w=1800&q=84",
-    alt: "J.GLOW Makeup education homepage preview",
-    preview: "jglow",
+      "An editorial makeup-artist concept built around bridal and occasion services, portfolio storytelling, artist positioning, client reassurance, and a calm enquiry journey.",
+    image: "/assets/work/elara-vale-makeup-artist-preview.webp",
+    alt: "Elara Vale makeup artist website homepage preview",
+    preview: "elara",
     liveUrl: "https://makeup-artist-website-template.netlify.app/",
-    tags: ["Responsive Design", "Beauty Education", "Learning UX"],
+    tags: ["Editorial Design", "Service Portfolio", "Enquiry Flow"],
   },
 ];
 
@@ -124,7 +123,7 @@ function ClientWebsitePreview({ project, eager }) {
 
 function ConceptWebsitePreview({ project }) {
   const isTerrain = project.preview === "terrain";
-  const isJGlow = project.preview === "jglow";
+  const isElara = project.preview === "elara";
   const PreviewTag = project.liveUrl ? "a" : "div";
   const previewProps = project.liveUrl
     ? {
@@ -137,7 +136,7 @@ function ConceptWebsitePreview({ project }) {
 
   return (
     <PreviewTag
-      className={`work-page-media work-page-media-browser work-concept-preview ${isTerrain ? "work-concept-terrain" : isJGlow ? "work-concept-jglow" : "work-concept-aurelia"}`}
+      className={`work-page-media work-page-media-browser work-concept-preview ${isTerrain ? "work-concept-terrain" : isElara ? "work-concept-elara" : "work-concept-aurelia"}`}
       {...previewProps}
     >
       <BrowserBar
@@ -148,55 +147,45 @@ function ConceptWebsitePreview({ project }) {
         }
       />
       <div className="work-page-site-window">
-        <img className="work-concept-backdrop" src={project.image} alt="" loading="lazy" />
-        <div className="work-concept-shade" aria-hidden="true" />
-
-        {isTerrain ? (
-          <div className="work-mini-site work-mini-terrain" role="img" aria-label={project.alt}>
-            <div className="work-mini-header">
-              <div className="work-mini-brand"><strong>Terrain</strong><span>Outdoor Co.</span></div>
-              <div className="work-mini-nav" aria-hidden="true"><span>Services</span><span>Projects</span><span>About</span></div>
-              <span className="work-mini-action">Free estimate ↗</span>
-            </div>
-            <div className="work-mini-hero-copy">
-              <p>Landscape · Hardscape · Pool Care</p>
-              <h4>Outdoor spaces,<br /><em>thoughtfully built.</em></h4>
-              <span>Design, build, and care brought together with one consistent standard.</span>
-              <div><b>Request a free estimate ↗</b><small>Explore our work ↓</small></div>
-            </div>
-            <div className="work-mini-rail" aria-hidden="true"><span>Design + build + care</span><span>Austin, Texas</span><span>Residential outdoor environments</span></div>
-          </div>
-        ) : isJGlow ? (
-          <div className="work-mini-site work-mini-jglow" role="img" aria-label={project.alt}>
-            <div className="work-jglow-banner">✦ Learn anytime, anywhere ✦</div>
-            <div className="work-mini-header">
-              <div className="work-mini-brand work-jglow-brand"><strong>J.GLOW</strong><span>MAKEUP</span></div>
-              <div className="work-mini-nav" aria-hidden="true"><span>Home</span><span>About</span><span>FAQ</span><span>Lessons</span></div>
-              <span className="work-mini-action">Start learning</span>
-            </div>
-            <div className="work-jglow-copy">
-              <p>Professional makeup education</p>
-              <h4>Master Makeup<br /><em>With Confidence</em></h4>
-              <span>Learn practical makeup techniques from an experienced professional artist, at your own pace and from anywhere.</span>
-              <div><b>Explore Lessons →</b><small>▶ Watch Preview</small></div>
-            </div>
-            <div className="work-jglow-features" aria-hidden="true"><span>★ 15+ Years Experience</span><span>∞ Lifetime Access</span><span>▣ Learn Anywhere</span></div>
-          </div>
+        {isElara ? (
+          <img className="work-elara-preview" src={project.image} alt={project.alt} loading="lazy" />
         ) : (
-          <div className="work-mini-site work-mini-aurelia" role="img" aria-label={project.alt}>
-            <div className="work-mini-header">
-              <div className="work-mini-brand"><strong>Aurelia</strong><span>Motorcoach</span></div>
-              <div className="work-mini-nav" aria-hidden="true"><span>Our Fleet</span><span>Destinations</span><span>How It Works</span></div>
-              <span className="work-mini-action">Send an enquiry ↗</span>
-            </div>
-            <div className="work-mini-hero-copy">
-              <p>Private motorcoach journeys · American West</p>
-              <h4>The road is<br /><em>yours.</em></h4>
-              <span>Travel privately. Stay longer. Take the extraordinary route.</span>
-              <div><b>Explore the journey ↓</b></div>
-            </div>
-            <div className="work-mini-rail" aria-hidden="true"><span>01 · Featured coach</span><strong>The Signature 45</strong><span>Sleeps 4 · Seats 6 · 45 ft</span></div>
-          </div>
+          <>
+            <img className="work-concept-backdrop" src={project.image} alt="" loading="lazy" />
+            <div className="work-concept-shade" aria-hidden="true" />
+
+            {isTerrain ? (
+              <div className="work-mini-site work-mini-terrain" role="img" aria-label={project.alt}>
+                <div className="work-mini-header">
+                  <div className="work-mini-brand"><strong>Terrain</strong><span>Outdoor Co.</span></div>
+                  <div className="work-mini-nav" aria-hidden="true"><span>Services</span><span>Projects</span><span>About</span></div>
+                  <span className="work-mini-action">Free estimate ↗</span>
+                </div>
+                <div className="work-mini-hero-copy">
+                  <p>Landscape · Hardscape · Pool Care</p>
+                  <h4>Outdoor spaces,<br /><em>thoughtfully built.</em></h4>
+                  <span>Design, build, and care brought together with one consistent standard.</span>
+                  <div><b>Request a free estimate ↗</b><small>Explore our work ↓</small></div>
+                </div>
+                <div className="work-mini-rail" aria-hidden="true"><span>Design + build + care</span><span>Austin, Texas</span><span>Residential outdoor environments</span></div>
+              </div>
+            ) : (
+              <div className="work-mini-site work-mini-aurelia" role="img" aria-label={project.alt}>
+                <div className="work-mini-header">
+                  <div className="work-mini-brand"><strong>Aurelia</strong><span>Motorcoach</span></div>
+                  <div className="work-mini-nav" aria-hidden="true"><span>Our Fleet</span><span>Destinations</span><span>How It Works</span></div>
+                  <span className="work-mini-action">Send an enquiry ↗</span>
+                </div>
+                <div className="work-mini-hero-copy">
+                  <p>Private motorcoach journeys · American West</p>
+                  <h4>The road is<br /><em>yours.</em></h4>
+                  <span>Travel privately. Stay longer. Take the extraordinary route.</span>
+                  <div><b>Explore the journey ↓</b></div>
+                </div>
+                <div className="work-mini-rail" aria-hidden="true"><span>01 · Featured coach</span><strong>The Signature 45</strong><span>Sleeps 4 · Seats 6 · 45 ft</span></div>
+              </div>
+            )}
+          </>
         )}
       </div>
       <span className="work-page-media-index">{project.number}</span>

@@ -1085,3 +1085,17 @@
     transition: none !important;
   }
 }
+
+
+/* Elara Vale uses the actual captured live-site hero rather than a recreated concept. */
+.work-concept-elara .work-page-site-window {
+  background: #f2ede5;
+}
+
+.work-elara-preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
