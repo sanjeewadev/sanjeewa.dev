@@ -70,16 +70,17 @@ const conceptProjects = [
   },
   {
     number: "04",
-    name: "Aurelia Motorcoach",
-    market: "Luxury Travel · Motorcoach Rental",
+    name: "J.GLOW Makeup",
+    market: "Beauty Education · Makeup Artist",
     type: "Concept Website",
     summary:
-      "A cinematic premium-rental experience exploring fleet discovery, destinations, trip planning, and a reusable CMS-backed architecture for high-value service businesses.",
+      "A polished makeup-education concept built around lesson discovery, video-led learning, confidence-building content, and a refined blush-and-cream visual system.",
     image:
-      "https://images.unsplash.com/photo-1699115836378-10957ad67c48?auto=format&fit=crop&w=1800&q=84",
-    alt: "Aurelia Motorcoach homepage preview",
-    preview: "aurelia",
-    tags: ["Next.js", "Payload CMS", "Premium UX"],
+      "https://images.unsplash.com/photo-1741774397357-91dcb4a889cd?auto=format&fit=crop&w=1800&q=84",
+    alt: "J.GLOW Makeup education homepage preview",
+    preview: "jglow",
+    liveUrl: "https://makeup-artist-website-template.netlify.app/",
+    tags: ["Responsive Design", "Beauty Education", "Learning UX"],
   },
 ];
 
@@ -123,6 +124,7 @@ function ClientWebsitePreview({ project, eager }) {
 
 function ConceptWebsitePreview({ project }) {
   const isTerrain = project.preview === "terrain";
+  const isJGlow = project.preview === "jglow";
   const PreviewTag = project.liveUrl ? "a" : "div";
   const previewProps = project.liveUrl
     ? {
@@ -135,7 +137,7 @@ function ConceptWebsitePreview({ project }) {
 
   return (
     <PreviewTag
-      className={`work-page-media work-page-media-browser work-concept-preview ${isTerrain ? "work-concept-terrain" : "work-concept-aurelia"}`}
+      className={`work-page-media work-page-media-browser work-concept-preview ${isTerrain ? "work-concept-terrain" : isJGlow ? "work-concept-jglow" : "work-concept-aurelia"}`}
       {...previewProps}
     >
       <BrowserBar
@@ -163,6 +165,22 @@ function ConceptWebsitePreview({ project }) {
               <div><b>Request a free estimate ↗</b><small>Explore our work ↓</small></div>
             </div>
             <div className="work-mini-rail" aria-hidden="true"><span>Design + build + care</span><span>Austin, Texas</span><span>Residential outdoor environments</span></div>
+          </div>
+        ) : isJGlow ? (
+          <div className="work-mini-site work-mini-jglow" role="img" aria-label={project.alt}>
+            <div className="work-jglow-banner">✦ Learn anytime, anywhere ✦</div>
+            <div className="work-mini-header">
+              <div className="work-mini-brand work-jglow-brand"><strong>J.GLOW</strong><span>MAKEUP</span></div>
+              <div className="work-mini-nav" aria-hidden="true"><span>Home</span><span>About</span><span>FAQ</span><span>Lessons</span></div>
+              <span className="work-mini-action">Start learning</span>
+            </div>
+            <div className="work-jglow-copy">
+              <p>Professional makeup education</p>
+              <h4>Master Makeup<br /><em>With Confidence</em></h4>
+              <span>Learn practical makeup techniques from an experienced professional artist, at your own pace and from anywhere.</span>
+              <div><b>Explore Lessons →</b><small>▶ Watch Preview</small></div>
+            </div>
+            <div className="work-jglow-features" aria-hidden="true"><span>★ 15+ Years Experience</span><span>∞ Lifetime Access</span><span>▣ Learn Anywhere</span></div>
           </div>
         ) : (
           <div className="work-mini-site work-mini-aurelia" role="img" aria-label={project.alt}>
