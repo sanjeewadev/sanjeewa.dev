@@ -65,6 +65,7 @@ const conceptProjects = [
       "https://images.unsplash.com/photo-1783125127199-860da9744dcc?auto=format&fit=crop&w=1800&q=84",
     alt: "Terrain Outdoor Co. homepage preview",
     preview: "terrain",
+    liveUrl: "https://landscaping-hardscaping-pool-maintena.netlify.app/",
     tags: ["Next.js", "Responsive Design", "Multi-page"],
   },
   {
@@ -122,10 +123,28 @@ function ClientWebsitePreview({ project, eager }) {
 
 function ConceptWebsitePreview({ project }) {
   const isTerrain = project.preview === "terrain";
+  const PreviewTag = project.liveUrl ? "a" : "div";
+  const previewProps = project.liveUrl
+    ? {
+        href: project.liveUrl,
+        target: "_blank",
+        rel: "noopener noreferrer",
+        "aria-label": `Open ${project.name} live demo`,
+      }
+    : {};
 
   return (
-    <div className={`work-page-media work-page-media-browser work-concept-preview ${isTerrain ? "work-concept-terrain" : "work-concept-aurelia"}`}>
-      <BrowserBar label={isTerrain ? "Concept preview · Terrain Outdoor Co." : "Concept preview · Aurelia Motorcoach"} />
+    <PreviewTag
+      className={`work-page-media work-page-media-browser work-concept-preview ${isTerrain ? "work-concept-terrain" : "work-concept-aurelia"}`}
+      {...previewProps}
+    >
+      <BrowserBar
+        label={
+          project.liveUrl
+            ? project.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")
+            : `Concept preview · ${project.name}`
+        }
+      />
       <div className="work-page-site-window">
         <img className="work-concept-backdrop" src={project.image} alt="" loading="lazy" />
         <div className="work-concept-shade" aria-hidden="true" />
@@ -164,8 +183,10 @@ function ConceptWebsitePreview({ project }) {
       </div>
       <span className="work-page-media-index">{project.number}</span>
       <span className="work-page-type work-page-type-concept">{project.type}</span>
-      <span className="work-page-preview-label">Website preview</span>
-    </div>
+      <span className={project.liveUrl ? "work-page-view-hint" : "work-page-preview-label"}>
+        {project.liveUrl ? <>View live demo <b aria-hidden="true">↗</b></> : "Website preview"}
+      </span>
+    </PreviewTag>
   );
 }
 
@@ -259,9 +280,17 @@ export default function WorkPage() {
                     </div>
                     <p className="work-page-summary">{project.summary}</p>
                     <ProjectTags tags={project.tags} />
-                    <div className="work-page-demo-note">
-                      <span>Interactive multi-page concept</span>
-                    </div>
+                    {project.liveUrl ? (
+                      <div className="work-page-actions work-page-actions-concept">
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          View Live Demo <span aria-hidden="true">↗</span>
+                        </a>
+                      </div>
+                    ) : (
+                      <div className="work-page-demo-note">
+                        <span>Interactive multi-page concept</span>
+                      </div>
+                    )}
                   </div>
                 </article>
               ))}
