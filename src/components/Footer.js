@@ -16,7 +16,7 @@ export default function Footer() {
             <p className="footer-tagline text-light-muted">Professional websites and practical ongoing care for service businesses, creative professionals, and growing brands.</p>
           </div>
           <nav className="footer-column" aria-label="Footer Navigation">
-            <h4 className="footer-heading">Navigation</h4><a href="/" className="footer-link">Home</a><a href="/#services" className="footer-link">Services</a><a href="/work" className="footer-link">Work</a><a href="/#packages" className="footer-link">Pricing Plans</a>
+            <h4 className="footer-heading">Navigation</h4><a href="/" className="footer-link">Home</a><a href="/#services" className="footer-link">Services</a><a href="/#work" className="footer-link">Work</a><a href="/templates" className="footer-link">Templates</a><a href="/#packages" className="footer-link">Pricing Plans</a>
           </nav>
           <nav className="footer-column" aria-label="Social Links">
             <h4 className="footer-heading">Connect</h4><a href="/contact" className="footer-link">Contact Me</a><a href="https://linkedin.com/in/sanjeewadev" className="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/sanjeewadev" className="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>

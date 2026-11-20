@@ -101,7 +101,7 @@ export default function Home() {
                           
                           <div className="hero-actions-split">
                               <a href="/contact" className="btn-brand">Tell Me About Your Website</a>
-                              <a href="/work" className="btn-text-link text-dark-main ml-24">View My Work ↗</a>
+                              <a href="/#work" className="btn-text-link text-dark-main ml-24">View My Work ↗</a>
                           </div>
                           <p className="hero-service-note text-dark-muted">
                               Already have a website? <a href="/#maintenance">I can look after it each month →</a>
@@ -227,12 +227,7 @@ export default function Home() {
                           </a>
       
                       </div>
-
-                      <div className="view-all-wrapper scroll-fade-up delay-150">
-                          <a href="/work" className="btn-text-link text-dark-main">View all work ↗</a>
-                      </div>
-
-                  </section>
+</section>
                   
                   
                   <section id="packages" className="container section-pricing">

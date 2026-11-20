@@ -26,7 +26,8 @@ export default function Nav() {
         <nav className="nav-links desktop-links" aria-label="Main navigation">
           <a href="/#services">Web Development</a>
           <a href="/#maintenance">Maintenance</a>
-          <a href="/work">Work</a>
+          <a href="/#work">Work</a>
+          <a href="/templates">Templates</a>
           <a href="/#packages">Pricing</a>
         </nav>
         <div className="nav-cta desktop-cta"><a href="/contact" className="btn-brand-small">Contact Me</a></div>
@@ -38,7 +39,8 @@ export default function Nav() {
         <nav className="mobile-menu-inner" aria-label="Mobile navigation">
           <a href="/#services" className="mobile-link" onClick={closeMenu}>Web Development</a>
           <a href="/#maintenance" className="mobile-link" onClick={closeMenu}>Website Maintenance</a>
-          <a href="/work" className="mobile-link" onClick={closeMenu}>Work</a>
+          <a href="/#work" className="mobile-link" onClick={closeMenu}>Work</a>
+          <a href="/templates" className="mobile-link" onClick={closeMenu}>Templates</a>
           <a href="/#packages" className="mobile-link" onClick={closeMenu}>Website Pricing</a>
           <a href="/contact" className="btn-brand" style={{ marginTop: "24px", width: "100%" }} onClick={closeMenu}>Contact Me</a>
         </nav>
