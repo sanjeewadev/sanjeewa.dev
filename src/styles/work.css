@@ -250,6 +250,10 @@
   cursor: default;
 }
 
+.work-concept-preview[href] {
+  cursor: pointer;
+}
+
 .work-concept-backdrop {
   position: absolute;
   inset: 0;
@@ -606,6 +610,20 @@
 .work-page-card-concept .work-page-media {
   background: #25282f;
   box-shadow: 0 28px 68px rgba(0,0,0,0.28);
+}
+
+.work-page-actions-concept {
+  border-top-color: rgba(255,255,255,0.12);
+}
+
+.work-page-actions-concept a,
+.work-page-actions-concept a:last-child {
+  color: #8fa7ff;
+}
+
+.work-page-actions-concept a:hover,
+.work-page-actions-concept a:focus-visible {
+  color: #b7c5ff;
 }
 
 .work-page-demo-note {
